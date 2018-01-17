@@ -12,7 +12,27 @@
 		62A16D03200F30C600C5BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D01200F30C600C5BED3 /* Main.storyboard */; };
 		62A16D05200F30C600C5BED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D04200F30C600C5BED3 /* Assets.xcassets */; };
 		62A16D08200F30C600C5BED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D06200F30C600C5BED3 /* LaunchScreen.storyboard */; };
+		62A16D11200F32D900C5BED3 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */; };
+		62A16D12200F32D900C5BED3 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62A16D13200F32D900C5BED3 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; };
+		62A16D14200F32D900C5BED3 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62A16D17200F351500C5BED3 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A16D16200F351500C5BED3 /* IntervalViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62A16D15200F32D900C5BED3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				62A16D14200F32D900C5BED3 /* AudioKit.framework in Embed Frameworks */,
+				62A16D12200F32D900C5BED3 /* AudioKitUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		62A16CFA200F30C600C5BED3 /* EarTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +42,9 @@
 		62A16D04200F30C600C5BED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A16D07200F30C600C5BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A16D09200F30C600C5BED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
+		62A16D10200F32D900C5BED3 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		62A16D16200F351500C5BED3 /* IntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A16D13200F32D900C5BED3 /* AudioKit.framework in Frameworks */,
+				62A16D11200F32D900C5BED3 /* AudioKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +63,8 @@
 		62A16CF1200F30C600C5BED3 = {
 			isa = PBXGroup;
 			children = (
+				62A16D10200F32D900C5BED3 /* AudioKit.framework */,
+				62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */,
 				62A16CFC200F30C600C5BED3 /* EarTraining */,
 				62A16CFB200F30C600C5BED3 /* Products */,
 			);
@@ -60,6 +87,7 @@
 				62A16D04200F30C600C5BED3 /* Assets.xcassets */,
 				62A16D06200F30C600C5BED3 /* LaunchScreen.storyboard */,
 				62A16D09200F30C600C5BED3 /* Info.plist */,
+				62A16D16200F351500C5BED3 /* IntervalViewController.swift */,
 			);
 			path = EarTraining;
 			sourceTree = "<group>";
@@ -74,6 +102,7 @@
 				62A16CF6200F30C600C5BED3 /* Sources */,
 				62A16CF7200F30C600C5BED3 /* Frameworks */,
 				62A16CF8200F30C600C5BED3 /* Resources */,
+				62A16D15200F32D900C5BED3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A16D17200F351500C5BED3 /* IntervalViewController.swift in Sources */,
 				62A16D00200F30C600C5BED3 /* ViewController.swift in Sources */,
 				62A16CFE200F30C600C5BED3 /* AppDelegate.swift in Sources */,
 			);
@@ -275,6 +305,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EarTraining/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ariel.EarTraining;
@@ -289,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EarTraining/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ariel.EarTraining;
