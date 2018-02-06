@@ -14,6 +14,8 @@ class ExerciseTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,6 +51,10 @@ class ExerciseTableViewController: UITableViewController {
         cell.nameLabel?.text = exerciseNames[indexPath.row]
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: exerciseNames[indexPath.row], sender: self)
     }
     
 
