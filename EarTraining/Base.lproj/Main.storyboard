@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="L3p-aW-Rq6" customClass="IntervalTableViewCell" customModule="EarTraining" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="L3p-aW-Rq6" customClass="ExerciseTableViewCell" customModule="EarTraining" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L3p-aW-Rq6" id="DOM-HW-pNc">
@@ -115,13 +115,76 @@
                     <view key="view" contentMode="scaleToFill" id="qoc-0G-83j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8OL-zM-ge7">
+                                <rect key="frame" x="100" y="218.5" width="175" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a16-Nr-ZsP">
+                                        <rect key="frame" x="52" y="0.0" width="71" height="30"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgainWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="Rjm-3n-qu7"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flf-ti-inP">
+                                        <rect key="frame" x="0.0" y="60" width="175" height="110"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZT8-mi-yNt">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdK-sG-wlW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                                        <state key="normal" title="Major 2nd"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvV-QW-Aho">
+                                                        <rect key="frame" x="0.0" y="40" width="78" height="30"/>
+                                                        <state key="normal" title="Major 3rd"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duS-J1-R2y">
+                                                        <rect key="frame" x="0.0" y="80" width="78" height="30"/>
+                                                        <state key="normal" title="Perfect 4th"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DXY-VB-NYZ">
+                                                <rect key="frame" x="98" y="0.0" width="77" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adw-gr-u1N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                                        <state key="normal" title="Perfect 5th"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j69-CM-9iC">
+                                                        <rect key="frame" x="0.0" y="40" width="77" height="30"/>
+                                                        <state key="normal" title="Major 6th"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYf-OZ-wka">
+                                                        <rect key="frame" x="0.0" y="80" width="77" height="30"/>
+                                                        <state key="normal" title="Major 7th"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPi-eV-67w">
+                                        <rect key="frame" x="63" y="200" width="49" height="30"/>
+                                        <state key="normal" title="Octave"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8OL-zM-ge7" firstAttribute="centerY" secondItem="qoc-0G-83j" secondAttribute="centerY" id="g7u-5C-axm"/>
+                            <constraint firstItem="8OL-zM-ge7" firstAttribute="centerX" secondItem="qoc-0G-83j" secondAttribute="centerX" id="kl2-RY-3kk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HTi-Po-v2r"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqL-42-VZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="-850"/>
+            <point key="canvasLocation" x="2498" y="-1348"/>
         </scene>
         <!--Scales Table View Controller-->
         <scene sceneID="M8D-1j-YxU">
@@ -167,31 +230,38 @@
             </objects>
             <point key="canvasLocation" x="1473" y="-201"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chords Table View Controller-->
         <scene sceneID="dxO-AY-vdE">
             <objects>
-                <tableViewController id="CsB-24-S6E" sceneMemberID="viewController">
+                <tableViewController id="CsB-24-S6E" customClass="ChordsTableViewController" customModule="EarTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yzd-Qz-UrP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hf9-vp-xpU" style="IBUITableViewCellStyleDefault" id="ixS-mh-VTy">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="ixS-mh-VTy" customClass="ExerciseTableViewCell" customModule="EarTraining" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ixS-mh-VTy" id="KLC-bP-Fhi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hf9-vp-xpU">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN1-n2-K83">
+                                            <rect key="frame" x="16" y="29" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uN1-n2-K83" secondAttribute="bottom" constant="19" id="2R7-2I-jRr"/>
+                                        <constraint firstItem="uN1-n2-K83" firstAttribute="leading" secondItem="KLC-bP-Fhi" secondAttribute="leadingMargin" id="hGV-n9-jLM"/>
+                                        <constraint firstItem="uN1-n2-K83" firstAttribute="top" secondItem="KLC-bP-Fhi" secondAttribute="topMargin" constant="18" id="yy8-7T-7aa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="uN1-n2-K83" id="BUT-Lx-nlu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
