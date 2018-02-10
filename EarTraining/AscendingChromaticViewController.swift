@@ -1,8 +1,8 @@
 //
-//  AscendingDiatonicViewController.swift
+//  AscendingChromaticViewController.swift
 //  EarTraining
 //
-//  Created by Ariel Todoki on 2/7/18.
+//  Created by Ariel Todoki on 2/9/18.
 //  Copyright © 2018 Ariel Todoki. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import AudioKit
 import AudioKitUI
 
-class AscendingDiatonicViewController: UIViewController {
+class AscendingChromaticViewController: UIViewController {
     
     @IBOutlet var intervalButtons: [UIButton]!
     
@@ -18,7 +18,6 @@ class AscendingDiatonicViewController: UIViewController {
     let noteNameSharps = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     let noteNameFlats = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
     
-    let diatonicIntervals = [2,4,5,7,9,11,12]
     var bNoteOctave = 4.0
     var tNoteOctave = 4.0
     
@@ -33,14 +32,12 @@ class AscendingDiatonicViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
-        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
+        randomIndex = Int(arc4random_uniform(11))+1 // random number 1<n<11
+        topNote = bottomNote + randomIndex // random number chromatic interval from bottom note
         
-//        oscillator.rampTime = 0.2
         oscillator.frequency = 0.0
         oscillator.amplitude = 0.5
         AudioKit.output = oscillator
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,14 +54,10 @@ class AscendingDiatonicViewController: UIViewController {
         oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
         sleep(2)
         
-//        for i in cMajScale{
-//            oscillator.frequency = noteFrequency[i] * pow(2,octave)
-//            sleep(1)
-//        }
         oscillator.stop()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,19 +75,18 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     @IBAction func next(sender: UIButton){
-        
-        // MAKE BUTTON BACKGROUNDS GO BACK TO NORMAL
+        // Reset interval button background color
         for b in intervalButtons{
             b.backgroundColor = UIColor.white
         }
         
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
-        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
+        randomIndex = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        topNote = bottomNote + randomIndex // random number diatonic interval from bottomNote
         
         if(topNote > 11){
             tNoteOctave = bNoteOctave + 1
-        }else {
+        } else {
             tNoteOctave = bNoteOctave
         }
         
@@ -106,12 +98,33 @@ class AscendingDiatonicViewController: UIViewController {
 //        oscillator.stop()
         
         
-        
+    }
+
+    
+    @IBAction func minorSecond(sender: UIButton){
+        // Button turns green if the interval played is a minor second, turns red if not
+        if(topNote - bottomNote == 1){
+            sender.backgroundColor = UIColor.green
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
     }
     
     @IBAction func majorSecond(sender: UIButton){
         // Button turns green if the interval played is a major second, turns red if not
         if(topNote - bottomNote == 2){
+            sender.backgroundColor = UIColor.green
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+        
+    }
+    
+    @IBAction func minorThird(sender: UIButton){
+        // Button turns green if the interval played is a minor third, turns red if not
+        if(topNote - bottomNote == 3){
             sender.backgroundColor = UIColor.green
         }
         else{
@@ -142,9 +155,31 @@ class AscendingDiatonicViewController: UIViewController {
         
     }
     
+    @IBAction func tritone(sender: UIButton){
+        // Button turns green if the interval played is a tritone, turns red if not
+        if(topNote - bottomNote == 6){
+            sender.backgroundColor = UIColor.green
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+        
+    }
+    
     @IBAction func perfectFifth(sender: UIButton){
         // Button turns green if the interval played is a perfect fifth, turns red if not
         if(topNote - bottomNote == 7){
+            sender.backgroundColor = UIColor.green
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+        
+    }
+    
+    @IBAction func minorSixth(sender: UIButton){
+        // Button turns green if the interval played is a minor sixth, turns red if not
+        if(topNote - bottomNote == 8){
             sender.backgroundColor = UIColor.green
         }
         else{
@@ -161,6 +196,18 @@ class AscendingDiatonicViewController: UIViewController {
         else{
             sender.backgroundColor = UIColor.red
         }
+        
+    }
+    
+    @IBAction func minorSeventh(sender: UIButton){
+        // Button turns green if the interval played is a minor seventh, turns red if not
+        if(topNote - bottomNote == 10){
+            sender.backgroundColor = UIColor.green
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+        
     }
     
     @IBAction func majorSeventh(sender: UIButton){
@@ -179,12 +226,13 @@ class AscendingDiatonicViewController: UIViewController {
         if(topNote - bottomNote == 12){
             sender.backgroundColor = UIColor.green
         }
-        else {
+        else{
             sender.backgroundColor = UIColor.red
         }
         
     }
     
+
     /*
     // MARK: - Navigation
 

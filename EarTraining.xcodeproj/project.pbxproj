@@ -13,6 +13,7 @@
 		62A0E477202BE29A002995D7 /* AscendingDiatonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E476202BE29A002995D7 /* AscendingDiatonicViewController.swift */; };
 		62A0E479202BE7D4002995D7 /* ScalesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */; };
 		62A0E47D202CD356002995D7 /* ChordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */; };
+		62A0E47F202E852C002995D7 /* AscendingChromaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */; };
 		62A16CFE200F30C600C5BED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A16CFD200F30C600C5BED3 /* AppDelegate.swift */; };
 		62A16D03200F30C600C5BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D01200F30C600C5BED3 /* Main.storyboard */; };
 		62A16D05200F30C600C5BED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D04200F30C600C5BED3 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		62A0E476202BE29A002995D7 /* AscendingDiatonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscendingDiatonicViewController.swift; sourceTree = "<group>"; };
 		62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesTableViewController.swift; sourceTree = "<group>"; };
 		62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsTableViewController.swift; sourceTree = "<group>"; };
+		62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscendingChromaticViewController.swift; sourceTree = "<group>"; };
 		62A16CFA200F30C600C5BED3 /* EarTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A16CFD200F30C600C5BED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A16D02200F30C600C5BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */,
 				62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */,
 				62A0E476202BE29A002995D7 /* AscendingDiatonicViewController.swift */,
+				62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */,
 			);
 			path = EarTraining;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				62A0E47D202CD356002995D7 /* ChordsTableViewController.swift in Sources */,
 				62A0E479202BE7D4002995D7 /* ScalesTableViewController.swift in Sources */,
 				62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */,
+				62A0E47F202E852C002995D7 /* AscendingChromaticViewController.swift in Sources */,
 				62A0E477202BE29A002995D7 /* AscendingDiatonicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
