@@ -13,6 +13,7 @@ import AudioKitUI
 class AscendingDiatonicViewController: UIViewController {
     
     @IBOutlet var intervalButtons: [UIButton]!
+    @IBOutlet var exerciseNumLabel: UILabel!
     
     let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteNameSharps = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
@@ -25,6 +26,8 @@ class AscendingDiatonicViewController: UIViewController {
     var bottomNote = 0
     var topNote = 0
     var randomIndex = 0
+    
+    var exerciseNum = 1
     
     let oscillator = AKOscillator()
 
@@ -97,6 +100,10 @@ class AscendingDiatonicViewController: UIViewController {
         }else {
             tNoteOctave = bNoteOctave
         }
+        
+        exerciseNum += 1
+        
+        exerciseNumLabel.text = "Exercise #\(exerciseNum)"
         
 //        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
 //        oscillator.start()

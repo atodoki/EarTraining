@@ -9,7 +9,7 @@
 import UIKit
 
 class ScalesTableViewController: UITableViewController {
-    var scales = ["Scales", "Modes", "Jazz"]
+    var scales = ["Diatonic Scales", "Modes", "Jazz"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,10 @@ class ScalesTableViewController: UITableViewController {
         cell.nameLabel?.text = scales[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: scales[indexPath.row], sender: self)
     }
     
 
