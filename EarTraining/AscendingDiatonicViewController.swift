@@ -47,6 +47,7 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         AudioKit.start()
         
         oscillator.start()
@@ -66,6 +67,11 @@ class AscendingDiatonicViewController: UIViewController {
 //        }
         oscillator.stop()
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioKit.stop()
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,7 +10,7 @@ import UIKit
 
 class IntervalTableViewController: UITableViewController {
     
-    var intervalExercises = ["Ascending Diatonic", "Descending Diatonic", "Ascending Chromatic", "Descending Chromatic"]
+    var intervalExercises = ["Ascending Diatonic", "Descending Diatonic", "Ascending Chromatic", "Descending Chromatic", "Ascending Sing Interval"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

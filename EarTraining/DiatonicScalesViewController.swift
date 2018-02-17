@@ -48,10 +48,16 @@ class DiatonicScalesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         AudioKit.start()
         
         playScale(scale: scaleList[scaleType])
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioKit.stop()
     }
     
     func playScale(scale: Array<Int>){
