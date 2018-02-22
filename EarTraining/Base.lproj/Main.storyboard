@@ -321,7 +321,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sung Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhw-Hr-WU1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sung Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhw-Hr-WU1">
                                 <rect key="frame" x="90" y="246" width="175" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -337,7 +337,7 @@
                                     <outletCollection property="gestureRecognizers" destination="bFn-U3-nty" appends="YES" id="Mc1-3Y-Sd1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Given Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-po-nhN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Given Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-po-nhN">
                                 <rect key="frame" x="94" y="377" width="171" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -361,6 +361,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-b9-04F">
+                                <rect key="frame" x="170" y="517" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startWithSender:" destination="qmO-Zr-jAa" eventType="touchUpInside" id="dly-lN-QBZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sing interval above" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABe-Dw-Wyk">
+                                <rect key="frame" x="60" y="185" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -372,6 +387,7 @@
                     </view>
                     <connections>
                         <outlet property="givenNote" destination="5FP-po-nhN" id="yWT-8a-MOb"/>
+                        <outlet property="intervalLabel" destination="ABe-Dw-Wyk" id="xBS-Jk-TmM"/>
                         <outlet property="recordButton" destination="pTg-ea-7XR" id="dcX-kY-7bv"/>
                         <outlet property="sungNote" destination="lhw-Hr-WU1" id="aNG-Ze-LFr"/>
                     </connections>
@@ -395,10 +411,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-ZQ-1z8">
-                                <rect key="frame" x="132.5" y="249.5" width="110" height="168"/>
+                                <rect key="frame" x="62.5" y="159.5" width="250" height="348"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s2-9B-IC3">
-                                        <rect key="frame" x="21" y="0.0" width="68" height="48"/>
+                                        <rect key="frame" x="91" y="0.0" width="68" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-pg-WDQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="48"/>
@@ -418,38 +434,46 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SX0-Cd-kGl">
-                                        <rect key="frame" x="0.0" y="48" width="110" height="120"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SX0-Cd-kGl">
+                                        <rect key="frame" x="0.0" y="48" width="250" height="300"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-ix-jhI">
-                                                <rect key="frame" x="35.5" y="0.0" width="39" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="75"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Major"/>
                                                 <connections>
                                                     <action selector="majorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="mqA-SG-BmN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-4U-CHC">
-                                                <rect key="frame" x="8.5" y="30" width="93" height="30"/>
+                                                <rect key="frame" x="0.0" y="75" width="250" height="75"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Natural Minor"/>
                                                 <connections>
                                                     <action selector="naturalMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="zXE-1T-Zgo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0f-R2-1ec">
-                                                <rect key="frame" x="0.0" y="60" width="110" height="30"/>
+                                                <rect key="frame" x="0.0" y="150" width="250" height="75"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Harmonic Minor"/>
                                                 <connections>
                                                     <action selector="harmonicMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="YnS-oO-1BL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raK-X1-5xa">
-                                                <rect key="frame" x="6.5" y="90" width="97" height="30"/>
+                                                <rect key="frame" x="0.0" y="225" width="250" height="75"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Melodic Minor"/>
                                                 <connections>
                                                     <action selector="melodicMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="gR6-w8-AyG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="7Du-Rv-ltM"/>
+                                            <constraint firstAttribute="width" constant="250" id="vdQ-HE-hZL"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>

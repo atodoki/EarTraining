@@ -14,8 +14,14 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     @IBOutlet private var givenNote: UILabel!
     @IBOutlet private var sungNote: UILabel!
+    @IBOutlet private var intervalLabel: UILabel!
     @IBOutlet private var recordButton: UIButton!
+    
 
+    var givenNoteIndex = 0
+    var octaveRange = 4.0
+    var intervalIndex = 0
+    let oscillator = AKOscillator()
     
     var mic: AKMicrophone!
     var tracker: AKFrequencyTracker!
@@ -28,6 +34,14 @@ class AscendingDSingIntervalViewController: UIViewController {
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
     
     let noteFreqRanges = [15.9, 16.83, 17.83, 18.9, 20.01, 21.21, 22.47, 23.8, 25.22, 26.72, 28.31, 29.99, 31.77]
+    
+    let inTuneLow = [16.26, 17.22, 18.24, 19.33, 20.48, 21.7, 22.99, 24.36, 25.81, 27.34, 28.97, 30.69]
+    
+    let inTuneHigh = [16.45, 17.42, 18.46, 19.56, 20.72, 21.95, 23.26, 24.64, 26.11, 27.66, 29.3, 31.05]
+    
+    let intervalNames = ["Major 2nd", "Major 3rd", "Perfect 4th", "Perfect 5th", "Major 6th", "Major 7th", "Octave"]
+    
+    let intervalDiff = [2, 4, 5, 7, 9, 11, 12]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +52,10 @@ class AscendingDSingIntervalViewController: UIViewController {
         tracker = AKFrequencyTracker(mic)
         silence = AKBooster(tracker, gain: 0)
         AudioKit.output = silence
+        
+        oscillator.frequency = 0.0
+        oscillator.amplitude = 0.5
+        AudioKit.output = oscillator
 
     }
     
@@ -52,6 +70,28 @@ class AscendingDSingIntervalViewController: UIViewController {
         super.viewWillDisappear(animated)
         AudioKit.stop()
     }
+    
+    @IBAction func start(sender: UIButton){
+        // Play note within user specified range
+        givenNoteIndex = Int(arc4random_uniform(12))
+        oscillator.frequency = noteFrequencies[givenNoteIndex] * pow(2,octaveRange)
+        givenNote.text = "\(noteNamesWithSharps[givenNoteIndex])\(Int(octaveRange))"
+        
+        
+        intervalIndex = Int(arc4random_uniform(UInt32(intervalNames.count)))
+        intervalLabel.text = "Sing \(intervalNames[intervalIndex]) above"
+    
+        // reset label background colors
+        sungNote.backgroundColor = UIColor.white
+        givenNote.backgroundColor = UIColor.white
+        
+        oscillator.start()
+        sleep(2)
+        oscillator.stop()
+        
+
+    }
+    
     
     @objc func updateUI(){
         var frequency0 = tracker.frequency
@@ -69,7 +109,8 @@ class AscendingDSingIntervalViewController: UIViewController {
                 octave += 1
             }
             while(frequency0 < noteFrequencies[0]){ // don't need this??
-                frequency0 *= 2
+                //frequency0 *= 2 ?????
+                octave -= 1
             }
             
             // get note name
@@ -78,8 +119,36 @@ class AscendingDSingIntervalViewController: UIViewController {
                     noteIndex = i
                 }
             }
-            sungNote.text = noteNamesWithSharps[noteIndex]
+            sungNote.text = "\(noteNamesWithSharps[noteIndex])\(octave)"
             
+            // preliminary check if sung note is higher than given note
+//            if((Int(octaveRange) == octave) || (octave > Int(octaveRange))){
+//
+//
+//            } else {
+//                sungNote.backgroundColor = UIColor.red
+//            }
+            
+            //checks if sung interval is correct
+            let intDiff = givenNoteIndex + intervalDiff[intervalIndex]
+            if(intDiff%12 == noteIndex){
+                if((intDiff > 11 && octave > Int(octaveRange)) || (intDiff < 12 && octave == Int(octaveRange))){
+                    if(frequency0 > inTuneLow[noteIndex] && frequency0 < inTuneHigh[noteIndex]){
+                    sungNote.backgroundColor = UIColor.green
+                    }else{
+                    sungNote.backgroundColor = UIColor.orange
+                    }
+                    
+                }else{
+                    sungNote.backgroundColor = UIColor.red
+                }
+            }else {
+                sungNote.backgroundColor = UIColor.red
+            }
+            
+            
+            
+      
             
         }
         
