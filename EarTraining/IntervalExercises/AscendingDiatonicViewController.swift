@@ -32,28 +32,53 @@ class AscendingDiatonicViewController: UIViewController {
     let oscillator = AKOscillator()
     var envelope: AKAmplitudeEnvelope!
     
+    var frequencies = (1...5).map{ $0 * 261.63}
+    let mixer = AKMixer()
+    var oscillators = [AKOscillator()]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
         randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
         topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
         
-//        oscillator.rampTime = 0.2
-        oscillator.frequency = 0.0
-        oscillator.amplitude = 0.5
         
-        envelope = AKAmplitudeEnvelope(oscillator)
+//        oscillator.frequency = 0.0
+//        oscillator.amplitude = 0.5
+        
+        oscillators = frequencies.map { createAndStartOscillator(frequency: $0)}
+        
+        oscillators[0].amplitude = 1.0
+        oscillators[1].amplitude = 0.1
+        oscillators[2].amplitude = 0.35
+        oscillators[3].amplitude = 0.08
+        oscillators[4].amplitude = 0.07
+        
+        oscillators.forEach{mixer.connect(input: $0)}
+        
+        envelope = AKAmplitudeEnvelope(mixer)
         envelope.attackDuration = 0.01
         envelope.decayDuration = 0.1
         envelope.sustainLevel = 0.1
         envelope.releaseDuration = 0.3
+
         
         AudioKit.output = envelope
         //AudioKit.output = oscillator
         
     }
+    
+    func createAndStartOscillator(frequency: Double) -> AKOscillator {
+        let oscillator = AKOscillator(waveform: AKTable(.positiveTriangle))
+        oscillator.frequency = frequency
+        oscillator.start()
+        return oscillator
+    }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -66,17 +91,21 @@ class AscendingDiatonicViewController: UIViewController {
             tNoteOctave = bNoteOctave + 1
         }
         
-        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
+        envelope.start()
+        
+        changeFrequency(frequency: noteFrequency[bottomNote] * pow(2,bNoteOctave))
+        //oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
         sleep(1)
+        
         
         envelope.stop()
         sleep(1)
         
-        envelope.start()
         oscillator.start()
-        
-        
-        oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
+        envelope.start()
+        changeFrequency(frequency: noteFrequency[topNote%12] * pow(2,tNoteOctave))
+       //oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
+
         sleep(1)
         
 //        for i in cMajScale{
@@ -88,6 +117,13 @@ class AscendingDiatonicViewController: UIViewController {
         oscillator.stop()
         
         
+    }
+    
+    func changeFrequency(frequency: Double){
+        frequencies = (1...5).map{$0 * frequency}
+        for i in (0...4){
+            oscillators[i].frequency = frequencies[i]
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,7 +141,8 @@ class AscendingDiatonicViewController: UIViewController {
     // MARK: - Button Actions
     
     @IBAction func playAgain(sender: UIButton){
-        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
+        changeFrequency(frequency: noteFrequency[bottomNote] * pow(2,bNoteOctave))
+        //oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
         envelope.start()
         oscillator.start()
         sleep(1)
@@ -113,7 +150,8 @@ class AscendingDiatonicViewController: UIViewController {
         sleep(1)
         
         envelope.start()
-        oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
+        changeFrequency(frequency: noteFrequency[topNote%12] * pow(2,tNoteOctave))
+        //oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
         sleep(1)
         envelope.stop()
         sleep(1)
