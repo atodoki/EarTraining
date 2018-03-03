@@ -30,7 +30,8 @@ class AscendingDiatonicViewController: UIViewController {
     var exerciseNum = 1
     
     let oscillator = AKOscillator()
-
+    var envelope: AKAmplitudeEnvelope!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +43,15 @@ class AscendingDiatonicViewController: UIViewController {
 //        oscillator.rampTime = 0.2
         oscillator.frequency = 0.0
         oscillator.amplitude = 0.5
-        AudioKit.output = oscillator
+        
+        envelope = AKAmplitudeEnvelope(oscillator)
+        envelope.attackDuration = 0.01
+        envelope.decayDuration = 0.1
+        envelope.sustainLevel = 0.1
+        envelope.releaseDuration = 0.3
+        
+        AudioKit.output = envelope
+        //AudioKit.output = oscillator
         
     }
     
@@ -51,27 +60,41 @@ class AscendingDiatonicViewController: UIViewController {
         AudioKit.start()
         
         oscillator.start()
+        envelope.start()
         
         if(topNote > 11){
             tNoteOctave = bNoteOctave + 1
         }
         
         oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
-        sleep(2)
+        sleep(1)
+        
+        envelope.stop()
+        sleep(1)
+        
+        envelope.start()
+        oscillator.start()
+        
+        
         oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
-        sleep(2)
+        sleep(1)
         
 //        for i in cMajScale{
 //            oscillator.frequency = noteFrequency[i] * pow(2,octave)
 //            sleep(1)
 //        }
+        envelope.stop()
+        sleep(1)
         oscillator.stop()
+        
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         AudioKit.stop()
+        oscillator.stop()
+        envelope.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,10 +106,17 @@ class AscendingDiatonicViewController: UIViewController {
     
     @IBAction func playAgain(sender: UIButton){
         oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
+        envelope.start()
         oscillator.start()
-        sleep(2)
+        sleep(1)
+        envelope.stop()
+        sleep(1)
+        
+        envelope.start()
         oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
-        sleep(2)
+        sleep(1)
+        envelope.stop()
+        sleep(1)
         oscillator.stop()
     }
     

@@ -24,6 +24,7 @@
 		62A16D12200F32D900C5BED3 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A16D13200F32D900C5BED3 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; };
 		62A16D14200F32D900C5BED3 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62C2C7AF20493B640069ECEC /* DescendingDiatonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2C7AE20493B640069ECEC /* DescendingDiatonicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,7 @@
 		62A16D09200F30C600C5BED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
 		62A16D10200F32D900C5BED3 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		62C2C7AE20493B640069ECEC /* DescendingDiatonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingDiatonicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		623F07D1204A21E600548DE6 /* IntervalExercises */ = {
+			isa = PBXGroup;
+			children = (
+				62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */,
+				62A0E476202BE29A002995D7 /* AscendingDiatonicViewController.swift */,
+				62C2C7AE20493B640069ECEC /* DescendingDiatonicViewController.swift */,
+				62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */,
+				62A0E48220352206002995D7 /* AscendingDSingIntervalViewController.swift */,
+			);
+			path = IntervalExercises;
+			sourceTree = "<group>";
+		};
+		623F07D2204A222400548DE6 /* ScaleExercises */ = {
+			isa = PBXGroup;
+			children = (
+				62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */,
+				62A0E48020312E7E002995D7 /* DiatonicScalesViewController.swift */,
+			);
+			path = ScaleExercises;
+			sourceTree = "<group>";
+		};
+		623F07D3204A224200548DE6 /* ChordExercises */ = {
+			isa = PBXGroup;
+			children = (
+				62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */,
+			);
+			path = ChordExercises;
+			sourceTree = "<group>";
+		};
 		62A16CF1200F30C600C5BED3 = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +133,9 @@
 				62A16D09200F30C600C5BED3 /* Info.plist */,
 				62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */,
 				62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */,
-				62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */,
-				62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */,
-				62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */,
-				62A0E476202BE29A002995D7 /* AscendingDiatonicViewController.swift */,
-				62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */,
-				62A0E48020312E7E002995D7 /* DiatonicScalesViewController.swift */,
-				62A0E48220352206002995D7 /* AscendingDSingIntervalViewController.swift */,
+				623F07D2204A222400548DE6 /* ScaleExercises */,
+				623F07D3204A224200548DE6 /* ChordExercises */,
+				623F07D1204A21E600548DE6 /* IntervalExercises */,
 			);
 			path = EarTraining;
 			sourceTree = "<group>";
@@ -194,6 +221,7 @@
 				62A0E479202BE7D4002995D7 /* ScalesTableViewController.swift in Sources */,
 				62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */,
 				62A0E47F202E852C002995D7 /* AscendingChromaticViewController.swift in Sources */,
+				62C2C7AF20493B640069ECEC /* DescendingDiatonicViewController.swift in Sources */,
 				62A0E48320352206002995D7 /* AscendingDSingIntervalViewController.swift in Sources */,
 				62A0E477202BE29A002995D7 /* AscendingDiatonicViewController.swift in Sources */,
 			);
