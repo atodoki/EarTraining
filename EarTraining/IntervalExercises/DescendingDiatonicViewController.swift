@@ -17,75 +17,75 @@ class DescendingDiatonicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func createAndStartOscillator(frequency: Double) -> AKOscillator {
-            let oscillator = AKOscillator(waveform: AKTable(.positiveTriangle))
-            oscillator.frequency = frequency
-            oscillator.start()
-            return oscillator
-        }
-        
-        let frequencies = (1...5).map{ $0 * 261.63}
-        
-        
-        let oscillators = frequencies.map {
-            createAndStartOscillator(frequency: $0)
-        }
-        
-        oscillators[0].amplitude = 1.0
-        oscillators[1].amplitude = 0.301
-        oscillators[2].amplitude = 0.177
-        oscillators[3].amplitude = 0.114
-        oscillators[4].amplitude = 0.092
-        
-        let mixer = AKMixer()
-        oscillators.forEach{mixer.connect(input: $0)}
-        
-        let envelope = AKAmplitudeEnvelope(mixer)
-        envelope.attackDuration = 0.01
-        envelope.decayDuration = 0.1
-        envelope.sustainLevel = 0.1
-        envelope.releaseDuration = 0.3
-        
-        AudioKit.output = envelope
-        AudioKit.start()
-        
-        envelope.start()
-        
-        sleep(5)
-        
-        envelope.stop()
-        sleep(1)
-        
-        oscillators[0].amplitude = 0.1
-        oscillators[1].amplitude = 1.0
-        oscillators[2].amplitude = 0.3
-        oscillators[3].amplitude = 0.15
-        oscillators[4].amplitude = 0.05
-        envelope.start()
-        sleep(5)
-        envelope.stop()
-        sleep(1)
-        
-        
-        oscillators[0].amplitude = 0.55
-        oscillators[1].amplitude = 0.5
-        oscillators[2].amplitude = 1
-        oscillators[3].amplitude = 0.2
-        oscillators[4].amplitude = 0.3
-        envelope.start()
-        sleep(5)
-        envelope.stop()
-        sleep(1)
-        
-        oscillators[0].amplitude = 1.0
-        oscillators[1].amplitude = 0.1
-        oscillators[2].amplitude = 0.35
-        oscillators[3].amplitude = 0.08
-        oscillators[4].amplitude = 0.07
-        envelope.start()
-        sleep(5)
-        envelope.stop()
-        sleep(1)
+//        func createAndStartOscillator(frequency: Double) -> AKOscillator {
+//            let oscillator = AKOscillator(waveform: AKTable(.positiveTriangle))
+//            oscillator.frequency = frequency
+//            oscillator.start()
+//            return oscillator
+//        }
+//
+//        let frequencies = (1...5).map{ $0 * 261.63}
+//
+//
+//        let oscillators = frequencies.map {
+//            createAndStartOscillator(frequency: $0)
+//        }
+//
+//        oscillators[0].amplitude = 1.0
+//        oscillators[1].amplitude = 0.301
+//        oscillators[2].amplitude = 0.177
+//        oscillators[3].amplitude = 0.114
+//        oscillators[4].amplitude = 0.092
+//
+//        let mixer = AKMixer()
+//        oscillators.forEach{mixer.connect(input: $0)}
+//
+//        let envelope = AKAmplitudeEnvelope(mixer)
+//        envelope.attackDuration = 0.01
+//        envelope.decayDuration = 0.1
+//        envelope.sustainLevel = 0.1
+//        envelope.releaseDuration = 0.3
+//
+//        AudioKit.output = envelope
+//        AudioKit.start()
+//
+//        envelope.start()
+//
+//        sleep(5)
+//
+//        envelope.stop()
+//        sleep(1)
+//
+//        oscillators[0].amplitude = 0.1
+//        oscillators[1].amplitude = 1.0
+//        oscillators[2].amplitude = 0.3
+//        oscillators[3].amplitude = 0.15
+//        oscillators[4].amplitude = 0.05
+//        envelope.start()
+//        sleep(5)
+//        envelope.stop()
+//        sleep(1)
+//
+//
+//        oscillators[0].amplitude = 0.55
+//        oscillators[1].amplitude = 0.5
+//        oscillators[2].amplitude = 1
+//        oscillators[3].amplitude = 0.2
+//        oscillators[4].amplitude = 0.3
+//        envelope.start()
+//        sleep(5)
+//        envelope.stop()
+//        sleep(1)
+//
+//        oscillators[0].amplitude = 1.0
+//        oscillators[1].amplitude = 0.1
+//        oscillators[2].amplitude = 0.35
+//        oscillators[3].amplitude = 0.08
+//        oscillators[4].amplitude = 0.07
+//        envelope.start()
+//        sleep(5)
+//        envelope.stop()
+//        sleep(1)
         
         
 
