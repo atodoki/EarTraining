@@ -10,7 +10,7 @@ import UIKit
 
 class ChordsTableViewController: UITableViewController {
     
-    var chordExercises = ["Basic Identification"]
+    var chordExercises = ["Triad Identification"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

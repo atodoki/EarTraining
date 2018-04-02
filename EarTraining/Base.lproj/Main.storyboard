@@ -603,65 +603,138 @@
             </objects>
             <point key="canvasLocation" x="463" y="1846"/>
         </scene>
-        <!--Basic Chord Identification View Controller-->
+        <!--Triad Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">
             <objects>
-                <viewController id="cMf-PG-aaJ" customClass="BasicChordIdentificationViewController" customModule="EarTraining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cMf-PG-aaJ" customClass="TriadIdentificationViewController" customModule="EarTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yFF-qe-0Sq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cfq-kI-P6L">
-                                <rect key="frame" x="62.5" y="313.5" width="250" height="100"/>
+                                <rect key="frame" x="62.5" y="263.5" width="250" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTh-CU-pzh">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="46.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Major"/>
+                                        <connections>
+                                            <action selector="majChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="GSI-lE-nGn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Bm-MIH">
-                                        <rect key="frame" x="0.0" y="52.5" width="250" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="250" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Minor"/>
+                                        <connections>
+                                            <action selector="minChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="fTR-B2-M2s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tji-GW-l6r">
+                                        <rect key="frame" x="0.0" y="102.5" width="250" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Diminished"/>
+                                        <connections>
+                                            <action selector="dimChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="Q7a-fH-Ncs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50f-98-AWx">
+                                        <rect key="frame" x="0.0" y="154" width="250" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Augmented"/>
+                                        <connections>
+                                            <action selector="augChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="ngZ-EN-i6S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="9BP-bX-gPl"/>
-                                    <constraint firstAttribute="height" constant="100" id="qhk-mC-vFW"/>
+                                    <constraint firstAttribute="height" constant="200" id="qhk-mC-vFW"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basic Chord Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Nd-MQ9">
-                                <rect key="frame" x="89" y="82" width="197" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqN-kP-VUV">
-                                <rect key="frame" x="144" y="136" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-OW-eM5">
                                 <rect key="frame" x="136" y="224" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="▶️"/>
+                                <connections>
+                                    <action selector="playAgainWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="JmU-SR-0lX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjk-7R-1av">
                                 <rect key="frame" x="212" y="224" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="⏩"/>
+                                <connections>
+                                    <action selector="nextWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="cv3-h2-DpO"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Dd-tn-g2Z">
+                                <rect key="frame" x="36" y="74" width="303" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triad Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Nd-MQ9">
+                                        <rect key="frame" x="48.5" y="0.0" width="206" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqN-kP-VUV">
+                                        <rect key="frame" x="108.5" y="31.5" width="86.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kro-P6-NBe">
+                                        <rect key="frame" x="0.0" y="52" width="303" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kya-bB-aBl">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <state key="normal" title="Piano"/>
+                                                <connections>
+                                                    <action selector="pianoWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="gj4-kl-tlv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-50-DoP">
+                                                <rect key="frame" x="53" y="0.0" width="54" height="30"/>
+                                                <state key="normal" title="Clarinet"/>
+                                                <connections>
+                                                    <action selector="clarinetWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="d6C-2A-Ebx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-Wt-BFl">
+                                                <rect key="frame" x="122" y="0.0" width="85" height="30"/>
+                                                <state key="normal" title="French Horn"/>
+                                                <connections>
+                                                    <action selector="frenchHornWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="csc-8E-eQE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-kw-2mt">
+                                                <rect key="frame" x="222" y="0.0" width="81" height="30"/>
+                                                <state key="normal" title="Pizz Strings"/>
+                                                <connections>
+                                                    <action selector="stringWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="R2N-lN-U06"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerX" secondItem="yFF-qe-0Sq" secondAttribute="centerX" id="95A-9I-kVe"/>
                             <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerY" secondItem="yFF-qe-0Sq" secondAttribute="centerY" constant="30" id="9kL-kw-ueQ"/>
+                            <constraint firstItem="5Dd-tn-g2Z" firstAttribute="centerX" secondItem="yFF-qe-0Sq" secondAttribute="centerX" id="Iga-vH-eOM"/>
+                            <constraint firstItem="5Dd-tn-g2Z" firstAttribute="top" secondItem="VyD-fm-HjB" secondAttribute="top" constant="10" id="mK8-m6-vUw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VyD-fm-HjB"/>
                     </view>
+                    <connections>
+                        <outlet property="exerciseNumLabel" destination="jqN-kP-VUV" id="hFd-rC-aRV"/>
+                        <outletCollection property="intervalButtons" destination="hTh-CU-pzh" collectionClass="NSMutableArray" id="PyT-kv-o6q"/>
+                        <outletCollection property="intervalButtons" destination="iaL-Bm-MIH" collectionClass="NSMutableArray" id="uPl-20-WN6"/>
+                        <outletCollection property="intervalButtons" destination="tji-GW-l6r" collectionClass="NSMutableArray" id="Ub0-sT-UNs"/>
+                        <outletCollection property="intervalButtons" destination="50f-98-AWx" collectionClass="NSMutableArray" id="NmH-as-iAT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A6-Fm-A4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -973,7 +1046,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="cMf-PG-aaJ" kind="show" identifier="Basic Identification" id="x47-IA-HJY"/>
+                        <segue destination="cMf-PG-aaJ" kind="show" identifier="Triad Identification" id="x47-IA-HJY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chu-Am-ASL" userLabel="First Responder" sceneMemberID="firstResponder"/>

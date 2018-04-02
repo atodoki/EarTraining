@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		623F07D5204A8BB100548DE6 /* BasicChordIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* BasicChordIdentificationViewController.swift */; };
+		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
 		62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */; };
 		62A0E471202708B2002995D7 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */; };
 		62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */; };
@@ -49,7 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		623F07D4204A8BB100548DE6 /* BasicChordIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChordIdentificationViewController.swift; sourceTree = "<group>"; };
+		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
 		62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */,
-				623F07D4204A8BB100548DE6 /* BasicChordIdentificationViewController.swift */,
+				623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */,
 			);
 			path = ChordExercises;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 				62A16CFE200F30C600C5BED3 /* AppDelegate.swift in Sources */,
 				62A0E47D202CD356002995D7 /* ChordsTableViewController.swift in Sources */,
 				62A0E479202BE7D4002995D7 /* ScalesTableViewController.swift in Sources */,
-				623F07D5204A8BB100548DE6 /* BasicChordIdentificationViewController.swift in Sources */,
+				623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */,
 				62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */,
 				62A0E47F202E852C002995D7 /* AscendingChromaticViewController.swift in Sources */,
 				62C2C7AF20493B640069ECEC /* DescendingDiatonicViewController.swift in Sources */,
