@@ -601,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-ip-n4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="1662"/>
+            <point key="canvasLocation" x="463" y="1846"/>
         </scene>
         <!--Basic Chord Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">
@@ -610,13 +610,62 @@
                     <view key="view" contentMode="scaleToFill" id="yFF-qe-0Sq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cfq-kI-P6L">
+                                <rect key="frame" x="62.5" y="313.5" width="250" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTh-CU-pzh">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Major"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Bm-MIH">
+                                        <rect key="frame" x="0.0" y="52.5" width="250" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Minor"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9BP-bX-gPl"/>
+                                    <constraint firstAttribute="height" constant="100" id="qhk-mC-vFW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basic Chord Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Nd-MQ9">
+                                <rect key="frame" x="89" y="82" width="197" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqN-kP-VUV">
+                                <rect key="frame" x="144" y="136" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-OW-eM5">
+                                <rect key="frame" x="136" y="224" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▶️"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjk-7R-1av">
+                                <rect key="frame" x="212" y="224" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="⏩"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerX" secondItem="yFF-qe-0Sq" secondAttribute="centerX" id="95A-9I-kVe"/>
+                            <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerY" secondItem="yFF-qe-0Sq" secondAttribute="centerY" constant="30" id="9kL-kw-ueQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VyD-fm-HjB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A6-Fm-A4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="1600"/>
+            <point key="canvasLocation" x="1666.4000000000001" y="1599.8500749625189"/>
         </scene>
         <!--Descending Diatonic View Controller-->
         <scene sceneID="B3U-qD-Ffx">
@@ -670,11 +719,9 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdK-sG-wlW">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
-                                                        <color key="backgroundColor" red="0.32699827500105261" green="0.74370091484918399" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 2nd">
-                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
+                                                        <state key="normal" title="Major 2nd"/>
                                                         <connections>
                                                             <action selector="majorSecondWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="T3D-XJ-LNL"/>
                                                         </connections>
@@ -757,31 +804,68 @@
                                     <constraint firstAttribute="height" constant="340" id="Mxc-13-ckv"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-bc-FMt">
-                                <rect key="frame" x="0.0" y="74" width="375" height="55"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-JH-PxH">
+                                <rect key="frame" x="29.5" y="74" width="317.5" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ascending Diatonic Intervals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSS-MT-Dbz">
-                                        <rect key="frame" x="29" y="0.0" width="317.5" height="31.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-Vs-zY8">
-                                        <rect key="frame" x="142.5" y="34.5" width="90.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-bc-FMt">
+                                        <rect key="frame" x="0.0" y="0.0" width="317.5" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ascending Diatonic Intervals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSS-MT-Dbz">
+                                                <rect key="frame" x="0.0" y="0.0" width="317.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-Vs-zY8">
+                                                <rect key="frame" x="113.5" y="34.5" width="90.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GN1-Yc-by2">
+                                        <rect key="frame" x="7.5" y="60" width="303" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxY-FV-CDE">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <state key="normal" title="Piano"/>
+                                                <connections>
+                                                    <action selector="pianoWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="G7s-FX-4TP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-Rf-dS3">
+                                                <rect key="frame" x="53" y="0.0" width="54" height="30"/>
+                                                <state key="normal" title="Clarinet"/>
+                                                <connections>
+                                                    <action selector="clarinetWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="1VC-Tr-xTp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-qt-Zwg">
+                                                <rect key="frame" x="122" y="0.0" width="85" height="30"/>
+                                                <state key="normal" title="French Horn"/>
+                                                <connections>
+                                                    <action selector="frenchHornWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="5cK-5c-z7O"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr5-RG-UY9">
+                                                <rect key="frame" x="222" y="0.0" width="81" height="30"/>
+                                                <state key="normal" title="Pizz Strings"/>
+                                                <connections>
+                                                    <action selector="stringWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="sgo-Dm-Dgg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aMW-JH-PxH" firstAttribute="top" secondItem="HTi-Po-v2r" secondAttribute="top" constant="10" id="0d6-Dh-3Ei"/>
                             <constraint firstItem="6zr-GN-jI2" firstAttribute="centerX" secondItem="qoc-0G-83j" secondAttribute="centerX" id="24R-rh-GcZ"/>
-                            <constraint firstItem="HTi-Po-v2r" firstAttribute="trailing" secondItem="xRv-bc-FMt" secondAttribute="trailing" id="518-Mi-IiY"/>
                             <constraint firstItem="6zr-GN-jI2" firstAttribute="centerY" secondItem="qoc-0G-83j" secondAttribute="centerY" constant="100" id="5z0-nW-jFb"/>
-                            <constraint firstItem="xRv-bc-FMt" firstAttribute="top" secondItem="HTi-Po-v2r" secondAttribute="top" constant="10" id="ZUu-DM-ywN"/>
-                            <constraint firstItem="xRv-bc-FMt" firstAttribute="leading" secondItem="HTi-Po-v2r" secondAttribute="leading" id="jDX-Oy-aJR"/>
+                            <constraint firstItem="aMW-JH-PxH" firstAttribute="centerX" secondItem="qoc-0G-83j" secondAttribute="centerX" id="Kaw-Hd-oMH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HTi-Po-v2r"/>
                     </view>

@@ -32,11 +32,12 @@ class AscendingDiatonicViewController: UIViewController {
     var player: AKSampler!
     var timePitch: AKTimePitch!
 
+    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        try! sampler.loadWav("../Kawai-K11-GrPiano-C4")
+        try! sampler.loadWav("../\(soundNames[0])")
 
         
         timePitch = AKTimePitch(sampler)
@@ -101,6 +102,22 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     // MARK: - Button Actions
+    
+    @IBAction func piano(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[0])")
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[1])")
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[2])")
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[3])")
+    }
     
     @IBAction func playAgain(sender: UIButton){
         sampler.play()
