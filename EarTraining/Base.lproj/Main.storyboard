@@ -581,6 +581,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-Er-vaO">
+                                <rect key="frame" x="32" y="121" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Piano"/>
+                                <connections>
+                                    <action selector="pianoWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="TLo-qv-34g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w10-R1-tml">
+                                <rect key="frame" x="93" y="121" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clarinet"/>
+                                <connections>
+                                    <action selector="clarinetWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="dOa-zZ-o8A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXt-Ug-D5R">
+                                <rect key="frame" x="279" y="121" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pizz Strings"/>
+                                <connections>
+                                    <action selector="stringWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="WxV-7j-vJC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-DJ-aTd">
+                                <rect key="frame" x="170" y="121" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="French Horn"/>
+                                <connections>
+                                    <action selector="frenchHornWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="Sfm-wf-ZSz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -601,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-ip-n4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="1846"/>
+            <point key="canvasLocation" x="461.60000000000002" y="1845.4272863568217"/>
         </scene>
         <!--Triad Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">

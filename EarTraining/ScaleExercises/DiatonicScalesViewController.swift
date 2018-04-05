@@ -15,6 +15,8 @@ class DiatonicScalesViewController: UIViewController {
     @IBOutlet var scaleButtons: [UIButton]!
     
     let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
+    let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+
     
     let majorScale = [0,2,4,5,7,9,11,12]
     let naturalMinorScale = [0,2,3,5,7,8,10,12]
@@ -26,22 +28,31 @@ class DiatonicScalesViewController: UIViewController {
     
     var scaleType = 0
     var firstNote = 0
-    var octave = 4.0
+
+    let sampler = AKSampler()
+    var player: AKSampler!
+    var timePitch: AKTimePitch!
     
-    let oscillator = AKOscillator()
+    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        try! sampler.loadWav("../\(soundNames[0])")
+        
+        
+        timePitch = AKTimePitch(sampler)
+        timePitch.rate = 2.0
+        timePitch.pitch = 0.0
+        timePitch.overlap = 8.0
+        
+        AudioKit.output = timePitch
 
         // Do any additional setup after loading the view.
         scaleList.append(majorScale)
         scaleList.append(naturalMinorScale)
         scaleList.append(harmonicMinorScale)
         scaleList.append(melodicMinorScale)
-        
-        oscillator.frequency = 0.0
-        oscillator.amplitude = 0.5
-        AudioKit.output = oscillator
         
         scaleType = Int(arc4random_uniform(4))
         firstNote = Int(arc4random_uniform(12))
@@ -62,18 +73,15 @@ class DiatonicScalesViewController: UIViewController {
     
     func playScale(scale: Array<Int>){
         
-        var octaveChange = false
         for i in scale{
             let noteIndex = firstNote+i
-            if(!octaveChange && (noteIndex > 11)){
-                octave += 1
-                octaveChange = true
-            }
-            oscillator.frequency = noteFrequency[noteIndex%12] * pow(2,octave)
-            oscillator.start()
+            
+            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
+            sampler.play()
+
             sleep(1)
         }
-        oscillator.stop()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,9 +105,24 @@ class DiatonicScalesViewController: UIViewController {
         
         scaleType = Int(arc4random_uniform(4))
         firstNote = Int(arc4random_uniform(12))
-        octave = 4.0
         
         
+    }
+    
+    @IBAction func piano(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[0])")
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[1])")
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[2])")
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[3])")
     }
     
     @IBAction func major(sender: UIButton){
