@@ -10,7 +10,14 @@ import UIKit
 
 class IntervalTableViewController: UITableViewController {
     
-    var intervalExercises = ["Ascending Diatonic", "Descending Diatonic", "Ascending Chromatic", "Descending Chromatic", "Ascending Sing Interval"]
+//    var intervalExercises = ["Ascending Diatonic", "Descending Diatonic", "Ascending Chromatic", "Descending Chromatic", "Ascending Sing Interval"]
+    
+    var intervalExercises = [
+    ["Ascending Diatonic", "Descending Diatonic", "Ascending Sing Interval"],
+    ["Ascending Chromatic", "Descending Chromatic"]
+    ]
+    
+    var headers = ["Diatonic", "Chromatic"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +38,25 @@ class IntervalTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = headers[section]
+        label.backgroundColor = UIColor.lightGray
+        return label
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return intervalExercises.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return intervalExercises.count
+        return intervalExercises[section].count
     }
 
     
@@ -48,13 +66,13 @@ class IntervalTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ExerciseTableViewCell
         
         // Configure the cell...
-        cell.nameLabel?.text = intervalExercises[indexPath.row]
+        cell.nameLabel?.text = intervalExercises[indexPath.section][indexPath.row]
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: intervalExercises[indexPath.row], sender: self)
+        performSegue(withIdentifier: intervalExercises[indexPath.section][indexPath.row], sender: self)
     }
     
 
