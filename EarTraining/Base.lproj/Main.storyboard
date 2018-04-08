@@ -952,9 +952,209 @@
                     <view key="view" contentMode="scaleToFill" id="toc-1G-QA7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6v5-KP-ZFC">
+                                <rect key="frame" x="21.5" y="74" width="332.5" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-Uh-pGb">
+                                        <rect key="frame" x="0.0" y="0.0" width="332.5" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descending Diatonic Intervals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEs-iI-kaV">
+                                                <rect key="frame" x="0.0" y="0.0" width="332.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-rP-bvw">
+                                                <rect key="frame" x="121" y="34.5" width="90.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pKS-vS-MFn">
+                                        <rect key="frame" x="15" y="60" width="303" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuG-Ng-rRY">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <state key="normal" title="Piano"/>
+                                                <connections>
+                                                    <action selector="pianoWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="AUC-Ow-z3c"/>
+                                                    <action selector="pianoWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="kUg-oT-hwN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-HG-LH3">
+                                                <rect key="frame" x="53" y="0.0" width="54" height="30"/>
+                                                <state key="normal" title="Clarinet"/>
+                                                <connections>
+                                                    <action selector="clarinetWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="0dM-2h-fLg"/>
+                                                    <action selector="clarinetWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="LY1-o7-Nx6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rah-DT-5Tx">
+                                                <rect key="frame" x="122" y="0.0" width="85" height="30"/>
+                                                <state key="normal" title="French Horn"/>
+                                                <connections>
+                                                    <action selector="frenchHornWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="GAD-1Q-vqX"/>
+                                                    <action selector="frenchHornWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="cmc-aB-80M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZd-SS-v2U">
+                                                <rect key="frame" x="222" y="0.0" width="81" height="30"/>
+                                                <state key="normal" title="Pizz Strings"/>
+                                                <connections>
+                                                    <action selector="stringWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="f6t-UF-DL6"/>
+                                                    <action selector="stringWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="szk-8h-ZZK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2RV-l3-EdO">
+                                <rect key="frame" x="35" y="263.5" width="305" height="340"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4iG-oo-Zkc">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="250"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c6g-ci-ePg">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bN-2G-jLM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Major 2nd"/>
+                                                        <connections>
+                                                            <action selector="majorSecondWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="Glg-le-51R"/>
+                                                            <action selector="majorSecondWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="uFu-n1-YMa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peu-i0-h6y">
+                                                        <rect key="frame" x="0.0" y="85" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Perfect 4th"/>
+                                                        <connections>
+                                                            <action selector="perfectFourthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="68G-Vj-N5q"/>
+                                                            <action selector="perfectFourthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="BBN-OX-gFJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDF-4H-3v7">
+                                                        <rect key="frame" x="0.0" y="170" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Major 6th"/>
+                                                        <connections>
+                                                            <action selector="majorSixthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="V8l-uZ-qqJ"/>
+                                                            <action selector="majorSixthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="vm0-fA-U4c"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="bgH-i4-3bv"/>
+                                                    <constraint firstAttribute="width" constant="150" id="q8G-cE-d8d"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NfF-Cu-7TK">
+                                                <rect key="frame" x="155" y="0.0" width="150" height="250"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-3g-tsD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Major 3rd"/>
+                                                        <connections>
+                                                            <action selector="majorThirdWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="Ot1-g9-l3n"/>
+                                                            <action selector="majorThirdWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="xf1-Cw-R4t"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCH-GU-mw6">
+                                                        <rect key="frame" x="0.0" y="85" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Perfect 5th"/>
+                                                        <connections>
+                                                            <action selector="perfectFifthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="AwL-Ip-Nfp"/>
+                                                            <action selector="perfectFifthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="f7N-zk-WkU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-1z-hQf">
+                                                        <rect key="frame" x="0.0" y="170" width="150" height="80"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <state key="normal" title="Major 7th"/>
+                                                        <connections>
+                                                            <action selector="majorSeventhWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="XRK-Y2-pWM"/>
+                                                            <action selector="majorSeventhWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="bQy-bd-8RH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="Da2-TA-Flt"/>
+                                                    <constraint firstAttribute="width" constant="150" id="IKL-Hu-JqF"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="c6g-ci-ePg" secondAttribute="bottom" id="0Nk-gd-L9G"/>
+                                            <constraint firstItem="c6g-ci-ePg" firstAttribute="leading" secondItem="4iG-oo-Zkc" secondAttribute="leading" id="69N-1g-pnc"/>
+                                            <constraint firstAttribute="bottom" secondItem="NfF-Cu-7TK" secondAttribute="bottom" id="MfJ-zk-Box"/>
+                                            <constraint firstItem="c6g-ci-ePg" firstAttribute="top" secondItem="4iG-oo-Zkc" secondAttribute="top" id="dDp-lL-Vk5"/>
+                                            <constraint firstItem="NfF-Cu-7TK" firstAttribute="top" secondItem="4iG-oo-Zkc" secondAttribute="top" id="qYt-Vk-kHF"/>
+                                            <constraint firstAttribute="trailing" secondItem="NfF-Cu-7TK" secondAttribute="trailing" id="t8t-hR-JMz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-1V-xI9">
+                                        <rect key="frame" x="0.0" y="255" width="305" height="85"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Octave"/>
+                                        <connections>
+                                            <action selector="octaveWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="TQ5-dK-clK"/>
+                                            <action selector="octaveWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="bpa-hT-juN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="EOi-Eg-kIH"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otg-bU-RED">
+                                <rect key="frame" x="137" y="192" width="34" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="▶️"/>
+                                <connections>
+                                    <action selector="playAgainWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="icb-Ui-9MV"/>
+                                    <action selector="playAgainWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="yMT-Kk-97P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srf-kw-1AG">
+                                <rect key="frame" x="189" y="192" width="34" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="⏩"/>
+                                <connections>
+                                    <action selector="nextWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="McC-80-nxj"/>
+                                    <action selector="nextWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="aXw-cd-7q0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2RV-l3-EdO" firstAttribute="centerX" secondItem="toc-1G-QA7" secondAttribute="centerX" id="5hA-Yp-FTf"/>
+                            <constraint firstItem="6v5-KP-ZFC" firstAttribute="top" secondItem="hva-ry-eih" secondAttribute="top" constant="10" id="EJA-Oa-MWe"/>
+                            <constraint firstItem="6v5-KP-ZFC" firstAttribute="centerX" secondItem="toc-1G-QA7" secondAttribute="centerX" id="b5J-AH-6Am"/>
+                            <constraint firstItem="2RV-l3-EdO" firstAttribute="centerY" secondItem="toc-1G-QA7" secondAttribute="centerY" constant="100" id="coe-q2-oLA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hva-ry-eih"/>
                     </view>
+                    <connections>
+                        <outlet property="exerciseNumLabel" destination="N0e-rP-bvw" id="nZp-ri-PH2"/>
+                        <outletCollection property="intervalButtons" destination="8bN-2G-jLM" collectionClass="NSMutableArray" id="dZV-9c-MmC"/>
+                        <outletCollection property="intervalButtons" destination="g1P-3g-tsD" collectionClass="NSMutableArray" id="ptw-np-Jmp"/>
+                        <outletCollection property="intervalButtons" destination="Peu-i0-h6y" collectionClass="NSMutableArray" id="dci-1H-TzS"/>
+                        <outletCollection property="intervalButtons" destination="tCH-GU-mw6" collectionClass="NSMutableArray" id="J18-ZF-B0j"/>
+                        <outletCollection property="intervalButtons" destination="PDF-4H-3v7" collectionClass="NSMutableArray" id="tlI-N4-kN7"/>
+                        <outletCollection property="intervalButtons" destination="cI8-1z-hQf" collectionClass="NSMutableArray" id="z6k-Ws-XKB"/>
+                        <outletCollection property="intervalButtons" destination="pLe-1V-xI9" collectionClass="NSMutableArray" id="y7a-d0-FpD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRh-Bb-rrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

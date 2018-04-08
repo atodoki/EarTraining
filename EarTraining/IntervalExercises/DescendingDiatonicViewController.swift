@@ -14,110 +14,180 @@ import AudioKitUI
 
 class DescendingDiatonicViewController: UIViewController {
 
+    @IBOutlet var intervalButtons: [UIButton]!
+    @IBOutlet var exerciseNumLabel: UILabel!
+    
+    let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    
+    let diatonicIntervals = [2,4,5,7,9,11,12]
+    
+    var bNoteOctave = 4
+    var tNoteOctave = 4
+    
+    var bottomNote = 0
+    var topNote = 0
+    var randomIndex = 0
+    
+    var exerciseNum = 1
+    
+    
+    let sampler = AKSampler()
+    var timePitch: AKTimePitch!
+    
+    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        func createAndStartOscillator(frequency: Double) -> AKOscillator {
-//            let oscillator = AKOscillator(waveform: AKTable(.positiveTriangle))
-//            oscillator.frequency = frequency
-//            oscillator.start()
-//            return oscillator
-//        }
-//
-//        let frequencies = (1...5).map{ $0 * 261.63}
-//
-//
-//        let oscillators = frequencies.map {
-//            createAndStartOscillator(frequency: $0)
-//        }
-//
-//        oscillators[0].amplitude = 1.0
-//        oscillators[1].amplitude = 0.301
-//        oscillators[2].amplitude = 0.177
-//        oscillators[3].amplitude = 0.114
-//        oscillators[4].amplitude = 0.092
-//
-//        let mixer = AKMixer()
-//        oscillators.forEach{mixer.connect(input: $0)}
-//
-//        let envelope = AKAmplitudeEnvelope(mixer)
-//        envelope.attackDuration = 0.01
-//        envelope.decayDuration = 0.1
-//        envelope.sustainLevel = 0.1
-//        envelope.releaseDuration = 0.3
-//
-//        AudioKit.output = envelope
-//        AudioKit.start()
-//
-//        envelope.start()
-//
-//        sleep(5)
-//
-//        envelope.stop()
-//        sleep(1)
-//
-//        oscillators[0].amplitude = 0.1
-//        oscillators[1].amplitude = 1.0
-//        oscillators[2].amplitude = 0.3
-//        oscillators[3].amplitude = 0.15
-//        oscillators[4].amplitude = 0.05
-//        envelope.start()
-//        sleep(5)
-//        envelope.stop()
-//        sleep(1)
-//
-//
-//        oscillators[0].amplitude = 0.55
-//        oscillators[1].amplitude = 0.5
-//        oscillators[2].amplitude = 1
-//        oscillators[3].amplitude = 0.2
-//        oscillators[4].amplitude = 0.3
-//        envelope.start()
-//        sleep(5)
-//        envelope.stop()
-//        sleep(1)
-//
-//        oscillators[0].amplitude = 1.0
-//        oscillators[1].amplitude = 0.1
-//        oscillators[2].amplitude = 0.35
-//        oscillators[3].amplitude = 0.08
-//        oscillators[4].amplitude = 0.07
-//        envelope.start()
-//        sleep(5)
-//        envelope.stop()
-//        sleep(1)
+        try! sampler.loadWav("../\(soundNames[0])")
         
         
-
-//        // Do any additional setup after loading the view.
-//
-//
-//
-//        let flute = AKFlute()
-//        //let oscillator = AKOscillator()
-//        //AudioKit.output = flute
-////        flute.start()
-//        flute.frequency = 440.0
-//        //flute.trigger(frequency: 440.0)
-//
-//
-////        let filter = AKLowPassFilter(oscillator, cutoffFrequency: 22000.0, resonance: 0.2)
-//        let envelope = AKAmplitudeEnvelope(flute)
-//        envelope.attackDuration = 0.1
-//        envelope.decayDuration = 0.1
-//        envelope.sustainLevel = 0.1
-//        envelope.releaseDuration = 0.3
-//
-//        AudioKit.output = envelope
-//        AudioKit.start()
-//        envelope.start()
-//        flute.start()
-//        //oscillator.start()
+        timePitch = AKTimePitch(sampler)
+        timePitch.rate = 2.0
+        timePitch.pitch = 0.0
+        timePitch.overlap = 8.0
+        
+        AudioKit.output = timePitch
+        
+        setInterval()
+        
     }
-
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AudioKit.start()
+        
+    }
+ 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioKit.stop()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setInterval(){
+        topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
+        bottomNote = topNote - diatonicIntervals[randomIndex]// random number diatonic interval from topNote
+        tNoteOctave = Int(arc4random_uniform(3))+3
+        bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
+        bottomNote += 12
+    }
+    
+    func playInterval(){
+        timePitch.pitch = noteCents[topNote] + octaveChange[tNoteOctave]
+        sampler.play()
+        sleep(1)
+        
+        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+        
+        sampler.play()
+    }
+    
+    func checkAnswer(sender: UIButton, interval: Int){
+        if(diatonicIntervals[randomIndex] == interval){
+            sender.backgroundColor = UIColor.green
+            for b in intervalButtons{
+                b.isEnabled = false
+            }
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+    }
+    
+    // MARK: - Button Actions
+    
+    @IBAction func piano(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[0])")
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[1])")
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[2])")
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[3])")
+    }
+    
+    @IBAction func playAgain(sender: UIButton){
+        timePitch.pitch = noteCents[topNote] + octaveChange[tNoteOctave]
+        sampler.play()
+        sleep(1)
+        
+        timePitch.pitch = noteCents[bottomNote%12] + octaveChange[bNoteOctave]
+        
+        sampler.play()
+        
+    }
+    
+    @IBAction func next(sender: UIButton){
+        
+        // MAKE BUTTON BACKGROUNDS GO BACK TO NORMAL
+        for b in intervalButtons{
+            b.backgroundColor = UIColor.white
+            b.isEnabled = true
+        }
+        
+        setInterval()
+        
+        exerciseNum += 1
+        
+        exerciseNumLabel.text = "Exercise #\(exerciseNum)"
+        
+    }
+    
+    
+    @IBAction func majorSecond(sender: UIButton){
+        // Button turns green if the interval played is a major second, turns red if not
+        checkAnswer(sender: sender, interval: 2)
+
+    }
+
+    @IBAction func majorThird(sender: UIButton){
+        // Button turns green if the interval played is a major third, turns red if not
+        checkAnswer(sender: sender, interval: 4)
+
+    }
+
+    @IBAction func perfectFourth(sender: UIButton){
+        // Button turns green if the interval played is a perfect fourth, turns red if not
+        checkAnswer(sender: sender, interval: 5)
+
+    }
+
+    @IBAction func perfectFifth(sender: UIButton){
+        // Button turns green if the interval played is a perfect fifth, turns red if not
+        checkAnswer(sender: sender, interval: 7)
+
+    }
+
+    @IBAction func majorSixth(sender: UIButton){
+        // Button turns green if the interval played is a major sixth, turns red if not
+        checkAnswer(sender: sender, interval: 9)
+    }
+
+    @IBAction func majorSeventh(sender: UIButton){
+        // Button turns green if the interval played is a major seventh, turns red if not
+        checkAnswer(sender: sender, interval: 11)
+
+    }
+
+    @IBAction func octave(sender: UIButton){
+        // Button turns green if the interval played is an octave, turns red if not
+        checkAnswer(sender: sender, interval: 12)
+
     }
 
 

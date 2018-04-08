@@ -60,14 +60,6 @@ class AscendingChromaticViewController: UIViewController {
         
     }
     
-    func setInterval(){
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
-        topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
-        bNoteOctave = Int(arc4random_uniform(3))+2
-        tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
-        
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -80,6 +72,15 @@ class AscendingChromaticViewController: UIViewController {
     }
     
     // MARK: - Defined Functions
+    
+    func setInterval(){
+        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
+        topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
+        bNoteOctave = Int(arc4random_uniform(3))+2
+        tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
+        
+    }
     
     func playInterval(){
         timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
