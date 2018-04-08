@@ -19,46 +19,53 @@ class AscendingChromaticViewController: UIViewController {
     let noteNameSharps = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     let noteNameFlats = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
     
-    var bNoteOctave = 4.0
-    var tNoteOctave = 4.0
+    var bNoteOctave = 4
+    var tNoteOctave = 4
     
     var bottomNote = 0
     var topNote = 0
-    var randomIndex = 0
-    
+    var intervalSize = 0
     var exerciseNum = 1;
     
-    let oscillator = AKOscillator()
+    let sampler = AKSampler()
+    var timePitch: AKTimePitch!
+    
+    let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    
+    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    
+    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(11))+1 // random number 1<n<11
-        topNote = bottomNote + randomIndex // random number chromatic interval from bottom note
         
-        oscillator.frequency = 0.0
-        oscillator.amplitude = 0.5
-        AudioKit.output = oscillator
+        try! sampler.loadWav("../\(soundNames[0])")
+        
+        timePitch = AKTimePitch(sampler)
+        timePitch.rate = 2.0
+        timePitch.pitch = 0.0
+        timePitch.overlap = 8.0
+        
+        AudioKit.output = timePitch
+        
+        setInterval()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         AudioKit.start()
         
-        oscillator.start()
-        
-        if(topNote > 11){
-            tNoteOctave = bNoteOctave + 1
-        }
-        
-        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
-        sleep(2)
-        oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
-        sleep(2)
-        
-        oscillator.stop()
+    }
+    
+    func setInterval(){
+        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
+        topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
+        bNoteOctave = Int(arc4random_uniform(3))+2
+        tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
         
     }
     
@@ -72,176 +79,135 @@ class AscendingChromaticViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Defined Functions
+    
+    func playInterval(){
+        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+        sampler.play()
+        sleep(1)
+        
+        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
+        sampler.play()
+    }
+    
+    func checkAnswer(sender: UIButton, interval: Int){
+        if(topNote - bottomNote == interval){
+            sender.backgroundColor = UIColor.green
+            for b in intervalButtons{
+                b.isEnabled = false
+            }
+        }
+        else{
+            sender.backgroundColor = UIColor.red
+        }
+    }
+    
     // MARK: - Button Actions
     
+    @IBAction func piano(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[0])")
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[1])")
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[2])")
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[3])")
+    }
+    
     @IBAction func playAgain(sender: UIButton){
-        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
-        oscillator.start()
-        sleep(2)
-        oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
-        sleep(2)
-        oscillator.stop()
+        playInterval()
     }
     
     @IBAction func next(sender: UIButton){
         // Reset interval button background color
         for b in intervalButtons{
             b.backgroundColor = UIColor.white
+            b.isEnabled = true
         }
         
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(11)) + 1 // random number 1<n<11
-        topNote = bottomNote + randomIndex // random number diatonic interval from bottomNote
-        
-        if(topNote > 11){
-            tNoteOctave = bNoteOctave + 1
-        } else {
-            tNoteOctave = bNoteOctave
-        }
+        setInterval()
         
         exerciseNum += 1
         
         exerciseNumLabel.text = "Exercise #\(exerciseNum)"
-        
-//        oscillator.frequency = noteFrequency[bottomNote] * pow(2,bNoteOctave)
-//        oscillator.start()
-//        sleep(2)
-//        oscillator.frequency = noteFrequency[topNote%12] * pow(2,tNoteOctave)
-//        sleep(2)
-//        oscillator.stop()
-        
-        
+   
     }
 
     
     @IBAction func minorSecond(sender: UIButton){
         // Button turns green if the interval played is a minor second, turns red if not
-        if(topNote - bottomNote == 1){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 1)
     }
     
     @IBAction func majorSecond(sender: UIButton){
         // Button turns green if the interval played is a major second, turns red if not
-        if(topNote - bottomNote == 2){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 2)
         
     }
     
     @IBAction func minorThird(sender: UIButton){
         // Button turns green if the interval played is a minor third, turns red if not
-        if(topNote - bottomNote == 3){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 3)
         
     }
     
     @IBAction func majorThird(sender: UIButton){
         // Button turns green if the interval played is a major third, turns red if not
-        if(topNote - bottomNote == 4){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 4)
         
     }
     
     @IBAction func perfectFourth(sender: UIButton){
         // Button turns green if the interval played is a perfect fourth, turns red if not
-        if(topNote - bottomNote == 5){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 5)
         
     }
     
     @IBAction func tritone(sender: UIButton){
         // Button turns green if the interval played is a tritone, turns red if not
-        if(topNote - bottomNote == 6){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 6)
         
     }
     
     @IBAction func perfectFifth(sender: UIButton){
         // Button turns green if the interval played is a perfect fifth, turns red if not
-        if(topNote - bottomNote == 7){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 7)
         
     }
     
     @IBAction func minorSixth(sender: UIButton){
         // Button turns green if the interval played is a minor sixth, turns red if not
-        if(topNote - bottomNote == 8){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 8)
         
     }
     
     @IBAction func majorSixth(sender: UIButton){
         // Button turns green if the interval played is a major sixth, turns red if not
-        if(topNote - bottomNote == 9){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 9)
         
     }
     
     @IBAction func minorSeventh(sender: UIButton){
         // Button turns green if the interval played is a minor seventh, turns red if not
-        if(topNote - bottomNote == 10){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 10)
         
     }
     
     @IBAction func majorSeventh(sender: UIButton){
         // Button turns green if the interval played is a major seventh, turns red if not
-        if(topNote - bottomNote == 11){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 11)
         
     }
     
     @IBAction func octave(sender: UIButton){
         // Button turns green if the interval played is an octave, turns red if not
-        if(topNote - bottomNote == 12){
-            sender.backgroundColor = UIColor.green
-        }
-        else{
-            sender.backgroundColor = UIColor.red
-        }
+        checkAnswer(sender: sender, interval: 12)
         
     }
     
