@@ -17,10 +17,13 @@ class AscendingDiatonicViewController: UIViewController {
     
     //let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     let diatonicIntervals = [2,4,5,7,9,11,12]
-
     
+    var bNoteOctave = 4
+    var tNoteOctave = 4
+
     var bottomNote = 0
     var topNote = 0
     var randomIndex = 0
@@ -29,7 +32,6 @@ class AscendingDiatonicViewController: UIViewController {
     
     
     let sampler = AKSampler()
-    var player: AKSampler!
     var timePitch: AKTimePitch!
 
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
@@ -47,12 +49,7 @@ class AscendingDiatonicViewController: UIViewController {
         
         AudioKit.output = timePitch
         
-        
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
-        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
-        
-        
+        setInterval()
     }
     
 
@@ -60,23 +57,9 @@ class AscendingDiatonicViewController: UIViewController {
         super.viewDidAppear(animated)
         AudioKit.start()
         
-        sampler.play()
-        timePitch.pitch = noteCents[bottomNote]
-        
-        sleep(1)
-       
-        if(topNote > 11){
-            timePitch.pitch = noteCents[topNote%12] + 1200.0
-        } else{
-            timePitch.pitch = noteCents[topNote]
-        }
-        sampler.play()
-        
-        
     }
     
 
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         AudioKit.stop()
@@ -88,11 +71,29 @@ class AscendingDiatonicViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    func setInterval(){
+        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
+        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
+        bNoteOctave = Int(arc4random_uniform(3))+2
+        tNoteOctave = topNote > 11 ? bNoteOctave + 1 : bNoteOctave
+        
+    }
+    
+    func playInterval(){
+        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+        sampler.play()
+        sleep(1)
+        
+        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
+        sampler.play()
+    }
+    
     func checkAnswer(sender: UIButton, interval: Int){
         if(topNote - bottomNote == interval){
             sender.backgroundColor = UIColor.green
             for b in intervalButtons{
-                //b.alpha = 0.5
                 b.isEnabled = false
             }
         }
@@ -120,17 +121,7 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     @IBAction func playAgain(sender: UIButton){
-        sampler.play()
-        timePitch.pitch = noteCents[bottomNote]
-        sleep(1)
-        
-        if(topNote > 11){
-            timePitch.pitch = noteCents[topNote%12] + 1200.0
-        } else{
-            timePitch.pitch = noteCents[topNote]
-        }
-        sampler.play()
-        
+        playInterval()
     }
     
     @IBAction func next(sender: UIButton){
@@ -141,9 +132,7 @@ class AscendingDiatonicViewController: UIViewController {
             b.isEnabled = true
         }
         
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
-        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
+        setInterval()
         
         exerciseNum += 1
         
