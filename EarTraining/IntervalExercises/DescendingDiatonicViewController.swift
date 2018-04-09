@@ -95,6 +95,7 @@ class DescendingDiatonicViewController: UIViewController {
         if(diatonicIntervals[randomIndex] == interval){
             sender.backgroundColor = UIColor.green
             for b in intervalButtons{
+                b.alpha = 0.75
                 b.isEnabled = false
             }
         }
@@ -131,6 +132,7 @@ class DescendingDiatonicViewController: UIViewController {
         // MAKE BUTTON BACKGROUNDS GO BACK TO NORMAL
         for b in intervalButtons{
             b.backgroundColor = UIColor.white
+            b.alpha = 1.0
             b.isEnabled = true
         }
         

@@ -525,7 +525,7 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TN7-If-4O5" firstAttribute="top" secondItem="jdd-Ec-7dG" secondAttribute="top" constant="10" id="0gL-7x-a2o"/>
                             <constraint firstItem="Dxz-wK-dxN" firstAttribute="top" secondItem="zmS-qq-huF" secondAttribute="bottom" constant="70" id="F9U-eq-E39"/>
@@ -592,32 +592,44 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-ix-jhI">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="75"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Major"/>
+                                                <state key="normal" title="Major">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="majorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="mqA-SG-BmN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-4U-CHC">
                                                 <rect key="frame" x="0.0" y="75" width="250" height="75"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Natural Minor"/>
+                                                <state key="normal" title="Natural Minor">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="naturalMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="zXE-1T-Zgo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0f-R2-1ec">
                                                 <rect key="frame" x="0.0" y="150" width="250" height="75"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Harmonic Minor"/>
+                                                <state key="normal" title="Harmonic Minor">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="harmonicMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="YnS-oO-1BL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raK-X1-5xa">
                                                 <rect key="frame" x="0.0" y="225" width="250" height="75"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Melodic Minor"/>
+                                                <state key="normal" title="Melodic Minor">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="melodicMinorWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="gR6-w8-AyG"/>
                                                 </connections>
@@ -639,7 +651,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-Er-vaO">
                                 <rect key="frame" x="32" y="121" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Piano"/>
+                                <state key="normal" title="Piano">
+                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pianoWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="TLo-qv-34g"/>
                                 </connections>
@@ -647,7 +661,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w10-R1-tml">
                                 <rect key="frame" x="93" y="121" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clarinet"/>
+                                <state key="normal" title="Clarinet">
+                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="clarinetWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="dOa-zZ-o8A"/>
                                 </connections>
@@ -655,7 +671,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXt-Ug-D5R">
                                 <rect key="frame" x="279" y="121" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pizz Strings"/>
+                                <state key="normal" title="Pizz Strings">
+                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="stringWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="WxV-7j-vJC"/>
                                 </connections>
@@ -663,13 +681,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-DJ-aTd">
                                 <rect key="frame" x="170" y="121" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="French Horn"/>
+                                <state key="normal" title="French Horn">
+                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="frenchHornWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="Sfm-wf-ZSz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lKL-3Q-IbT" firstAttribute="leading" secondItem="iEu-77-yHw" secondAttribute="leading" id="23c-MD-Tg3"/>
                             <constraint firstItem="xsN-ZQ-1z8" firstAttribute="centerX" secondItem="0fT-Vf-qpN" secondAttribute="centerX" id="UGk-0t-o5Q"/>
@@ -703,32 +723,44 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTh-CU-pzh">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="46.5"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Major"/>
+                                        <state key="normal" title="Major">
+                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="majChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="GSI-lE-nGn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Bm-MIH">
                                         <rect key="frame" x="0.0" y="51.5" width="250" height="46"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Minor"/>
+                                        <state key="normal" title="Minor">
+                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="minChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="fTR-B2-M2s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tji-GW-l6r">
                                         <rect key="frame" x="0.0" y="102.5" width="250" height="46.5"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Diminished"/>
+                                        <state key="normal" title="Diminished">
+                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="dimChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="Q7a-fH-Ncs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50f-98-AWx">
                                         <rect key="frame" x="0.0" y="154" width="250" height="46"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Augmented"/>
+                                        <state key="normal" title="Augmented">
+                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="augChordWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="ngZ-EN-i6S"/>
                                         </connections>
@@ -775,28 +807,36 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kya-bB-aBl">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
-                                                <state key="normal" title="Piano"/>
+                                                <state key="normal" title="Piano">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pianoWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="gj4-kl-tlv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-50-DoP">
                                                 <rect key="frame" x="53" y="0.0" width="54" height="30"/>
-                                                <state key="normal" title="Clarinet"/>
+                                                <state key="normal" title="Clarinet">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="clarinetWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="d6C-2A-Ebx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-Wt-BFl">
                                                 <rect key="frame" x="122" y="0.0" width="85" height="30"/>
-                                                <state key="normal" title="French Horn"/>
+                                                <state key="normal" title="French Horn">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="frenchHornWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="csc-8E-eQE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-kw-2mt">
                                                 <rect key="frame" x="222" y="0.0" width="81" height="30"/>
-                                                <state key="normal" title="Pizz Strings"/>
+                                                <state key="normal" title="Pizz Strings">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="stringWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="R2N-lN-U06"/>
                                                 </connections>
@@ -806,7 +846,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerX" secondItem="yFF-qe-0Sq" secondAttribute="centerX" id="95A-9I-kVe"/>
                             <constraint firstItem="Cfq-kI-P6L" firstAttribute="centerY" secondItem="yFF-qe-0Sq" secondAttribute="centerY" constant="30" id="9kL-kw-ueQ"/>
@@ -961,7 +1001,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dWR-Ac-PHo" firstAttribute="top" secondItem="ka5-nQ-eeg" secondAttribute="top" constant="5" id="J6k-4A-iGO"/>
                             <constraint firstItem="Lov-Tz-pZL" firstAttribute="centerY" secondItem="a9v-z0-lIF" secondAttribute="centerY" constant="20" id="QoO-66-LSM"/>
@@ -1023,7 +1063,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuG-Ng-rRY">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
-                                                <state key="normal" title="Piano"/>
+                                                <state key="normal" title="Piano">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pianoWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="AUC-Ow-z3c"/>
                                                     <action selector="pianoWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="kUg-oT-hwN"/>
@@ -1031,7 +1073,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-HG-LH3">
                                                 <rect key="frame" x="53" y="0.0" width="54" height="30"/>
-                                                <state key="normal" title="Clarinet"/>
+                                                <state key="normal" title="Clarinet">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="clarinetWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="0dM-2h-fLg"/>
                                                     <action selector="clarinetWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="LY1-o7-Nx6"/>
@@ -1039,7 +1083,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rah-DT-5Tx">
                                                 <rect key="frame" x="122" y="0.0" width="85" height="30"/>
-                                                <state key="normal" title="French Horn"/>
+                                                <state key="normal" title="French Horn">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="frenchHornWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="GAD-1Q-vqX"/>
                                                     <action selector="frenchHornWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="cmc-aB-80M"/>
@@ -1047,7 +1093,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZd-SS-v2U">
                                                 <rect key="frame" x="222" y="0.0" width="81" height="30"/>
-                                                <state key="normal" title="Pizz Strings"/>
+                                                <state key="normal" title="Pizz Strings">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="stringWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="f6t-UF-DL6"/>
                                                     <action selector="stringWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="szk-8h-ZZK"/>
@@ -1070,7 +1118,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 2nd"/>
+                                                        <state key="normal" title="Major 2nd">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorSecondWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="Glg-le-51R"/>
                                                             <action selector="majorSecondWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="uFu-n1-YMa"/>
@@ -1078,8 +1128,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peu-i0-h6y">
                                                         <rect key="frame" x="0.0" y="85" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Perfect 4th"/>
+                                                        <state key="normal" title="Perfect 4th">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="perfectFourthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="68G-Vj-N5q"/>
                                                             <action selector="perfectFourthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="BBN-OX-gFJ"/>
@@ -1087,8 +1140,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDF-4H-3v7">
                                                         <rect key="frame" x="0.0" y="170" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 6th"/>
+                                                        <state key="normal" title="Major 6th">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorSixthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="V8l-uZ-qqJ"/>
                                                             <action selector="majorSixthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="vm0-fA-U4c"/>
@@ -1105,8 +1161,11 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-3g-tsD">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 3rd"/>
+                                                        <state key="normal" title="Major 3rd">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorThirdWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="Ot1-g9-l3n"/>
                                                             <action selector="majorThirdWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="xf1-Cw-R4t"/>
@@ -1114,8 +1173,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCH-GU-mw6">
                                                         <rect key="frame" x="0.0" y="85" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Perfect 5th"/>
+                                                        <state key="normal" title="Perfect 5th">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="perfectFifthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="AwL-Ip-Nfp"/>
                                                             <action selector="perfectFifthWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="f7N-zk-WkU"/>
@@ -1123,8 +1185,11 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-1z-hQf">
                                                         <rect key="frame" x="0.0" y="170" width="150" height="80"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 7th"/>
+                                                        <state key="normal" title="Major 7th">
+                                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorSeventhWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="XRK-Y2-pWM"/>
                                                             <action selector="majorSeventhWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="bQy-bd-8RH"/>
@@ -1148,8 +1213,11 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-1V-xI9">
                                         <rect key="frame" x="0.0" y="255" width="305" height="85"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Octave"/>
+                                        <state key="normal" title="Octave">
+                                            <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="octaveWithSender:" destination="WfU-NW-OPq" eventType="touchUpInside" id="TQ5-dK-clK"/>
                                             <action selector="octaveWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="bpa-hT-juN"/>
@@ -1181,7 +1249,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2RV-l3-EdO" firstAttribute="centerX" secondItem="toc-1G-QA7" secondAttribute="centerX" id="5hA-Yp-FTf"/>
                             <constraint firstItem="6v5-KP-ZFC" firstAttribute="top" secondItem="hva-ry-eih" secondAttribute="top" constant="10" id="EJA-Oa-MWe"/>
@@ -1241,8 +1309,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM6-tH-5h3">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Minor 2nd"/>
+                                                <state key="normal" title="Minor 2nd">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="minorSecondWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="CFG-pk-fmd"/>
                                                     <action selector="minorSecondWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="fng-en-KF0"/>
@@ -1250,8 +1321,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRA-ho-gnT">
                                                 <rect key="frame" x="0.0" y="67.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Minor 3rd"/>
+                                                <state key="normal" title="Minor 3rd">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="minorThirdWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="MOz-AV-hBx"/>
                                                     <action selector="minorThirdWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="dWg-Re-J4D"/>
@@ -1259,8 +1333,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8t-yh-qa9">
                                                 <rect key="frame" x="0.0" y="135" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Perfect 4th"/>
+                                                <state key="normal" title="Perfect 4th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="perfectFourthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="H0i-pj-O7X"/>
                                                     <action selector="perfectFourthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="xwz-hD-QoT"/>
@@ -1268,8 +1345,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQD-dj-06Z">
                                                 <rect key="frame" x="0.0" y="202.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Perfect 5th"/>
+                                                <state key="normal" title="Perfect 5th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="perfectFifthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="5ke-Ph-AiR"/>
                                                     <action selector="perfectFifthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="h6A-kd-gnd"/>
@@ -1277,8 +1357,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-82-GII">
                                                 <rect key="frame" x="0.0" y="270" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Minor 6th"/>
+                                                <state key="normal" title="Minor 6th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="minorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="HRE-Fs-BvL"/>
                                                     <action selector="minorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="NG0-CG-IcD"/>
@@ -1286,8 +1369,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rs-7F-TCh">
                                                 <rect key="frame" x="0.0" y="337.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Minor 7th"/>
+                                                <state key="normal" title="Minor 7th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="minorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="RQB-EU-pTB"/>
                                                     <action selector="minorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="qe6-Wl-0sQ"/>
@@ -1304,8 +1390,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bik-Al-FcL">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Major 2nd"/>
+                                                <state key="normal" title="Major 2nd">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="majorSecondWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="1w4-Dg-v4k"/>
                                                     <action selector="majorSecondWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="JcV-sW-9LS"/>
@@ -1313,8 +1402,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-CW-gb3">
                                                 <rect key="frame" x="0.0" y="67.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Major 3rd"/>
+                                                <state key="normal" title="Major 3rd">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="majorThirdWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="0hh-C5-nIl"/>
                                                     <action selector="majorThirdWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="lLk-6O-fX8"/>
@@ -1322,8 +1414,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-Xz-ocd">
                                                 <rect key="frame" x="0.0" y="135" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Tritone"/>
+                                                <state key="normal" title="Tritone">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="tritoneWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="0SA-wo-WZW"/>
                                                     <action selector="tritoneWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="MaT-nM-mf4"/>
@@ -1331,8 +1426,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-ls-ygB">
                                                 <rect key="frame" x="0.0" y="202.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Major 6th"/>
+                                                <state key="normal" title="Major 6th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="majorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="NNr-kb-Dny"/>
                                                     <action selector="majorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="u3E-qS-Js1"/>
@@ -1340,8 +1438,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wng-D2-A5Y">
                                                 <rect key="frame" x="0.0" y="270" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Major 7th"/>
+                                                <state key="normal" title="Major 7th">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="majorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="NFi-IX-235"/>
                                                     <action selector="majorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="gac-Xv-78q"/>
@@ -1349,8 +1450,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2C-3D-oDu">
                                                 <rect key="frame" x="0.0" y="337.5" width="150" height="62.5"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Octave"/>
+                                                <state key="normal" title="Octave">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="octaveWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="GeH-zp-2xY"/>
                                                     <action selector="octaveWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="a3p-5T-H2h"/>
@@ -1394,7 +1498,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmT-bK-gop">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
-                                                <state key="normal" title="Piano"/>
+                                                <state key="normal" title="Piano">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pianoWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="4AN-0q-eww"/>
                                                     <action selector="pianoWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="oGL-GP-GdW"/>
@@ -1402,7 +1508,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-RQ-owO">
                                                 <rect key="frame" x="53" y="0.0" width="54" height="30"/>
-                                                <state key="normal" title="Clarinet"/>
+                                                <state key="normal" title="Clarinet">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="clarinetWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="6Wy-xn-rvg"/>
                                                     <action selector="clarinetWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="DjB-oi-YDA"/>
@@ -1410,7 +1518,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AB-05-e0g">
                                                 <rect key="frame" x="122" y="0.0" width="85" height="30"/>
-                                                <state key="normal" title="French Horn"/>
+                                                <state key="normal" title="French Horn">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="frenchHornWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="IL2-sl-A65"/>
                                                     <action selector="frenchHornWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="Yfc-vE-Mr8"/>
@@ -1418,7 +1528,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-er-1B9">
                                                 <rect key="frame" x="222" y="0.0" width="81" height="30"/>
-                                                <state key="normal" title="Pizz Strings"/>
+                                                <state key="normal" title="Pizz Strings">
+                                                    <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="stringWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="W1h-pc-YVB"/>
                                                     <action selector="stringWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="W32-o7-etf"/>
@@ -1429,7 +1541,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oKR-9i-UMa" firstAttribute="top" secondItem="Sxj-3p-Pzt" secondAttribute="top" constant="10" id="B8d-Gb-2Hc"/>
                             <constraint firstItem="oKR-9i-UMa" firstAttribute="centerX" secondItem="DPr-fW-7uq" secondAttribute="centerX" id="a8D-Wa-sQe"/>
@@ -1500,6 +1612,9 @@
                                                         <state key="normal" title="Major 2nd">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorSecondWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="T3D-XJ-LNL"/>
                                                         </connections>
@@ -1511,6 +1626,9 @@
                                                         <state key="normal" title="Perfect 4th">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="perfectFourthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="VCM-hY-lTM"/>
                                                         </connections>
@@ -1521,6 +1639,9 @@
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <state key="normal" title="Major 6th">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="majorSixthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="YyP-qY-kbJ"/>
@@ -1542,6 +1663,9 @@
                                                         <state key="normal" title="Major 3rd">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="majorThirdWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="112-DW-TKX"/>
                                                         </connections>
@@ -1553,6 +1677,9 @@
                                                         <state key="normal" title="Perfect 5th">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="perfectFifthWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="M57-6N-JKr"/>
                                                         </connections>
@@ -1563,6 +1690,9 @@
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <state key="normal" title="Major 7th">
                                                             <color key="titleColor" red="0.62224355864627834" green="0.46752251289942115" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <state key="disabled">
+                                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="majorSeventhWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="BH2-pZ-936"/>
@@ -1591,6 +1721,9 @@
                                         <state key="normal" title="Octave">
                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="octaveWithSender:" destination="rcM-zm-mE6" eventType="touchUpInside" id="hCw-ys-xSm"/>
                                         </connections>
@@ -1609,13 +1742,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ascending Diatonic Intervals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSS-MT-Dbz">
                                                 <rect key="frame" x="0.0" y="0.0" width="317.5" height="31.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-Vs-zY8">
                                                 <rect key="frame" x="113.5" y="34.5" width="90.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1625,6 +1758,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxY-FV-CDE">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.995632191" blue="0.83115904129999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Piano">
                                                     <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -1634,6 +1768,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-Rf-dS3">
                                                 <rect key="frame" x="53" y="0.0" width="54" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.995632191" blue="0.83115904129999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Clarinet">
                                                     <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -1643,6 +1778,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-qt-Zwg">
                                                 <rect key="frame" x="122" y="0.0" width="85" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.995632191" blue="0.83115904129999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="French Horn">
                                                     <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -1652,6 +1788,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr5-RG-UY9">
                                                 <rect key="frame" x="222" y="0.0" width="81" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.995632191" blue="0.83115904129999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Pizz Strings">
                                                     <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>

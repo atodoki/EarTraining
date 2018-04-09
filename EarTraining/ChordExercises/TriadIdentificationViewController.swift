@@ -125,6 +125,7 @@ class TriadIdentificationViewController: UIViewController {
         if (chordType == chord){
             button.backgroundColor = UIColor.green
             for b in intervalButtons{
+                b.alpha = 0.75
                 b.isEnabled = false
             }
         }
@@ -172,6 +173,7 @@ class TriadIdentificationViewController: UIViewController {
         
         for b in intervalButtons{
             b.backgroundColor = UIColor.white
+            b.alpha = 1.0
             b.isEnabled = true
         }
         

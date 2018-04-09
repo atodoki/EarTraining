@@ -95,6 +95,7 @@ class AscendingChromaticViewController: UIViewController {
         if(topNote - bottomNote == interval){
             sender.backgroundColor = UIColor.green
             for b in intervalButtons{
+                b.alpha = 0.75
                 b.isEnabled = false
             }
         }
@@ -129,6 +130,7 @@ class AscendingChromaticViewController: UIViewController {
         // Reset interval button background color
         for b in intervalButtons{
             b.backgroundColor = UIColor.white
+            b.alpha = 1.0
             b.isEnabled = true
         }
         
