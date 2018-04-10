@@ -16,6 +16,7 @@ class AscendingDSingIntervalViewController: UIViewController {
     @IBOutlet private var sungNote: UILabel!
     @IBOutlet private var intervalLabel: UILabel!
     @IBOutlet private var recordButton: UIButton!
+    @IBOutlet private var instrumentButtons: [UIButton]!
     
     var bNoteOctave = 4
     var tNoteOctave = 4
@@ -76,7 +77,7 @@ class AscendingDSingIntervalViewController: UIViewController {
   
         AudioKit.output = timePitch
         
-        setInterval()
+        //setInterval()
 
     }
     
@@ -93,6 +94,12 @@ class AscendingDSingIntervalViewController: UIViewController {
         
     }
     
+    func closeInstButtons(){
+        for b in instrumentButtons{
+            b.isHidden = true
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         AudioKit.start()
@@ -104,6 +111,35 @@ class AscendingDSingIntervalViewController: UIViewController {
         AudioKit.stop()
     }
     
+    @IBAction func instruments(sender: UIButton){
+        if(instrumentButtons[0].isHidden){
+            for b in instrumentButtons{
+                b.isHidden = false
+            }
+        }else{
+            closeInstButtons()
+        }
+    }
+    
+    @IBAction func piano(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[0])")
+        closeInstButtons()
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[1])")
+        closeInstButtons()
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[2])")
+        closeInstButtons()
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! sampler.loadWav("../\(soundNames[3])")
+        closeInstButtons()
+    }
     
     @IBAction func changeOctave(sender: UISlider){
         bNoteOctave = Int(sender.value)
@@ -137,6 +173,8 @@ class AscendingDSingIntervalViewController: UIViewController {
         
         timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
         sampler.play()
+        
+        sender.setTitle("Next", for: .normal)
 
     }
 

@@ -13,6 +13,7 @@ import AudioKitUI
 class AscendingChromaticViewController: UIViewController {
     
     @IBOutlet var intervalButtons: [UIButton]!
+    @IBOutlet var instrumentButtons: [UIButton]!
     @IBOutlet var exerciseNumLabel: UILabel!
     
     let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
@@ -104,22 +105,42 @@ class AscendingChromaticViewController: UIViewController {
         }
     }
     
+    func closeInstButtons(){
+        for b in instrumentButtons{
+            b.isHidden = true
+        }
+    }
+    
     // MARK: - Button Actions
+    
+    @IBAction func instruments(sender: UIButton){
+        if(instrumentButtons[0].isHidden){
+            for b in instrumentButtons{
+                b.isHidden = false
+            }
+        }else{
+            closeInstButtons()
+        }
+    }
     
     @IBAction func piano(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[0])")
+        closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[1])")
+        closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[2])")
+        closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[3])")
+        closeInstButtons()
     }
     
     @IBAction func playAgain(sender: UIButton){

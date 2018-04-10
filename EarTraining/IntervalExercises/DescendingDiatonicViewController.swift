@@ -15,6 +15,7 @@ import AudioKitUI
 class DescendingDiatonicViewController: UIViewController {
 
     @IBOutlet var intervalButtons: [UIButton]!
+    @IBOutlet var instrumentButtons: [UIButton]!
     @IBOutlet var exerciseNumLabel: UILabel!
     
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
@@ -104,22 +105,42 @@ class DescendingDiatonicViewController: UIViewController {
         }
     }
     
+    func closeInstButtons(){
+        for b in instrumentButtons{
+            b.isHidden = true
+        }
+    }
+    
     // MARK: - Button Actions
+    
+    @IBAction func instruments(sender: UIButton){
+        if(instrumentButtons[0].isHidden){
+            for b in instrumentButtons{
+                b.isHidden = false
+            }
+        }else{
+            closeInstButtons()
+        }
+    }
     
     @IBAction func piano(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[0])")
+        closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[1])")
+        closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[2])")
+        closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         try! sampler.loadWav("../\(soundNames[3])")
+        closeInstButtons()
     }
     
     @IBAction func playAgain(sender: UIButton){

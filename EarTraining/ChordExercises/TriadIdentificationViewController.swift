@@ -13,6 +13,7 @@ import AudioKitUI
 class TriadIdentificationViewController: UIViewController {
     
     @IBOutlet var intervalButtons: [UIButton]!
+    @IBOutlet var instrumentButtons: [UIButton]!
     @IBOutlet var exerciseNumLabel: UILabel!
     
     //let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
@@ -134,31 +135,51 @@ class TriadIdentificationViewController: UIViewController {
         }
     }
     
+    func closeInstButtons(){
+        for b in instrumentButtons{
+            b.isHidden = true
+        }
+    }
+    
     
     // MARK: - Button Actions
+    
+    @IBAction func instruments(sender: UIButton){
+        if(instrumentButtons[0].isHidden){
+            for b in instrumentButtons{
+                b.isHidden = false
+            }
+        }else{
+            closeInstButtons()
+        }
+    }
     
     @IBAction func piano(sender: UIButton){
         try! samplerRoot.loadWav("../\(soundNames[0])")
         try! samplerThird.loadWav("../\(soundNames[0])")
         try! samplerFifth.loadWav("../\(soundNames[0])")
+        closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         try! samplerRoot.loadWav("../\(soundNames[1])")
         try! samplerThird.loadWav("../\(soundNames[1])")
         try! samplerFifth.loadWav("../\(soundNames[1])")
+        closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         try! samplerRoot.loadWav("../\(soundNames[2])")
         try! samplerThird.loadWav("../\(soundNames[2])")
         try! samplerFifth.loadWav("../\(soundNames[2])")
+        closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         try! samplerRoot.loadWav("../\(soundNames[3])")
         try! samplerThird.loadWav("../\(soundNames[3])")
         try! samplerFifth.loadWav("../\(soundNames[3])")
+        closeInstButtons()
     }
     
     

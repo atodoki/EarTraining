@@ -18,10 +18,13 @@ class SingTriadsViewController: UIViewController {
     @IBOutlet var fifthNote: UILabel!
     @IBOutlet var triadLabel: UILabel!
     @IBOutlet var recordButton: UIButton!
+    @IBOutlet var instrumentButtons: [UIButton]!
     
     let noteFrequencies = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteFreqRanges = [15.9, 16.83, 17.83, 18.9, 20.01, 21.21, 22.47, 23.8, 25.22, 26.72, 28.31, 29.99, 31.77]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
     let triadNames = ["Major Triad", "Minor Triad", "Diminished Triad", "Augmented Triad"]
@@ -43,6 +46,17 @@ class SingTriadsViewController: UIViewController {
     var rootNoteName = ""
     var thirdNoteName = ""
     var fifthNoteName = ""
+    
+    var rootOctave = 4
+    var thirdOctave = 4
+    var fifthOctave = 4
+    
+//    var bNoteOctave = 4
+//    var tNoteOctave = 4
+//    var bottomNote = 0
+//    var topNote = 0
+//    var intervalSize = 0
+//    var intervalIndex = 0
     
     let samplerRoot = AKSampler()
     let samplerThird = AKSampler()
@@ -119,28 +133,76 @@ class SingTriadsViewController: UIViewController {
         third = root + chordList[chordType][0]
         fifth = root + chordList[chordType][1]
         
+        thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
+        fifthOctave = fifthOctave > 11 ? rootOctave + 1 : rootOctave
+        
         triadLabel.text = "Sing a \(triadNames[chordType])"
         
-        tpRoot.pitch = noteCents[root]
-        tpThird.pitch = (third > 11 ? noteCents[third%12] + 1200.0 : noteCents[third])
-        tpFifth.pitch = (fifth > 11 ? noteCents[fifth%12] + 1200.0 : noteCents[fifth])
+        tpRoot.pitch = noteCents[root] + octaveChange[rootOctave]
+        tpThird.pitch = noteCents[third%12] + octaveChange[thirdOctave]
+        tpFifth.pitch = noteCents[fifth%12] + octaveChange[fifthOctave]
         
         
         // set note name variables ???? do you need this?
-        rootNoteName = noteNamesWithFlats[root]
-        thirdNoteName = (third > 11 ? noteNamesWithFlats[third%12] : noteNamesWithFlats[third])
-        fifthNoteName = (fifth > 11 ? noteNamesWithFlats[fifth%12] : noteNamesWithFlats[fifth])
+//        rootNoteName = noteNamesWithFlats[root]
+//        thirdNoteName = noteNamesWithFlats[third%12]
+//        fifthNoteName = noteNamesWithFlats[fifth%12]
+    }
+    
+    func closeInstButtons(){
+        for b in instrumentButtons{
+            b.isHidden = true
+        }
     }
     
     // MARK: - Button Actions
+    
+    @IBAction func instruments(sender: UIButton){
+        if(instrumentButtons[0].isHidden){
+            for b in instrumentButtons{
+                b.isHidden = false
+            }
+        }else{
+            closeInstButtons()
+        }
+    }
+    
+    @IBAction func piano(sender: UIButton){
+        try! samplerRoot.loadWav("../\(soundNames[0])")
+        try! samplerThird.loadWav("../\(soundNames[0])")
+        try! samplerFifth.loadWav("../\(soundNames[0])")
+        closeInstButtons()
+    }
+    
+    @IBAction func clarinet(sender: UIButton){
+        try! samplerRoot.loadWav("../\(soundNames[1])")
+        try! samplerThird.loadWav("../\(soundNames[1])")
+        try! samplerFifth.loadWav("../\(soundNames[1])")
+        closeInstButtons()
+    }
+    
+    @IBAction func frenchHorn(sender: UIButton){
+        try! samplerRoot.loadWav("../\(soundNames[2])")
+        try! samplerThird.loadWav("../\(soundNames[2])")
+        try! samplerFifth.loadWav("../\(soundNames[2])")
+        closeInstButtons()
+    }
+    
+    @IBAction func string(sender: UIButton){
+        try! samplerRoot.loadWav("../\(soundNames[3])")
+        try! samplerThird.loadWav("../\(soundNames[3])")
+        try! samplerFifth.loadWav("../\(soundNames[3])")
+        closeInstButtons()
+    }
+    
     @IBAction func playRoot(sender: UIButton){
-        AudioKit.output = mixer
+        //AudioKit.output = mixer
         samplerRoot.play()
         
     }
     
     @IBAction func playChordSequence(sender: UIButton){
-        AudioKit.output = mixer
+        //AudioKit.output = mixer
         samplerRoot.play()
         sleep(1)
         samplerThird.play()
@@ -149,7 +211,8 @@ class SingTriadsViewController: UIViewController {
     }
     
     @IBAction func playChord(sender: UIButton){
-        AudioKit.output = mixer
+        //AudioKit.output = mixer
+        
         samplerRoot.play()
         samplerThird.play()
         samplerFifth.play()
@@ -169,6 +232,18 @@ class SingTriadsViewController: UIViewController {
         exerciseNumLabel.text = "Exercise #\(exerciseNum)"
     }
     
+    @IBAction func changeOctave(sender: UISlider){
+        rootOctave = Int(sender.value)
+        thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
+        fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
+        
+        tpRoot.pitch = noteCents[root] + octaveChange[rootOctave]
+        tpThird.pitch = noteCents[third%12] + octaveChange[thirdOctave]
+        tpFifth.pitch = noteCents[fifth%12] + octaveChange[fifthOctave]
+        
+        rootNote.text = "\(noteNamesWithSharps[root])\(rootOctave)"
+    }
+    
     @IBAction func handleGesture(_ sender: UILongPressGestureRecognizer){
         if sender.state == UIGestureRecognizerState.began{
             timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(SingTriadsViewController.updateUI), userInfo: nil, repeats: true)
@@ -183,7 +258,7 @@ class SingTriadsViewController: UIViewController {
     @objc func updateUI(){
         AudioKit.output = silence
         var frequency0 = tracker.frequency
-        var sungOctave = 0.0
+        var sungOctave = 0
         var sungNoteIndex = 0
         
         if(tracker.amplitude > 0.09){
@@ -206,11 +281,11 @@ class SingTriadsViewController: UIViewController {
             }
             
             if(rootNote.backgroundColor != UIColor.green){
-                changeNoteLabel(label: rootNote, noteIndex: root, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                changeNoteLabel(label: rootNote, noteIndex: root, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: rootOctave)
             }else if(thirdNote.backgroundColor != UIColor.green){
-                changeNoteLabel(label: thirdNote, noteIndex: third, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                changeNoteLabel(label: thirdNote, noteIndex: third, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: thirdOctave)
             }else{
-                changeNoteLabel(label: fifthNote, noteIndex: fifth, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                changeNoteLabel(label: fifthNote, noteIndex: fifth, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: fifthOctave)
             }
             
             
@@ -218,10 +293,10 @@ class SingTriadsViewController: UIViewController {
         }
     }
     
-    func changeNoteLabel(label: UILabel, noteIndex: Int, sungNoteIndex: Int, sungOctave: Double){
-        label.text = "\(noteNamesWithFlats[sungNoteIndex])\(Int(sungOctave))"
+    func changeNoteLabel(label: UILabel, noteIndex: Int, sungNoteIndex: Int, sungOctave: Int, noteOctave: Int){
+        label.text = "\(noteNamesWithSharps[sungNoteIndex])\(Int(sungOctave))"
         // checks if sung note is correct
-        if(sungNoteIndex == (noteIndex > 11 ? noteIndex % 12 : noteIndex)){
+        if(sungNoteIndex == (noteIndex > 11 ? noteIndex % 12 : noteIndex) && sungOctave == noteOctave){
             label.backgroundColor = UIColor.green
         }else{
             label.backgroundColor = UIColor.red
