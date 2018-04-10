@@ -9,7 +9,7 @@
 import UIKit
 
 class ScalesTableViewController: UITableViewController {
-    var scales = ["Diatonic Scales", "Modes", "Jazz"]
+    var scales = ["Major/Minor Scales", "Modes", "Chromatic"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
