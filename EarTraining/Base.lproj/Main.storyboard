@@ -716,76 +716,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z6i-0X-UES">
-                                <rect key="frame" x="258" y="69" width="107" height="34"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-Yr-veM">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="⚙️"/>
-                                        <connections>
-                                            <action selector="instrumentsWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="IMV-Aw-lwQ"/>
-                                            <action selector="instrumentsWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="xyp-Jr-3tq"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDY-Wd-N6c">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Piano">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pianoWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="7SE-hJ-A1w"/>
-                                            <action selector="pianoWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="tOX-ZV-OBJ"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-5O-26p">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Clarinet">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clarinetWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="YIZ-C4-LBR"/>
-                                            <action selector="clarinetWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="jjo-XQ-p3C"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-vh-iu9">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="French Horn">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="frenchHornWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="8qc-P8-fek"/>
-                                            <action selector="frenchHornWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="Kzz-Wg-0W7"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-AJ-8XZ">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Pizz Strings">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="stringWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="Ws5-oM-vXA"/>
-                                            <action selector="stringWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="fsO-wo-Efn"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes of Major Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ji-95-qaB">
-                                <rect key="frame" x="0.0" y="89" width="375" height="31.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1em-0r-gHp">
-                                <rect key="frame" x="62.5" y="139.5" width="250" height="448"/>
+                                <rect key="frame" x="62" y="139" width="250" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-AX-aqb">
                                         <rect key="frame" x="91" y="0.0" width="68" height="48"/>
@@ -917,6 +849,74 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z6i-0X-UES">
+                                <rect key="frame" x="258" y="69" width="107" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-Yr-veM">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="⚙️"/>
+                                        <connections>
+                                            <action selector="instrumentsWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="IMV-Aw-lwQ"/>
+                                            <action selector="instrumentsWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="xyp-Jr-3tq"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDY-Wd-N6c">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Piano">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pianoWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="7SE-hJ-A1w"/>
+                                            <action selector="pianoWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="tOX-ZV-OBJ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-5O-26p">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Clarinet">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clarinetWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="YIZ-C4-LBR"/>
+                                            <action selector="clarinetWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="jjo-XQ-p3C"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-vh-iu9">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="French Horn">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="frenchHornWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="8qc-P8-fek"/>
+                                            <action selector="frenchHornWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="Kzz-Wg-0W7"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-AJ-8XZ">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Pizz Strings">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stringWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="Ws5-oM-vXA"/>
+                                            <action selector="stringWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="fsO-wo-Efn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes of Major Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ji-95-qaB">
+                                <rect key="frame" x="0.0" y="89" width="375" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97307997940000002" green="0.93996626139999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -946,7 +946,217 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lT-ed-9MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629.60000000000002" y="1599.8500749625189"/>
+            <point key="canvasLocation" x="1238" y="1620"/>
+        </scene>
+        <!--Chromatic Scales View Controller-->
+        <scene sceneID="Z0U-rA-3Rw">
+            <objects>
+                <viewController id="2kb-0W-NC2" customClass="ChromaticScalesViewController" customModule="EarTraining" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MVH-VB-iWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O1U-KZ-gf5">
+                                <rect key="frame" x="62.5" y="189.5" width="250" height="348"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPt-Rr-rty">
+                                        <rect key="frame" x="91" y="0.0" width="68" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bui-Ik-4t6">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="▶️"/>
+                                                <connections>
+                                                    <action selector="playAgainWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="fyQ-6m-V0p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWW-aV-myE">
+                                                <rect key="frame" x="34" y="0.0" width="34" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="⏩"/>
+                                                <connections>
+                                                    <action selector="nextWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="nZR-MA-sXG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cp5-P4-i5b">
+                                        <rect key="frame" x="0.0" y="48" width="250" height="300"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlB-YS-lXW">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="71.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Chromatic">
+                                                    <color key="titleColor" red="0.62473422290000002" green="0.4650245905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chromaticWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="ttv-CB-UWh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-13-9JK">
+                                                <rect key="frame" x="0.0" y="76.5" width="250" height="71"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Whole Tone">
+                                                    <color key="titleColor" red="0.62473422290000002" green="0.4650245905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="wholeToneWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="qrB-fm-jit"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ear-Vs-IfT">
+                                                <rect key="frame" x="0.0" y="152.5" width="250" height="71.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Whole-Half Octatonic">
+                                                    <color key="titleColor" red="0.62473422290000002" green="0.4650245905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="whOctatonicWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="gFP-Lc-NQV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRG-Xb-A7q">
+                                                <rect key="frame" x="0.0" y="229" width="250" height="71"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Half-Whole Octatonic">
+                                                    <color key="titleColor" red="0.62473422290000002" green="0.4650245905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hwOctatonicWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="uuI-Zd-4mm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="00o-rd-WlP"/>
+                                            <constraint firstAttribute="width" constant="250" id="CXp-N4-61g"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ejS-DQ-kIb">
+                                <rect key="frame" x="258" y="69" width="107" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaj-If-4Ue">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="⚙️"/>
+                                        <connections>
+                                            <action selector="instrumentsWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="UfI-oR-1Ce"/>
+                                            <action selector="instrumentsWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="g1I-zi-mnS"/>
+                                            <action selector="instrumentsWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="iWY-GD-FbN"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bg-9Q-OJO">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Piano">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pianoWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="5MQ-vD-9RS"/>
+                                            <action selector="pianoWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="6lT-bw-l4l"/>
+                                            <action selector="pianoWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="cdj-Ms-L1E"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7Y-Ad-zKU">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Clarinet">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clarinetWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="RbH-KV-1Qa"/>
+                                            <action selector="clarinetWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="ku7-lo-QBK"/>
+                                            <action selector="clarinetWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="xyc-OP-ZB4"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijG-iy-v79">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="French Horn">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="frenchHornWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="WF5-ZL-hsP"/>
+                                            <action selector="frenchHornWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="ZHP-UW-HmL"/>
+                                            <action selector="frenchHornWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="aOa-Ij-8Sj"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jc-MP-ksd">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Pizz Strings">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stringWithSender:" destination="2kb-0W-NC2" eventType="touchUpInside" id="mCR-R9-60B"/>
+                                            <action selector="stringWithSender:" destination="yXE-Fy-5p8" eventType="touchUpInside" id="nw8-nW-aT4"/>
+                                            <action selector="stringWithSender:" destination="iOX-PE-pPw" eventType="touchUpInside" id="x2K-q2-NZA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YQd-bs-I9Z">
+                                <rect key="frame" x="13" y="69" width="349" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chromatic and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8R-KV-3aJ">
+                                        <rect key="frame" x="92.5" y="0.0" width="164.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes of Limited Transposition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbK-V1-fdH">
+                                        <rect key="frame" x="0.0" y="31.5" width="349" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97307997940000002" green="0.93996626139999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O1U-KZ-gf5" firstAttribute="centerY" secondItem="MVH-VB-iWf" secondAttribute="centerY" constant="30" id="84C-7m-Ogn"/>
+                            <constraint firstItem="ejS-DQ-kIb" firstAttribute="top" secondItem="ihV-K0-3hU" secondAttribute="top" constant="5" id="BrN-t4-5jI"/>
+                            <constraint firstItem="YQd-bs-I9Z" firstAttribute="centerX" secondItem="MVH-VB-iWf" secondAttribute="centerX" id="bIc-wE-oOK"/>
+                            <constraint firstItem="O1U-KZ-gf5" firstAttribute="centerX" secondItem="MVH-VB-iWf" secondAttribute="centerX" id="jlu-qg-ZEk"/>
+                            <constraint firstItem="ihV-K0-3hU" firstAttribute="trailing" secondItem="ejS-DQ-kIb" secondAttribute="trailing" constant="10" id="uRN-9g-Bdq"/>
+                            <constraint firstItem="YQd-bs-I9Z" firstAttribute="top" secondItem="ihV-K0-3hU" secondAttribute="top" constant="5" id="wcl-sj-wrs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ihV-K0-3hU"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="scaleButtons" destination="MlB-YS-lXW" collectionClass="NSMutableArray" id="owE-nI-OHs"/>
+                        <outletCollection property="scaleButtons" destination="9Dh-13-9JK" collectionClass="NSMutableArray" id="5Zc-v0-Cyv"/>
+                        <outletCollection property="scaleButtons" destination="ear-Vs-IfT" collectionClass="NSMutableArray" id="VAR-HN-S4E"/>
+                        <outletCollection property="scaleButtons" destination="YRG-Xb-A7q" collectionClass="NSMutableArray" id="y3T-tR-1y4"/>
+                        <outletCollection property="instrumentButtons" destination="6Bg-9Q-OJO" collectionClass="NSMutableArray" id="Erm-eA-jSE"/>
+                        <outletCollection property="instrumentButtons" destination="y7Y-Ad-zKU" collectionClass="NSMutableArray" id="RgK-aM-Wuj"/>
+                        <outletCollection property="instrumentButtons" destination="ijG-iy-v79" collectionClass="NSMutableArray" id="43y-l0-miZ"/>
+                        <outletCollection property="instrumentButtons" destination="3Jc-MP-ksd" collectionClass="NSMutableArray" id="OTc-y2-5xE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4e-Mi-AA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="1619.6401799100452"/>
         </scene>
         <!--Maj Min Scales View Controller-->
         <scene sceneID="Ur5-sx-asI">
@@ -1136,7 +1346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-ip-n4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1319" y="1600"/>
+            <point key="canvasLocation" x="593" y="1620"/>
         </scene>
         <!--Triad Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">
@@ -1337,7 +1547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A6-Fm-A4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.5999999999999" y="1599.8500749625189"/>
+            <point key="canvasLocation" x="2962" y="1575"/>
         </scene>
         <!--Sing Triads View Controller-->
         <scene sceneID="hvH-Yu-2iC">
@@ -1611,7 +1821,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2767.1999999999998" y="1574.6626686656673"/>
+            <point key="canvasLocation" x="3775" y="1575"/>
         </scene>
         <!--Descending Diatonic View Controller-->
         <scene sceneID="B3U-qD-Ffx">
@@ -2593,6 +2803,7 @@
                     <connections>
                         <segue destination="iOX-PE-pPw" kind="show" identifier="Major/Minor Scales" id="fr7-bu-rFW"/>
                         <segue destination="yXE-Fy-5p8" kind="show" identifier="Modes" id="xLf-Ek-hu5"/>
+                        <segue destination="2kb-0W-NC2" kind="show" identifier="Chromatic/Modes of Limited Transposition" id="JYt-TU-ZcH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHx-P3-VAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2645,7 +2856,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chu-Am-ASL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="793"/>
+            <point key="canvasLocation" x="3212" y="793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Caw-KD-0C7">

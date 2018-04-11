@@ -15,6 +15,7 @@
 		625363422074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633E2074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav */; };
 		6259F0052079E11F00887FAC /* DescendingChromaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F0042079E11F00887FAC /* DescendingChromaticViewController.swift */; };
 		6259F007207C6A6100887FAC /* ModesScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F006207C6A6100887FAC /* ModesScalesViewController.swift */; };
+		6259F009207DF1F600887FAC /* ChromaticScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */; };
 		62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */; };
 		62A0E471202708B2002995D7 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */; };
 		62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */; };
@@ -59,6 +60,7 @@
 		6253633E2074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-Clarinet-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Ensoniq-SQ-1-Clarinet-C4.wav"; sourceTree = "<group>"; };
 		6259F0042079E11F00887FAC /* DescendingChromaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingChromaticViewController.swift; sourceTree = "<group>"; };
 		6259F006207C6A6100887FAC /* ModesScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesScalesViewController.swift; sourceTree = "<group>"; };
+		6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticScalesViewController.swift; sourceTree = "<group>"; };
 		62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				62A0E478202BE7D4002995D7 /* ScalesTableViewController.swift */,
 				62A0E48020312E7E002995D7 /* MajMinScalesViewController.swift */,
 				6259F006207C6A6100887FAC /* ModesScalesViewController.swift */,
+				6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */,
 			);
 			path = ScaleExercises;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */,
 				62A0E48120312E7E002995D7 /* MajMinScalesViewController.swift in Sources */,
+				6259F009207DF1F600887FAC /* ChromaticScalesViewController.swift in Sources */,
 				62A0E471202708B2002995D7 /* ExerciseTableViewCell.swift in Sources */,
 				62A16CFE200F30C600C5BED3 /* AppDelegate.swift in Sources */,
 				62A0E47D202CD356002995D7 /* ChordsTableViewController.swift in Sources */,
