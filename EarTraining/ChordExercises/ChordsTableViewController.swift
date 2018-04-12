@@ -10,7 +10,16 @@ import UIKit
 
 class ChordsTableViewController: UITableViewController {
     
-    var chordExercises = ["Triad Identification","Triad Sing"]
+    var chordExercises = [["Triad Identification","Triad Sing"]]
+    
+    var segueNames = [["Triad Identification","Triad Sing"]]
+    
+    var headers = ["Easy"]
+    
+    var imageNames = [["triad","triad"]]
+    
+    var descriptions = [["Test your knowledge and identify major, minor, diminished, and augmented triads!",
+                         "See if you can sing major, minor, diminished, and augmented broken triads!"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +38,28 @@ class ChordsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = headers[section]
+        label.font = UIFont.boldSystemFont(ofSize: 30.0)
+        label.backgroundColor = UIColor(red: 0.8431, green: 0.6784, blue: 0.8588, alpha: 1.0)
+        return label
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return chordExercises.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return chordExercises.count
+        return chordExercises[section].count
     }
 
     
@@ -47,13 +69,15 @@ class ChordsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ExerciseTableViewCell
         
         // Configure the cell...
-        cell.nameLabel?.text = chordExercises[indexPath.row]
+        cell.nameLabel?.text = chordExercises[indexPath.section][indexPath.row]
+        cell.descriptionLabel?.text = descriptions[indexPath.section][indexPath.row]
+        cell.musicImage.image = UIImage(named: imageNames[indexPath.section][indexPath.row])
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: chordExercises[indexPath.row], sender: self)
+        performSegue(withIdentifier: segueNames[indexPath.section][indexPath.row], sender: self)
     }
  
 

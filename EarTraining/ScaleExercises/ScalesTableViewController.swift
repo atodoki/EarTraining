@@ -9,7 +9,18 @@
 import UIKit
 
 class ScalesTableViewController: UITableViewController {
-    var scales = ["Major/Minor Scales", "Modes", "Chromatic/Modes of Limited Transposition"]
+    var scales = [["Major/Minor Scales"], ["Modes"], ["Chromatic/Modes of Limited Transposition"]]
+    
+    var segueNames = [["Major/Minor Scales"], ["Modes"], ["Chromatic/Modes of Limited Transposition"]]
+    
+    var headers = ["Easy","Medium","Challenge"]
+    
+    var imageNames = [["majorScale"],["modeScale"],["wtScale"]]
+    
+    var descriptions = [["See if you can identify major and minor scales! Includes natural minor, harmonic minor, and natural minor."],
+                        ["See if you can identify the 7 different modes of the major scale!"],
+                        ["Can you identify the chromatic scale, whole tone scale, and the octatonic/diminished scales?"]]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +39,28 @@ class ScalesTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = headers[section]
+        label.font = UIFont.boldSystemFont(ofSize: 30.0)
+        label.backgroundColor = UIColor(red: 0.8431, green: 0.6784, blue: 0.8588, alpha: 1.0)
+        return label
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return scales.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return scales.count
+        return scales[section].count
     }
 
     
@@ -45,13 +69,14 @@ class ScalesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ExerciseTableViewCell
         
         // Configure the cell...
-        cell.nameLabel?.text = scales[indexPath.row]
-        
+        cell.nameLabel?.text = scales[indexPath.section][indexPath.row]
+        cell.descriptionLabel?.text = descriptions[indexPath.section][indexPath.row]
+        cell.musicImage.image = UIImage(named: imageNames[indexPath.section][indexPath.row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: scales[indexPath.row], sender: self)
+        performSegue(withIdentifier: segueNames[indexPath.section][indexPath.row], sender: self)
     }
     
 

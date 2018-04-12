@@ -32,7 +32,7 @@ class IntervalTableViewController: UITableViewController {
     ]
     
     var imageNames = [["ascendDiatonic","descendDiatonic","ascendDiatonic"],
-                      ["ascendDiatonic","descendDiatonic"]]
+                      ["ascendChrom","descendChrom"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
