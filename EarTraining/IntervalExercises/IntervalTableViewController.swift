@@ -13,11 +13,26 @@ class IntervalTableViewController: UITableViewController {
 //    var intervalExercises = ["Ascending Diatonic", "Descending Diatonic", "Ascending Chromatic", "Descending Chromatic", "Ascending Sing Interval"]
     
     var intervalExercises = [
+        ["Ascending", "Descending", "Ascending Sing"],
+        ["Ascending", "Descending"]
+    ]
+    var segueNames = [
     ["Ascending Diatonic", "Descending Diatonic", "Ascending Sing Interval"],
     ["Ascending Chromatic", "Descending Chromatic"]
     ]
     
     var headers = ["Diatonic", "Chromatic"]
+    
+    var descriptions = [
+    ["Test your skills and identify the intervals found in a major scale! Plays bottom note, then top note.",
+     "Test your skills and identify the intervals found in a major scale! Plays top note, then bottom note.",
+     "Test your skills by singing diatonic intervals above a given note!"],
+    ["Test your skills and identify the intervals found in a chromatic scale! Plays bottom note, then top note.",
+     "Test your skills and identify the intervals found in a chromatic scale! Plays top note, then bottom note."]
+    ]
+    
+    var imageNames = [["ascendDiatonic","descendDiatonic","ascendDiatonic"],
+                      ["ascendDiatonic","descendDiatonic"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +56,14 @@ class IntervalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = headers[section]
-        label.backgroundColor = UIColor.lightGray
+        label.font = UIFont.boldSystemFont(ofSize: 30.0)
+        label.backgroundColor = UIColor(red: 0.8431, green: 0.6784, blue: 0.8588, alpha: 1.0)
         return label
         
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 50
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -67,12 +83,14 @@ class IntervalTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.nameLabel?.text = intervalExercises[indexPath.section][indexPath.row]
+        cell.descriptionLabel?.text = descriptions[indexPath.section][indexPath.row]
+        cell.musicImage.image = UIImage(named: imageNames[indexPath.section][indexPath.row])
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: intervalExercises[indexPath.section][indexPath.row], sender: self)
+        performSegue(withIdentifier: segueNames[indexPath.section][indexPath.row], sender: self)
     }
     
 

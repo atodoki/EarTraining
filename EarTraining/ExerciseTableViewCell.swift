@@ -11,6 +11,8 @@ import UIKit
 class ExerciseTableViewCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var musicImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

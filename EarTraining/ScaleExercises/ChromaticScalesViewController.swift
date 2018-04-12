@@ -23,13 +23,6 @@ class ChromaticScalesViewController: UIViewController {
     let wholeTone = [0,2,4,6,8,10,12]
     let whOctatonic = [0,2,3,5,6,8,9,11,12]
     let hwOctatonic = [0,1,3,4,6,7,9,10,12]
-//    let ionian = [0,2,4,5,7,9,11,12]
-//    let dorian = [0,2,3,5,7,9,10,12]
-//    let phrygian = [0,1,3,5,7,8,10,12]
-//    let lydian = [0,2,4,6,7,9,11,12]
-//    let mixolydian = [0,2,4,5,7,9,10,12]
-//    let aeolian = [0,2,3,5,7,8,10,12]
-//    let locrian = [0,1,3,5,6,8,10,12]
     
     var scaleList = [[Int]]()
     
