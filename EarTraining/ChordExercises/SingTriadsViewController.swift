@@ -8,7 +8,6 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
 
 class SingTriadsViewController: UIViewController {
     
@@ -58,9 +57,9 @@ class SingTriadsViewController: UIViewController {
 //    var intervalSize = 0
 //    var intervalIndex = 0
     
-    let samplerRoot = AKSampler()
-    let samplerThird = AKSampler()
-    let samplerFifth = AKSampler()
+    let samplerRoot = AKAppleSampler()
+    let samplerThird = AKAppleSampler()
+    let samplerFifth = AKAppleSampler()
     
     var tpRoot: AKTimePitch!
     var tpThird: AKTimePitch!
@@ -114,12 +113,12 @@ class SingTriadsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -197,25 +196,25 @@ class SingTriadsViewController: UIViewController {
     
     @IBAction func playRoot(sender: UIButton){
         //AudioKit.output = mixer
-        samplerRoot.play()
+        try! samplerRoot.play()
         
     }
     
     @IBAction func playChordSequence(sender: UIButton){
         //AudioKit.output = mixer
-        samplerRoot.play()
+        try! samplerRoot.play()
         sleep(1)
-        samplerThird.play()
+        try! samplerThird.play()
         sleep(1)
-        samplerFifth.play()
+        try! samplerFifth.play()
     }
     
     @IBAction func playChord(sender: UIButton){
         //AudioKit.output = mixer
         
-        samplerRoot.play()
-        samplerThird.play()
-        samplerFifth.play()
+        try! samplerRoot.play()
+        try! samplerThird.play()
+        try! samplerFifth.play()
     }
     
     @IBAction func next(sender: UIButton){

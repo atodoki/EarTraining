@@ -8,7 +8,7 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
+
 
 class ChromaticScalesViewController: UIViewController {
 
@@ -30,8 +30,7 @@ class ChromaticScalesViewController: UIViewController {
     var scaleType = 0
     var firstNote = 0
     
-    let sampler = AKSampler()
-    var player: AKSampler!
+    let sampler = AKAppleSampler()
     var timePitch: AKTimePitch!
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
@@ -61,7 +60,7 @@ class ChromaticScalesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
         playScale(scale: scaleList[scaleType])
         
@@ -69,7 +68,7 @@ class ChromaticScalesViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +82,7 @@ class ChromaticScalesViewController: UIViewController {
             let noteIndex = firstNote+i
             
             timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
-            sampler.play()
+            try! sampler.play()
             
             sleep(1)
         }

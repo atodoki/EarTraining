@@ -8,7 +8,6 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
 
 class TriadIdentificationViewController: UIViewController {
     
@@ -34,9 +33,9 @@ class TriadIdentificationViewController: UIViewController {
 
     var exerciseNum = 1
     
-    let samplerRoot = AKSampler()
-    let samplerThird = AKSampler()
-    let samplerFifth = AKSampler()
+    let samplerRoot = AKAppleSampler()
+    let samplerThird = AKAppleSampler()
+    let samplerFifth = AKAppleSampler()
     
     //var player: AKSampler!
     
@@ -85,7 +84,7 @@ class TriadIdentificationViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
         playChord()
         
@@ -96,7 +95,7 @@ class TriadIdentificationViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
         
     }
 
@@ -117,9 +116,9 @@ class TriadIdentificationViewController: UIViewController {
     }
     
     func playChord(){
-        samplerRoot.play()
-        samplerThird.play()
-        samplerFifth.play()
+        try! samplerRoot.play()
+        try! samplerThird.play()
+        try! samplerFifth.play()
     }
     
     func checkAnswer(button: UIButton, chord: Int){

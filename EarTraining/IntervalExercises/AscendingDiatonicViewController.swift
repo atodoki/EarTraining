@@ -8,7 +8,7 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
+
 
 class AscendingDiatonicViewController: UIViewController {
     
@@ -32,7 +32,7 @@ class AscendingDiatonicViewController: UIViewController {
     var exerciseNum = 1
     
     
-    let sampler = AKSampler()
+    let sampler = AKAppleSampler()
     var timePitch: AKTimePitch!
 
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
@@ -56,14 +56,14 @@ class AscendingDiatonicViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
     }
     
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
 
     }
 
@@ -84,11 +84,11 @@ class AscendingDiatonicViewController: UIViewController {
     
     func playInterval(){
         timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        sampler.play()
+        try! sampler.play()
         sleep(1)
         
         timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
-        sampler.play()
+        try! sampler.play()
     }
     
     func checkAnswer(sender: UIButton, interval: Int){

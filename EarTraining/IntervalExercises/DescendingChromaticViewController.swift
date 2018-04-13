@@ -8,7 +8,6 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
 
 class DescendingChromaticViewController: UIViewController {
 
@@ -28,7 +27,7 @@ class DescendingChromaticViewController: UIViewController {
     var intervalSize = 0
     var exerciseNum = 1;
     
-    let sampler = AKSampler()
+    let sampler = AKAppleSampler()
     var timePitch: AKTimePitch!
     
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
@@ -57,14 +56,14 @@ class DescendingChromaticViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
     }
     
     override func didReceiveMemoryWarning() {
@@ -85,11 +84,11 @@ class DescendingChromaticViewController: UIViewController {
     
     func playInterval(){
         timePitch.pitch = noteCents[topNote] + octaveChange[tNoteOctave]
-        sampler.play()
+        try! sampler.play()
         sleep(1)
         
         timePitch.pitch = noteCents[bottomNote%12] + octaveChange[bNoteOctave]
-        sampler.play()
+        try! sampler.play()
     }
     
     func checkAnswer(sender: UIButton, interval: Int){

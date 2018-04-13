@@ -8,7 +8,7 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
+
 
 class AscendingDSingIntervalViewController: UIViewController {
     
@@ -26,7 +26,7 @@ class AscendingDSingIntervalViewController: UIViewController {
     var intervalIndex = 0
     //var randomIndex = 0
     
-    let sampler = AKSampler()
+    let sampler = AKAppleSampler()
     var timePitch: AKTimePitch!
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
@@ -102,13 +102,13 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
     }
     
     @IBAction func instruments(sender: UIButton){
@@ -150,14 +150,14 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     @IBAction func replay(sender: UIButton){
         timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        sampler.play()
+        try! sampler.play()
         sleep(1)
 
     }
     
     @IBAction func playAnswer(sender: UIButton){
         timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
-        sampler.play()
+        try! sampler.play()
         sleep(1)
 
     }
@@ -172,7 +172,7 @@ class AscendingDSingIntervalViewController: UIViewController {
         setInterval()
         
         timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        sampler.play()
+        try! sampler.play()
         
         sender.setTitle("Next", for: .normal)
 

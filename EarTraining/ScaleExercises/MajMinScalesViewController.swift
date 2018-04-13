@@ -8,7 +8,8 @@
 
 import UIKit
 import AudioKit
-import AudioKitUI
+
+
 
 class MajMinScalesViewController: UIViewController {
     
@@ -30,15 +31,14 @@ class MajMinScalesViewController: UIViewController {
     var scaleType = 0
     var firstNote = 0
 
-    let sampler = AKSampler()
-    var player: AKSampler!
+    let sampler = AKAppleSampler()
     var timePitch: AKTimePitch!
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         try! sampler.loadWav("../\(soundNames[0])")
         
         
@@ -61,7 +61,7 @@ class MajMinScalesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AudioKit.start()
+        try! AudioKit.start()
         
         playScale(scale: scaleList[scaleType])
         
@@ -69,7 +69,7 @@ class MajMinScalesViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AudioKit.stop()
+        try! AudioKit.stop()
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +83,8 @@ class MajMinScalesViewController: UIViewController {
             let noteIndex = firstNote+i
             
             timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
-            sampler.play()
+            try! sampler.play()
+//            sampler.play()
 
             sleep(1)
         }
@@ -159,7 +160,7 @@ class MajMinScalesViewController: UIViewController {
     }
     
     @IBAction func string(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[3])")
+         try! sampler.loadWav("../\(soundNames[3])")
         closeInstButtons()
     }
     

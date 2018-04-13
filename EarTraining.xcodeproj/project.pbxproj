@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
+		624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D109620807AD7005B65B1 /* AudioKit.framework */; };
 		6253633A2074A36D0097AB11 /* SingTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625363392074A36D0097AB11 /* SingTriadsViewController.swift */; };
 		6253633F2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633B2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav */; };
 		625363402074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633C2074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav */; };
@@ -29,22 +30,16 @@
 		62A16D03200F30C600C5BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D01200F30C600C5BED3 /* Main.storyboard */; };
 		62A16D05200F30C600C5BED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D04200F30C600C5BED3 /* Assets.xcassets */; };
 		62A16D08200F30C600C5BED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A16D06200F30C600C5BED3 /* LaunchScreen.storyboard */; };
-		62A16D11200F32D900C5BED3 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */; };
-		62A16D12200F32D900C5BED3 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		62A16D13200F32D900C5BED3 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; };
-		62A16D14200F32D900C5BED3 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A16D10200F32D900C5BED3 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62C2C7AF20493B640069ECEC /* DescendingDiatonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2C7AE20493B640069ECEC /* DescendingDiatonicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		62A16D15200F32D900C5BED3 /* Embed Frameworks */ = {
+		625CA5082080587D005274FB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				62A16D14200F32D900C5BED3 /* AudioKit.framework in Embed Frameworks */,
-				62A16D12200F32D900C5BED3 /* AudioKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
+		624D109620807AD7005B65B1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		625363392074A36D0097AB11 /* SingTriadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingTriadsViewController.swift; sourceTree = "<group>"; };
 		6253633B2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Kawai-K11-GrPiano-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Kawai-K11-GrPiano-C4.wav"; sourceTree = "<group>"; };
 		6253633C2074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-French-Horn-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Ensoniq-SQ-1-French-Horn-C4.wav"; sourceTree = "<group>"; };
@@ -76,8 +72,6 @@
 		62A16D04200F30C600C5BED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A16D07200F30C600C5BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A16D09200F30C600C5BED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
-		62A16D10200F32D900C5BED3 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		62C2C7AE20493B640069ECEC /* DescendingDiatonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingDiatonicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A16D13200F32D900C5BED3 /* AudioKit.framework in Frameworks */,
-				62A16D11200F32D900C5BED3 /* AudioKitUI.framework in Frameworks */,
+				624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,13 +121,20 @@
 			path = ChordExercises;
 			sourceTree = "<group>";
 		};
+		624D109320807916005B65B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				624D109620807AD7005B65B1 /* AudioKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		62A16CF1200F30C600C5BED3 = {
 			isa = PBXGroup;
 			children = (
-				62A16D10200F32D900C5BED3 /* AudioKit.framework */,
-				62A16D0F200F32D900C5BED3 /* AudioKitUI.framework */,
 				62A16CFC200F30C600C5BED3 /* EarTraining */,
 				62A16CFB200F30C600C5BED3 /* Products */,
+				624D109320807916005B65B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,7 +185,7 @@
 				62A16CF6200F30C600C5BED3 /* Sources */,
 				62A16CF7200F30C600C5BED3 /* Frameworks */,
 				62A16CF8200F30C600C5BED3 /* Resources */,
-				62A16D15200F32D900C5BED3 /* Embed Frameworks */,
+				625CA5082080587D005274FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ariel Todoki";
 				TargetAttributes = {
 					62A16CF9200F30C600C5BED3 = {
@@ -307,6 +307,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -314,6 +315,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -364,6 +366,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -371,6 +374,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -412,6 +416,7 @@
 				);
 				INFOPLIST_FILE = EarTraining/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ariel.EarTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
