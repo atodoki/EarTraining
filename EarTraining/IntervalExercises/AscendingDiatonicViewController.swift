@@ -32,38 +32,43 @@ class AscendingDiatonicViewController: UIViewController {
     var exerciseNum = 1
     
     
-    let sampler = AKAppleSampler()
-    var timePitch: AKTimePitch!
+    var conductor = Conductor.sharedInstance
+    
+    
+//    var sampler = AKAppleSampler()
+//    var timePitch: AKTimePitch!
+//
+
 
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        try! sampler.loadWav("../\(soundNames[0])")
-
-        
-        timePitch = AKTimePitch(sampler)
-        timePitch.rate = 2.0
-        timePitch.pitch = 0.0
-        timePitch.overlap = 8.0
-        
-        AudioKit.output = timePitch
-        
+        conductor.closeMic()
         setInterval()
     }
     
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        try! AudioKit.start()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        do {
+//            try AudioKit.start()
+//        } catch {
+//            AKLog("AudioKit did not start!")
+//        }
         
     }
     
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        try! AudioKit.stop()
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+//        do {
+//            try AudioKit.stop()
+//        } catch {
+//            AKLog("AudioKit did not stop!")
+//        }
+        
+        //conductor.stopAudioEngine()
 
     }
 
@@ -83,12 +88,16 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     func playInterval(){
-        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        try! sampler.play()
+        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.play(note: .root)
+//        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+//        try! sampler.play()
         sleep(1)
         
-        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
-        try! sampler.play()
+        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
+        conductor.play(note: .root)
+//        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
+//        try! sampler.play()
     }
     
     func checkAnswer(sender: UIButton, interval: Int){
@@ -123,22 +132,26 @@ class AscendingDiatonicViewController: UIViewController {
     }
     
     @IBAction func piano(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[0])")
+        conductor.changeInstrument(instr: .piano)
+//        try! sampler.loadWav("../\(soundNames[0])")
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[1])")
+        conductor.changeInstrument(instr: .clarinet)
+//        try! sampler.loadWav("../\(soundNames[1])")
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[2])")
+        conductor.changeInstrument(instr: .french_horn)
+//        try! sampler.loadWav("../\(soundNames[2])")
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[3])")
+        conductor.changeInstrument(instr: .pizz_strings)
+//        try! sampler.loadWav("../\(soundNames[3])")
         closeInstButtons()
     }
     

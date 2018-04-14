@@ -31,23 +31,24 @@ class MajMinScalesViewController: UIViewController {
     var scaleType = 0
     var firstNote = 0
 
-    let sampler = AKAppleSampler()
-    var timePitch: AKTimePitch!
+//    let sampler = AKAppleSampler()
+//    var timePitch: AKTimePitch!
+    var conductor = Conductor.sharedInstance
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        try! sampler.loadWav("../\(soundNames[0])")
-        
-        
-        timePitch = AKTimePitch(sampler)
-        timePitch.rate = 2.0
-        timePitch.pitch = 0.0
-        timePitch.overlap = 8.0
-        
-        AudioKit.output = timePitch
+//        try! sampler.loadWav("../\(soundNames[0])")
+//
+//
+//        timePitch = AKTimePitch(sampler)
+//        timePitch.rate = 2.0
+//        timePitch.pitch = 0.0
+//        timePitch.overlap = 8.0
+//
+//        AudioKit.output = timePitch
 
         // Do any additional setup after loading the view.
         scaleList.append(majorScale)
@@ -61,15 +62,15 @@ class MajMinScalesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        try! AudioKit.start()
-        
+//        try! AudioKit.start()
+        conductor.closeMic()
         playScale(scale: scaleList[scaleType])
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        try! AudioKit.stop()
+//        try! AudioKit.stop()
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,9 +83,11 @@ class MajMinScalesViewController: UIViewController {
         for i in scale{
             let noteIndex = firstNote+i
             
-            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
-            try! sampler.play()
-//            sampler.play()
+            conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex], note: .root)
+            conductor.play(note: .root)
+//            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
+//            try! sampler.play()
+
 
             sleep(1)
         }
@@ -145,22 +148,26 @@ class MajMinScalesViewController: UIViewController {
     }
     
     @IBAction func piano(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[0])")
+        conductor.changeInstrument(instr: .piano)
+//        try! sampler.loadWav("../\(soundNames[0])")
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[1])")
+        conductor.changeInstrument(instr: .clarinet)
+//        try! sampler.loadWav("../\(soundNames[1])")
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[2])")
+        conductor.changeInstrument(instr: .french_horn)
+//        try! sampler.loadWav("../\(soundNames[2])")
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
-         try! sampler.loadWav("../\(soundNames[3])")
+        conductor.changeInstrument(instr: .pizz_strings)
+//         try! sampler.loadWav("../\(soundNames[3])")
         closeInstButtons()
     }
     

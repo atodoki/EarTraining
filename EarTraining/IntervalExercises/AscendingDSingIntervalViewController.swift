@@ -26,14 +26,17 @@ class AscendingDSingIntervalViewController: UIViewController {
     var intervalIndex = 0
     //var randomIndex = 0
     
-    let sampler = AKAppleSampler()
-    var timePitch: AKTimePitch!
+//    var sampler = AKAppleSampler()
+//    var timePitch: AKTimePitch!
+//    var mixer = AKMixer()
+    
+    var conductor = Conductor.sharedInstance
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
-    var mic: AKMicrophone!
-    var tracker: AKFrequencyTracker!
-    var silence: AKBooster!
+//    var mic: AKMicrophone!
+//    var tracker: AKFrequencyTracker!
+//    var silence: AKBooster!
     var timer: Timer!
     
     
@@ -55,29 +58,32 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     
     let diatonicIntervals = [2, 4, 5, 7, 9, 11, 12]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        try! sampler.loadWav("../\(soundNames[0])")
-        
-        timePitch = AKTimePitch(sampler)
-        timePitch.rate = 2.0
-        timePitch.pitch = 0.0
-        timePitch.overlap = 8.0
-        
-        
-        AKSettings.audioInputEnabled = true
-        mic = AKMicrophone()
-        tracker = AKFrequencyTracker(mic)
-        silence = AKBooster(tracker, gain: 0)
-        AudioKit.output = silence
-  
-        AudioKit.output = timePitch
-        
-        //setInterval()
+//        try! sampler.loadWav("../\(soundNames[0])")
+//
+//        timePitch = AKTimePitch(sampler)
+//        timePitch.rate = 2.0
+//        timePitch.pitch = 0.0
+//        timePitch.overlap = 8.0
+//
+//
+//        AKSettings.audioInputEnabled = true
+//        mic = AKMicrophone()
+//        tracker = AKFrequencyTracker(mic)
+//        silence = AKBooster(tracker, gain: 0)
+//        AudioKit.output = silence
+//
+//        mixer.connect(input: timePitch)
+//
+//        AudioKit.output = mixer
+        conductor.setMic()
+        setInterval()
 
     }
     
@@ -100,15 +106,23 @@ class AscendingDSingIntervalViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        try! AudioKit.start()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+//        do{
+//            try AudioKit.start()
+//        } catch{
+//            AKLog("AudioKit did not start!")
+//        }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        try! AudioKit.stop()
+//        do {
+//            try AudioKit.stop()
+//        } catch {
+//            AKLog("AudioKit did not stop!")
+//        }
     }
     
     @IBAction func instruments(sender: UIButton){
@@ -122,22 +136,26 @@ class AscendingDSingIntervalViewController: UIViewController {
     }
     
     @IBAction func piano(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[0])")
+        conductor.changeInstrument(instr: .piano)
+//        try! sampler.loadWav("../\(soundNames[0])")
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[1])")
+        conductor.changeInstrument(instr: .clarinet)
+//        try! sampler.loadWav("../\(soundNames[1])")
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[2])")
+        conductor.changeInstrument(instr: .french_horn)
+//        try! sampler.loadWav("../\(soundNames[2])")
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
-        try! sampler.loadWav("../\(soundNames[3])")
+        conductor.changeInstrument(instr: .pizz_strings)
+//        try! sampler.loadWav("../\(soundNames[3])")
         closeInstButtons()
     }
     
@@ -149,15 +167,19 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     
     @IBAction func replay(sender: UIButton){
-        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        try! sampler.play()
+        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.play(note: .root)
+//        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+//        try! sampler.play()
         sleep(1)
 
     }
     
     @IBAction func playAnswer(sender: UIButton){
-        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
-        try! sampler.play()
+        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
+        conductor.play(note: .root)
+//        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
+//        try! sampler.play()
         sleep(1)
 
     }
@@ -171,8 +193,10 @@ class AscendingDSingIntervalViewController: UIViewController {
     
         setInterval()
         
-        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-        try! sampler.play()
+        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.play(note: .root)
+//        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
+//        try! sampler.play()
         
         sender.setTitle("Next", for: .normal)
 
@@ -182,12 +206,12 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     @objc func updateUI(){
         //AudioKit.output = silence
-        var frequency0 = tracker.frequency
+        var frequency0 = conductor.listenFreq()
         var sungOctave = 0.0
         var sungNoteIndex = 0;
 //        print(mic.isStarted)
 //        print(tracker.amplitude)
-        if(tracker.amplitude > 0.09){
+        if(conductor.listenAmp() > 0.09){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){
