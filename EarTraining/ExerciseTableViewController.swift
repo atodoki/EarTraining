@@ -11,6 +11,10 @@ import UIKit
 class ExerciseTableViewController: UITableViewController {
     
     var exerciseNames = ["Intervals", "Scales", "Chords"]
+    
+    var descriptions = ["Interval exercises include diatonic and chromatic, ascending and descending identification and singing.", "Scale exercises include identifying major, minor, modes of major scale, chromatic, and some of the modes of limited transposition.", "Chord exercises include identifying and singing major, minor, diminished and augmented triads."]
+    
+    var imageNames = ["ascendDiatonic","majorScale", "triad"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,8 @@ class ExerciseTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.nameLabel?.text = exerciseNames[indexPath.row]
+        cell.descriptionLabel?.text = descriptions[indexPath.row]
+        cell.musicImage.image = UIImage(named: imageNames[indexPath.row])
 
         return cell
     }
