@@ -87,7 +87,7 @@ class ChromaticScalesViewController: UIViewController {
 //            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
 //            try! sampler.play()
             
-            sleep(1)
+            usleep(500000)
         }
         
     }

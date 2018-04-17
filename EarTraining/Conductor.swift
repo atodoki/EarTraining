@@ -36,7 +36,6 @@ class Conductor {
     
     var mixer: AKMixer!
     
-    
     init() {
         do{
             try sampler1.loadWav("Kawai-K11-GrPiano-C4")
@@ -57,6 +56,7 @@ class Conductor {
             AudioKit.output = silence
             
             mixer = AKMixer(timePitch1, timePitch2, timePitch3)
+            mixer.volume = 3
             
             AudioKit.output = mixer
         }catch{
@@ -64,8 +64,6 @@ class Conductor {
         }
         
         startAudioEngine()
-        
-        
     }
     
     internal func startAudioEngine() {

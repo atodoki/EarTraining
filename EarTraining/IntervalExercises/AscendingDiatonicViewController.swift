@@ -16,6 +16,7 @@ class AscendingDiatonicViewController: UIViewController {
     @IBOutlet var instrumentButtons: [UIButton]!
     @IBOutlet var exerciseNumLabel: UILabel!
     
+    
     //let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]

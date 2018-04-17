@@ -80,6 +80,7 @@ class MajMinScalesViewController: UIViewController {
     
     func playScale(scale: Array<Int>){
         
+        
         for i in scale{
             let noteIndex = firstNote+i
             
@@ -88,10 +89,10 @@ class MajMinScalesViewController: UIViewController {
 //            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
 //            try! sampler.play()
 
-
-            sleep(1)
+            usleep(500000)
         }
-
+        
+        
     }
     
     func checkAnswer(button: UIButton, scale: Int){
