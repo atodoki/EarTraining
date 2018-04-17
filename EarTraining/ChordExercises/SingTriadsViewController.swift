@@ -102,6 +102,7 @@ class SingTriadsViewController: UIViewController {
 //        tpFifth = AKTimePitch(samplerFifth)
 //        tpFifth.rate = 2.0
         
+        conductor.setMic()
         setChord()
         
 //        mixer.connect(input: tpRoot)
@@ -122,6 +123,7 @@ class SingTriadsViewController: UIViewController {
         super.viewWillDisappear(animated)
 //        try! AudioKit.stop()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

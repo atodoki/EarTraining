@@ -74,6 +74,7 @@ class TriadIdentificationViewController: UIViewController {
 //        tpFifth = AKTimePitch(samplerFifth)
 //        tpFifth.rate = 2.0
 
+        conductor.closeMic()
         setChord()
         
 //        mixer.connect(input: tpRoot)
