@@ -40,16 +40,8 @@ class ModesScalesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        conductor.closeMic()
         
-//        try! sampler.loadWav("../\(soundNames[0])")
-//
-//
-//        timePitch = AKTimePitch(sampler)
-//        timePitch.rate = 2.0
-//        timePitch.pitch = 0.0
-//        timePitch.overlap = 8.0
-//
-//        AudioKit.output = timePitch
         
         // Do any additional setup after loading the view.
         scaleList.append(ionian)
@@ -66,15 +58,15 @@ class ModesScalesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        try! AudioKit.start()
-        conductor.closeMic()
+
+        
         playScale(scale: scaleList[scaleType])
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        try! AudioKit.stop()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,8 +81,7 @@ class ModesScalesViewController: UIViewController {
             
             conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex], note: .root)
             conductor.play(note: .root)
-//            timePitch.pitch = (noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex])
-//            try! sampler.play()
+
             
             usleep(500000)
         }
@@ -151,25 +142,25 @@ class ModesScalesViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-//        try! sampler.loadWav("../\(soundNames[0])")
+
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-//        try! sampler.loadWav("../\(soundNames[1])")
+
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-//        try! sampler.loadWav("../\(soundNames[2])")
+
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-//        try! sampler.loadWav("../\(soundNames[3])")
+
         closeInstButtons()
     }
     

@@ -175,11 +175,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-Jc-JPG">
                                 <rect key="frame" x="35" y="204.66666666666666" width="344" height="491.33333333333337"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3VZ-WN-u7E">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3VZ-WN-u7E">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4i-9C-gsU">
-                                                <rect key="frame" x="0.0" y="15.333333333333343" width="172" height="42"/>
+                                                <rect key="frame" x="0.0" y="15.333333333333343" width="169.66666666666666" height="42"/>
                                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Start/Replay">
@@ -190,7 +190,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-yV-cWo">
-                                                <rect key="frame" x="172" y="15.333333333333343" width="172" height="42"/>
+                                                <rect key="frame" x="174.66666666666663" y="15.333333333333343" width="169.33333333333337" height="42"/>
                                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Next">
@@ -693,7 +693,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="psH-Z4-FLp">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="psH-Z4-FLp">
                                 <rect key="frame" x="105" y="536" width="204" height="51"/>
                                 <color key="tintColor" red="0.53506134490000001" green="0.56263116769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -758,11 +758,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1em-0r-gHp">
                                 <rect key="frame" x="35" y="209" width="344" height="487"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-AX-aqb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-AX-aqb">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="63"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-60-wk2">
-                                                <rect key="frame" x="0.0" y="10.666666666666657" width="172" height="42"/>
+                                                <rect key="frame" x="0.0" y="10.666666666666657" width="169.66666666666666" height="42"/>
                                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Start/Replay">
@@ -773,7 +773,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQa-cF-68M">
-                                                <rect key="frame" x="172" y="10.666666666666657" width="172" height="42"/>
+                                                <rect key="frame" x="174.66666666666663" y="10.666666666666657" width="169.33333333333337" height="42"/>
                                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Next">
@@ -1856,7 +1856,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-ru-LYr">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-ru-LYr">
                                 <rect key="frame" x="105" y="536" width="204" height="51"/>
                                 <color key="tintColor" red="0.53506134490000001" green="0.56263116769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

@@ -24,26 +24,20 @@ class AscendingDSingIntervalViewController: UIViewController {
     var topNote = 0
     var intervalSize = 0
     var intervalIndex = 0
-    //var randomIndex = 0
-    
-//    var sampler = AKAppleSampler()
-//    var timePitch: AKTimePitch!
-//    var mixer = AKMixer()
+
     
     var conductor = Conductor.sharedInstance
     
     let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
-//    var mic: AKMicrophone!
-//    var tracker: AKFrequencyTracker!
-//    var silence: AKBooster!
+
     var timer: Timer!
     
     
     let noteFrequencies = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
-    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
@@ -65,23 +59,7 @@ class AscendingDSingIntervalViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-//        try! sampler.loadWav("../\(soundNames[0])")
-//
-//        timePitch = AKTimePitch(sampler)
-//        timePitch.rate = 2.0
-//        timePitch.pitch = 0.0
-//        timePitch.overlap = 8.0
-//
-//
-//        AKSettings.audioInputEnabled = true
-//        mic = AKMicrophone()
-//        tracker = AKFrequencyTracker(mic)
-//        silence = AKBooster(tracker, gain: 0)
-//        AudioKit.output = silence
-//
-//        mixer.connect(input: timePitch)
-//
-//        AudioKit.output = mixer
+
         conductor.setMic()
         setInterval()
 
@@ -109,20 +87,12 @@ class AscendingDSingIntervalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        do{
-//            try AudioKit.start()
-//        } catch{
-//            AKLog("AudioKit did not start!")
-//        }
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        do {
-//            try AudioKit.stop()
-//        } catch {
-//            AKLog("AudioKit did not stop!")
-//        }
+
     }
     
     @IBAction func instruments(sender: UIButton){
@@ -137,25 +107,25 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-//        try! sampler.loadWav("../\(soundNames[0])")
+
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-//        try! sampler.loadWav("../\(soundNames[1])")
+
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-//        try! sampler.loadWav("../\(soundNames[2])")
+
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-//        try! sampler.loadWav("../\(soundNames[3])")
+
         closeInstButtons()
     }
     
@@ -169,8 +139,7 @@ class AscendingDSingIntervalViewController: UIViewController {
     @IBAction func replay(sender: UIButton){
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
-//        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-//        try! sampler.play()
+
         sleep(1)
 
     }
@@ -178,8 +147,7 @@ class AscendingDSingIntervalViewController: UIViewController {
     @IBAction func playAnswer(sender: UIButton){
         conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
-//        timePitch.pitch = noteCents[topNote%12] + octaveChange[tNoteOctave]
-//        try! sampler.play()
+
         sleep(1)
 
     }
@@ -195,8 +163,7 @@ class AscendingDSingIntervalViewController: UIViewController {
         
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
-//        timePitch.pitch = noteCents[bottomNote] + octaveChange[bNoteOctave]
-//        try! sampler.play()
+
         
         sender.setTitle("Next", for: .normal)
 
@@ -211,7 +178,7 @@ class AscendingDSingIntervalViewController: UIViewController {
         var sungNoteIndex = 0;
 //        print(mic.isStarted)
 //        print(tracker.amplitude)
-        if(conductor.listenAmp() > 0.09){
+        if(conductor.listenAmp() > 0.05){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){

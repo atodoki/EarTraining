@@ -22,7 +22,7 @@ class SingTriadsViewController: UIViewController {
     let noteFrequencies = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteFreqRanges = [15.9, 16.83, 17.83, 18.9, 20.01, 21.21, 22.47, 23.8, 25.22, 26.72, 28.31, 29.99, 31.77]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
-    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
@@ -42,35 +42,17 @@ class SingTriadsViewController: UIViewController {
     
     var exerciseNum = 1
     
-    var rootNoteName = ""
-    var thirdNoteName = ""
-    var fifthNoteName = ""
+//    var rootNoteName = ""
+//    var thirdNoteName = ""
+//    var fifthNoteName = ""
     
     var rootOctave = 4
     var thirdOctave = 4
     var fifthOctave = 4
     
-//    var bNoteOctave = 4
-//    var tNoteOctave = 4
-//    var bottomNote = 0
-//    var topNote = 0
-//    var intervalSize = 0
-//    var intervalIndex = 0
-    
-//    let samplerRoot = AKAppleSampler()
-//    let samplerThird = AKAppleSampler()
-//    let samplerFifth = AKAppleSampler()
-//
-//    var tpRoot: AKTimePitch!
-//    var tpThird: AKTimePitch!
-//    var tpFifth: AKTimePitch!
-//
-//    var mic: AKMicrophone!
-//    var tracker: AKFrequencyTracker!
-//    var silence: AKBooster!
+
     var timer: Timer!
-//
-//    var mixer = AKMixer()
+
     
     var conductor = Conductor.sharedInstance
     
@@ -78,50 +60,26 @@ class SingTriadsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        AKSettings.audioInputEnabled = true
-//        mic = AKMicrophone()
-//        tracker = AKFrequencyTracker(mic)
-//        silence = AKBooster(tracker, gain: 0)
-        
+     
         chordList.append(majChord)
         chordList.append(minChord)
         chordList.append(dimChord)
         chordList.append(augChord)
         
-//        try! samplerRoot.loadWav("../\(soundNames[0])")
-//        try! samplerThird.loadWav("../\(soundNames[0])")
-//        try! samplerFifth.loadWav("../\(soundNames[0])")
-        
-//        tpRoot = AKTimePitch(samplerRoot)
-//        tpRoot.rate = 2.0
-//
-//        tpThird = AKTimePitch(samplerThird)
-//        tpThird.rate = 2.0
-//
-//        tpFifth = AKTimePitch(samplerFifth)
-//        tpFifth.rate = 2.0
-        
         conductor.setMic()
         setChord()
         
-//        mixer.connect(input: tpRoot)
-//        mixer.connect(input: tpThird)
-//        mixer.connect(input: tpFifth)
-//
-//        AudioKit.output = mixer
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        try! AudioKit.start()
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        try! AudioKit.stop()
+
     }
     
 
@@ -144,15 +102,7 @@ class SingTriadsViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
         conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
         conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
-//        tpRoot.pitch = noteCents[root] + octaveChange[rootOctave]
-//        tpThird.pitch = noteCents[third%12] + octaveChange[thirdOctave]
-//        tpFifth.pitch = noteCents[fifth%12] + octaveChange[fifthOctave]
-        
-        
-        // set note name variables ???? do you need this?
-//        rootNoteName = noteNamesWithFlats[root]
-//        thirdNoteName = noteNamesWithFlats[third%12]
-//        fifthNoteName = noteNamesWithFlats[fifth%12]
+
     }
     
     func closeInstButtons(){
@@ -175,39 +125,30 @@ class SingTriadsViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-//        try! samplerRoot.loadWav("../\(soundNames[0])")
-//        try! samplerThird.loadWav("../\(soundNames[0])")
-//        try! samplerFifth.loadWav("../\(soundNames[0])")
+
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-//        try! samplerRoot.loadWav("../\(soundNames[1])")
-//        try! samplerThird.loadWav("../\(soundNames[1])")
-//        try! samplerFifth.loadWav("../\(soundNames[1])")
+
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-//        try! samplerRoot.loadWav("../\(soundNames[2])")
-//        try! samplerThird.loadWav("../\(soundNames[2])")
-//        try! samplerFifth.loadWav("../\(soundNames[2])")
+
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-//        try! samplerRoot.loadWav("../\(soundNames[3])")
-//        try! samplerThird.loadWav("../\(soundNames[3])")
-//        try! samplerFifth.loadWav("../\(soundNames[3])")
+
         closeInstButtons()
     }
     
     @IBAction func playRoot(sender: UIButton){
-        //AudioKit.output = mixer
-//        try! samplerRoot.play()
+
         conductor.play(note: .root)
         
     }
@@ -227,9 +168,6 @@ class SingTriadsViewController: UIViewController {
         conductor.play(note: .third)
         conductor.play(note: .fifth)
         
-//        try! samplerRoot.play()
-//        try! samplerThird.play()
-//        try! samplerFifth.play()
     }
     
     @IBAction func next(sender: UIButton){
@@ -254,9 +192,6 @@ class SingTriadsViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
         conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
         conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
-//        tpRoot.pitch = noteCents[root] + octaveChange[rootOctave]
-//        tpThird.pitch = noteCents[third%12] + octaveChange[thirdOctave]
-//        tpFifth.pitch = noteCents[fifth%12] + octaveChange[fifthOctave]
         
         rootNote.text = "\(noteNamesWithSharps[root])\(rootOctave)"
     }
@@ -278,7 +213,7 @@ class SingTriadsViewController: UIViewController {
         var sungOctave = 0
         var sungNoteIndex = 0
         
-        if(conductor.listenAmp() > 0.09){
+        if(conductor.listenAmp() > 0.05){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){

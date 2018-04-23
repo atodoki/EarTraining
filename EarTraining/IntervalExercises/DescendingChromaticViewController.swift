@@ -32,7 +32,7 @@ class DescendingChromaticViewController: UIViewController {
     
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     
-    let octaveChange = [-6000.0,-3600.0,-2400.0,-1200.0,0,1200.0,2400.0]
+    let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     var conductor = Conductor.sharedInstance
     
@@ -42,15 +42,6 @@ class DescendingChromaticViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-//
-//        try! sampler.loadWav("../\(soundNames[0])")
-//
-//        timePitch = AKTimePitch(sampler)
-//        timePitch.rate = 2.0
-//        timePitch.pitch = 0.0
-//        timePitch.overlap = 8.0
-//
-//        AudioKit.output = timePitch
         
         conductor.closeMic()
         setInterval()
@@ -59,14 +50,14 @@ class DescendingChromaticViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        try! AudioKit.start()
+
         
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        try! AudioKit.stop()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,7 +71,7 @@ class DescendingChromaticViewController: UIViewController {
         topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
         intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
         bottomNote = topNote - intervalSize // random number chromatic interval from top note
-        tNoteOctave = Int(arc4random_uniform(3))+3
+        tNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
         bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
         bottomNote += 12
     }
@@ -88,14 +79,12 @@ class DescendingChromaticViewController: UIViewController {
     func playInterval(){
         conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
-//        timePitch.pitch = noteCents[topNote] + octaveChange[tNoteOctave]
-//        try! sampler.play()
+
         sleep(1)
         
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
-//        timePitch.pitch = noteCents[bottomNote%12] + octaveChange[bNoteOctave]
-//        try! sampler.play()
+
     }
     
     func checkAnswer(sender: UIButton, interval: Int){
@@ -131,25 +120,25 @@ class DescendingChromaticViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-//        try! sampler.loadWav("../\(soundNames[0])")
+
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-//        try! sampler.loadWav("../\(soundNames[1])")
+
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-//        try! sampler.loadWav("../\(soundNames[2])")
+
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-//        try! sampler.loadWav("../\(soundNames[3])")
+
         closeInstButtons()
     }
     

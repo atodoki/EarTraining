@@ -17,6 +17,7 @@ class TriadIdentificationViewController: UIViewController {
     
     //let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     //let diatonicIntervals = [2,4,5,7,9,11,12]
     let majChord = [4,7]
@@ -30,20 +31,13 @@ class TriadIdentificationViewController: UIViewController {
     var root = 0
     var third = 0
     var fifth = 0
+    
+    var rootOctave = 4
+    var thirdOctave = 4
+    var fifthOctave = 4
 
     var exerciseNum = 1
     
-//    var samplerRoot = AKAppleSampler()
-//    var samplerThird = AKAppleSampler()
-//    var samplerFifth = AKAppleSampler()
-//
-//    //var player: AKSampler!
-//
-//    var tpRoot: AKTimePitch!
-//    var tpThird: AKTimePitch!
-//    var tpFifth: AKTimePitch!
-//
-//    var mixer = AKMixer()
     
     var conductor = Conductor.sharedInstance
     
@@ -59,54 +53,25 @@ class TriadIdentificationViewController: UIViewController {
         chordList.append(dimChord)
         chordList.append(augChord)
         
-        
-//        try! samplerRoot.loadWav("../\(soundNames[0])")
-//        try! samplerThird.loadWav("../\(soundNames[0])")
-//        try! samplerFifth.loadWav("../\(soundNames[0])")
-//
-//
-//        tpRoot = AKTimePitch(samplerRoot)
-//        tpRoot.rate = 2.0
-//
-//        tpThird = AKTimePitch(samplerThird)
-//        tpThird.rate = 2.0
-//
-//        tpFifth = AKTimePitch(samplerFifth)
-//        tpFifth.rate = 2.0
 
         conductor.closeMic()
         setChord()
-        
-//        mixer.connect(input: tpRoot)
-//        mixer.connect(input: tpThird)
-//        mixer.connect(input: tpFifth)
-//
-//        AudioKit.output = mixer
+
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        do {
-//            try AudioKit.start()
-//        } catch {
-//            AKLog("AudioKit did not start!")
-//        }
         
         playChord()
-        
-        
+   
     }
     
     
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-//        do {
-//            try AudioKit.stop()
-//        } catch {
-//            AKLog("AudioKit did not stop!")
-//        }
+
         
     }
 
@@ -121,22 +86,21 @@ class TriadIdentificationViewController: UIViewController {
         third = root + chordList[chordType][0]
         fifth = root + chordList[chordType][1]
         
-        conductor.changePitch(pitch: noteCents[root], note: .root)
-        conductor.changePitch(pitch: third > 11 ? noteCents[third%12] + 1200.0 : noteCents[third], note: .third)
-        conductor.changePitch(pitch: fifth > 11 ? noteCents[fifth%12] + 1200.0 : noteCents[fifth], note: .fifth)
+        rootOctave = Int(arc4random_uniform(3) + 3)
+        thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
+        fifthOctave = fifthOctave > 11 ? rootOctave + 1 : rootOctave
         
-//        tpRoot.pitch = noteCents[root]
-//        tpThird.pitch = (third > 11 ? noteCents[third%12] + 1200.0 : noteCents[third])
-//        tpFifth.pitch = (fifth > 11 ? noteCents[fifth%12] + 1200.0 : noteCents[fifth])
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
+        
     }
     
     func playChord(){
         conductor.play(note: .root)
         conductor.play(note: .third)
         conductor.play(note: .fifth)
-//        try! samplerRoot.play()
-//        try! samplerThird.play()
-//        try! samplerFifth.play()
+
     }
     
     func checkAnswer(button: UIButton, chord: Int){
@@ -173,33 +137,25 @@ class TriadIdentificationViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-//        try! samplerRoot.loadWav("../\(soundNames[0])")
-//        try! samplerThird.loadWav("../\(soundNames[0])")
-//        try! samplerFifth.loadWav("../\(soundNames[0])")
+
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-//        try! samplerRoot.loadWav("../\(soundNames[1])")
-//        try! samplerThird.loadWav("../\(soundNames[1])")
-//        try! samplerFifth.loadWav("../\(soundNames[1])")
+
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-//        try! samplerRoot.loadWav("../\(soundNames[2])")
-//        try! samplerThird.loadWav("../\(soundNames[2])")
-//        try! samplerFifth.loadWav("../\(soundNames[2])")
+
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-//        try! samplerRoot.loadWav("../\(soundNames[3])")
-//        try! samplerThird.loadWav("../\(soundNames[3])")
-//        try! samplerFifth.loadWav("../\(soundNames[3])")
+
         closeInstButtons()
     }
     
