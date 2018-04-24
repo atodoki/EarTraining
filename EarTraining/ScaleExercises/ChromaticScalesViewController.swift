@@ -34,7 +34,6 @@ class ChromaticScalesViewController: UIViewController {
     var exerciseNum = 1
 
     var conductor = Conductor.sharedInstance
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

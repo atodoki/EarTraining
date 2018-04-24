@@ -9,17 +9,17 @@
 import UIKit
 
 class ScalesTableViewController: UITableViewController {
-    var scales = [["Major/Minor Scales", "Major/Minor Sing"], ["Modes", "Modes Sing"], ["Chromatic/Modes of Limited Transposition"]]
+    var scales = [["Major/Minor Scales", "Major/Minor Sing"], ["Modes", "Modes Sing"], ["Chromatic/Modes of Limited Transposition", "Chromatic/Modes Sing"]]
     
-    var segueNames = [["Major/Minor Scales","MajMinSing"], ["Modes", "ModesSing"], ["Chromatic/Modes of Limited Transposition"]]
+    var segueNames = [["Major/Minor Scales","MajMinSing"], ["Modes", "ModesSing"], ["Chromatic/Modes of Limited Transposition", "ChromaticSing"]]
     
     var headers = ["Easy","Medium","Challenge"]
     
-    var imageNames = [["majorScale","majorScale"],["modeScale","modeScale"],["wtScale"]]
+    var imageNames = [["majorScale","majorScale"],["modeScale","modeScale"],["wtScale", "wtScale"]]
     
     var descriptions = [["See if you can identify major and minor scales! Includes natural minor, harmonic minor, and natural minor.", "Test your skills and sing major and minor scales!"],
                         ["See if you can identify the 7 different modes of the major scale!", "Test your skills and sing modes of the major scale!"],
-                        ["Can you identify the chromatic scale, whole tone scale, and the octatonic/diminished scales?"]]
+                        ["Can you identify the chromatic scale, whole tone scale, and the octatonic/diminished scales?","Test your skills and sing the chromatic scale, whole tone scale, and the octatonic/diminished scales!"]]
     
 
     override func viewDidLoad() {

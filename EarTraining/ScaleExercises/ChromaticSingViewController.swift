@@ -1,5 +1,5 @@
 //
-//  ModesSingViewController.swift
+//  ChromaticSingViewController.swift
 //  EarTraining
 //
 //  Created by Ariel Todoki on 4/23/18.
@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import AudioKit
 
-class ModesSingViewController: UIViewController {
+class ChromaticSingViewController: UIViewController {
 
     @IBOutlet var exerciseNumLabel: UILabel!
     
@@ -21,6 +20,10 @@ class ModesSingViewController: UIViewController {
     @IBOutlet var note6: UILabel!
     @IBOutlet var note7: UILabel!
     @IBOutlet var note8: UILabel!
+    @IBOutlet var note9: UILabel!
+    @IBOutlet var note10: UILabel!
+    @IBOutlet var note11: UILabel!
+    @IBOutlet var note12: UILabel!
     
     @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var recordButton: UIButton!
@@ -32,15 +35,12 @@ class ModesSingViewController: UIViewController {
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
-    let scaleNames = ["Ionian Scale", "Dorian Scale","Phrygian Scale","Lydian Scale","Mixolydian Scale", "Aeolian Scale", "Locrian Scale"]
+    let scaleNames = ["Chromatic Scale", "Whole Tone Scale", "Whole-Half Octatonic Scale", "Half-Whole Octatonic Scale"]
     
-    let ionian = [0,2,4,5,7,9,11,12]
-    let dorian = [0,2,3,5,7,9,10,12]
-    let phrygian = [0,1,3,5,7,8,10,12]
-    let lydian = [0,2,4,6,7,9,11,12]
-    let mixolydian = [0,2,4,5,7,9,10,12]
-    let aeolian = [0,2,3,5,7,8,10,12]
-    let locrian = [0,1,3,5,6,8,10,12]
+    let chromatic = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+    let wholeTone = [0,2,4,6,8,10,12]
+    let whOctatonic = [0,2,3,5,6,8,9,11,12]
+    let hwOctatonic = [0,1,3,4,6,7,9,10,12]
     
     var scaleList = [[Int]]()
     
@@ -58,6 +58,10 @@ class ModesSingViewController: UIViewController {
     var noteInd6 = 0
     var noteInd7 = 0
     var noteInd8 = 0
+    var noteInd9 = 0
+    var noteInd10 = 0
+    var noteInd11 = 0
+    var noteInd12 = 0
     
     var exerciseNum = 1
     
@@ -71,13 +75,10 @@ class ModesSingViewController: UIViewController {
         conductor.closeMic()
         
         // Do any additional setup after loading the view.
-        scaleList.append(ionian)
-        scaleList.append(dorian)
-        scaleList.append(phrygian)
-        scaleList.append(lydian)
-        scaleList.append(mixolydian)
-        scaleList.append(aeolian)
-        scaleList.append(locrian)
+        scaleList.append(chromatic)
+        scaleList.append(wholeTone)
+        scaleList.append(whOctatonic)
+        scaleList.append(hwOctatonic)
         
         setScale()
         
@@ -90,7 +91,7 @@ class ModesSingViewController: UIViewController {
     }
     
     func setScale(){
-        scaleType = Int(arc4random_uniform(7))
+        scaleType = Int(arc4random_uniform(4))
         scaleLabel.text = " Sing a \(scaleNames[scaleType])"
         
         firstNote = Int(arc4random_uniform(12))
@@ -102,7 +103,18 @@ class ModesSingViewController: UIViewController {
         noteInd5 = scaleList[scaleType][4] + firstNote
         noteInd6 = scaleList[scaleType][5] + firstNote
         noteInd7 = scaleList[scaleType][6] + firstNote
-        noteInd8 = scaleList[scaleType][7] + firstNote
+        
+        if(scaleType == 2 || scaleType == 3){
+            noteInd8 = scaleList[scaleType][7] + firstNote
+            noteInd9 = scaleList[scaleType][8] + firstNote
+        } else if (scaleType == 0){
+            noteInd8 = scaleList[scaleType][7] + firstNote
+            noteInd9 = scaleList[scaleType][8] + firstNote
+            noteInd10 = scaleList[scaleType][9] + firstNote
+            noteInd11 = scaleList[scaleType][10] + firstNote
+            noteInd12 = scaleList[scaleType][11] + firstNote
+        }
+        
     }
     
     func playScale(scale: Array<Int>){
@@ -152,7 +164,7 @@ class ModesSingViewController: UIViewController {
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
         
-        var i = 8
+        var i = 12
         for l in noteLabels{
             l.backgroundColor = UIColor.white
             l.text = "Note \(i)"
@@ -198,7 +210,7 @@ class ModesSingViewController: UIViewController {
     
     @IBAction func handleGesture(_ sender: UILongPressGestureRecognizer){
         if sender.state == UIGestureRecognizerState.began{
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ModesSingViewController.updateUI), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ChromaticSingViewController.updateUI), userInfo: nil, repeats: true)
             recordButton.setTitle("Listening...", for: .normal)
         }
         else if sender.state == UIGestureRecognizerState.ended{
@@ -246,11 +258,44 @@ class ModesSingViewController: UIViewController {
                 changeNoteLabel(label: note6, noteIndex: noteInd6, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
             }else if(note7.backgroundColor != UIColor.green){
                 changeNoteLabel(label: note7, noteIndex: noteInd7, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
-            }else if(note8.backgroundColor != UIColor.green){
-                changeNoteLabel(label: note8, noteIndex: noteInd8, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
-            }else{
-                note8.text = "Correct!"
             }
+//                else if(note8.backgroundColor != UIColor.green){
+//                changeNoteLabel(label: note8, noteIndex: noteInd8, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+            else{
+                
+            switch scaleType {
+            case 0:
+                if(note8.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note8, noteIndex: noteInd8, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else if(note9.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note9, noteIndex: noteInd9, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else if(note10.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note10, noteIndex: noteInd10, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else if(note11.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note11, noteIndex: noteInd11, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else if(note12.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note12, noteIndex: noteInd12, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else{
+                    note12.text = "Correct!"
+                }
+            case 1:
+                note7.text = "Correct!"
+            case 2,
+                 3:
+                if(note8.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note8, noteIndex: noteInd8, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                }else if(note9.backgroundColor != UIColor.green){
+                    changeNoteLabel(label: note9, noteIndex: noteInd9, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
+                    
+                }else{
+                    note9.text = "Correct!"
+                }
+            default:
+                scaleLabel.text = "Press the Next Button"
+            }
+            }
+            
+            
             
         }
     }

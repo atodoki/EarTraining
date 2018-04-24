@@ -10,6 +10,7 @@
 		622815C3208E4DC700D85B7B /* MajMinSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C2208E4DC700D85B7B /* MajMinSingViewController.swift */; };
 		622815C5208EE5C700D85B7B /* DescendingDSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */; };
 		622815C7208EF40E00D85B7B /* ModesSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C6208EF40E00D85B7B /* ModesSingViewController.swift */; };
+		622815C9208EFD7800D85B7B /* ChromaticSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C8208EFD7800D85B7B /* ChromaticSingViewController.swift */; };
 		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
 		624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D109620807AD7005B65B1 /* AudioKit.framework */; };
 		6253633A2074A36D0097AB11 /* SingTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625363392074A36D0097AB11 /* SingTriadsViewController.swift */; };
@@ -54,6 +55,7 @@
 		622815C2208E4DC700D85B7B /* MajMinSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajMinSingViewController.swift; sourceTree = "<group>"; };
 		622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingDSingViewController.swift; sourceTree = "<group>"; };
 		622815C6208EF40E00D85B7B /* ModesSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesSingViewController.swift; sourceTree = "<group>"; };
+		622815C8208EFD7800D85B7B /* ChromaticSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticSingViewController.swift; sourceTree = "<group>"; };
 		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
 		624D109620807AD7005B65B1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		625363392074A36D0097AB11 /* SingTriadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingTriadsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */,
 				622815C2208E4DC700D85B7B /* MajMinSingViewController.swift */,
 				622815C6208EF40E00D85B7B /* ModesSingViewController.swift */,
+				622815C8208EFD7800D85B7B /* ChromaticSingViewController.swift */,
 			);
 			path = ScaleExercises;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622815C9208EFD7800D85B7B /* ChromaticSingViewController.swift in Sources */,
 				62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */,
 				62A0E48120312E7E002995D7 /* MajMinScalesViewController.swift in Sources */,
 				629F43902080AEE70000E682 /* Conductor.swift in Sources */,
