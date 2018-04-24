@@ -15,11 +15,11 @@ class MajMinScalesViewController: UIViewController {
     
     @IBOutlet var scaleButtons: [UIButton]!
     @IBOutlet var instrumentButtons: [UIButton]!
+    @IBOutlet var exerciseNumLabel: UILabel!
     
     let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
 
-    
     let majorScale = [0,2,4,5,7,9,11,12]
     let naturalMinorScale = [0,2,3,5,7,8,10,12]
     let harmonicMinorScale = [0,2,3,5,7,8,11,12]
@@ -30,10 +30,12 @@ class MajMinScalesViewController: UIViewController {
     
     var scaleType = 0
     var firstNote = 0
+    
+    var exerciseNum = 1
 
     var conductor = Conductor.sharedInstance
     
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
+//    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +130,9 @@ class MajMinScalesViewController: UIViewController {
             b.isEnabled = true
 
         }
+        
+        exerciseNum += 1
+        exerciseNumLabel.text = "Exercise # \(exerciseNum)"
         
         scaleType = Int(arc4random_uniform(4))
         firstNote = Int(arc4random_uniform(12))

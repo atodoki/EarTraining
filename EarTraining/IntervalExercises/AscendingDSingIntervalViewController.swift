@@ -12,11 +12,12 @@ import AudioKit
 
 class AscendingDSingIntervalViewController: UIViewController {
     
-    @IBOutlet private var givenNote: UILabel!
-    @IBOutlet private var sungNote: UILabel!
-    @IBOutlet private var intervalLabel: UILabel!
-    @IBOutlet private var recordButton: UIButton!
-    @IBOutlet private var instrumentButtons: [UIButton]!
+    @IBOutlet var givenNote: UILabel!
+    @IBOutlet var sungNote: UILabel!
+    @IBOutlet var intervalLabel: UILabel!
+    @IBOutlet var recordButton: UIButton!
+    @IBOutlet var instrumentButtons: [UIButton]!
+    @IBOutlet var exerciseNumLabel: UILabel!
     
     var bNoteOctave = 4
     var tNoteOctave = 4
@@ -25,6 +26,7 @@ class AscendingDSingIntervalViewController: UIViewController {
     var intervalSize = 0
     var intervalIndex = 0
 
+    var exerciseNum = 1
     
     var conductor = Conductor.sharedInstance
     
@@ -164,6 +166,8 @@ class AscendingDSingIntervalViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
 
+        exerciseNum += 1
+        exerciseNumLabel.text = "Exercise # \(exerciseNum)"
         
         sender.setTitle("Next", for: .normal)
 
