@@ -1,5 +1,5 @@
 //
-//  MajMinSingViewController.swift
+//  ModesSingViewController.swift
 //  EarTraining
 //
 //  Created by Ariel Todoki on 4/23/18.
@@ -9,8 +9,8 @@
 import UIKit
 import AudioKit
 
-class MajMinSingViewController: UIViewController {
-    
+class ModesSingViewController: UIViewController {
+
     @IBOutlet var exerciseNumLabel: UILabel!
     
     @IBOutlet var note1: UILabel!
@@ -32,18 +32,19 @@ class MajMinSingViewController: UIViewController {
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
-    let scaleNames = ["Major Scale", "Natural Minor Scale","Harmonic Minor Scale","Melodic Minor Scale"]
+    let scaleNames = ["Ionian Scale", "Dorian Scale","Phrygian Scale","Lydian Scale","Mixolydian Scale", "Aeolian Scale", "Locrian Scale"]
     
-    let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
-    
-    
-    let majorScale = [0,2,4,5,7,9,11,12]
-    let naturalMinorScale = [0,2,3,5,7,8,10,12]
-    let harmonicMinorScale = [0,2,3,5,7,8,11,12]
-    let melodicMinorScale = [0,2,3,5,7,9,11,12]
+    let ionian = [0,2,4,5,7,9,11,12]
+    let dorian = [0,2,3,5,7,9,10,12]
+    let phrygian = [0,1,3,5,7,8,10,12]
+    let lydian = [0,2,4,6,7,9,11,12]
+    let mixolydian = [0,2,4,5,7,9,10,12]
+    let aeolian = [0,2,3,5,7,8,10,12]
+    let locrian = [0,1,3,5,6,8,10,12]
     
     var scaleList = [[Int]]()
     
+    let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     
     var scaleType = 0
     var firstNote = 0
@@ -63,30 +64,33 @@ class MajMinSingViewController: UIViewController {
     var timer: Timer!
     
     var conductor = Conductor.sharedInstance
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         conductor.closeMic()
-
+        
         // Do any additional setup after loading the view.
-        scaleList.append(majorScale)
-        scaleList.append(naturalMinorScale)
-        scaleList.append(harmonicMinorScale)
-        scaleList.append(melodicMinorScale)
+        scaleList.append(ionian)
+        scaleList.append(dorian)
+        scaleList.append(phrygian)
+        scaleList.append(lydian)
+        scaleList.append(mixolydian)
+        scaleList.append(aeolian)
+        scaleList.append(locrian)
         
         setScale()
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func setScale(){
-        scaleType = Int(arc4random_uniform(4))
+        scaleType = Int(arc4random_uniform(7))
         scaleLabel.text = " Sing a \(scaleNames[scaleType])"
         
         firstNote = Int(arc4random_uniform(12))
@@ -247,7 +251,7 @@ class MajMinSingViewController: UIViewController {
             }else{
                 note8.text = "Correct!"
             }
-    
+            
         }
     }
     
