@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		622815C3208E4DC700D85B7B /* MajMinSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C2208E4DC700D85B7B /* MajMinSingViewController.swift */; };
+		622815C5208EE5C700D85B7B /* DescendingDSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */; };
 		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
 		624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D109620807AD7005B65B1 /* AudioKit.framework */; };
 		6253633A2074A36D0097AB11 /* SingTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625363392074A36D0097AB11 /* SingTriadsViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		622815C2208E4DC700D85B7B /* MajMinSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajMinSingViewController.swift; sourceTree = "<group>"; };
+		622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingDSingViewController.swift; sourceTree = "<group>"; };
 		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
 		624D109620807AD7005B65B1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		625363392074A36D0097AB11 /* SingTriadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingTriadsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				62A0E47E202E852C002995D7 /* AscendingChromaticViewController.swift */,
 				6259F0042079E11F00887FAC /* DescendingChromaticViewController.swift */,
 				62A0E48220352206002995D7 /* AscendingDSingIntervalViewController.swift */,
+				622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */,
 			);
 			path = IntervalExercises;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				629F43902080AEE70000E682 /* Conductor.swift in Sources */,
 				6259F009207DF1F600887FAC /* ChromaticScalesViewController.swift in Sources */,
 				62A0E471202708B2002995D7 /* ExerciseTableViewCell.swift in Sources */,
+				622815C5208EE5C700D85B7B /* DescendingDSingViewController.swift in Sources */,
 				62A16CFE200F30C600C5BED3 /* AppDelegate.swift in Sources */,
 				62A0E47D202CD356002995D7 /* ChordsTableViewController.swift in Sources */,
 				62A0E479202BE7D4002995D7 /* ScalesTableViewController.swift in Sources */,

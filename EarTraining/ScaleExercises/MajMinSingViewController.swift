@@ -25,6 +25,7 @@ class MajMinSingViewController: UIViewController {
     @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var recordButton: UIButton!
     @IBOutlet var instrumentButtons: [UIButton]!
+    @IBOutlet var noteLabels: [UILabel]!
     
     let noteFrequencies = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteFreqRanges = [15.9, 16.83, 17.83, 18.9, 20.01, 21.21, 22.47, 23.8, 25.22, 26.72, 28.31, 29.99, 31.77]
@@ -127,6 +128,8 @@ class MajMinSingViewController: UIViewController {
     @IBAction func changeOctave(sender: UISlider){
         //change octave of first note in scale
         firstNoteOctave = Int(sender.value)
+        
+        note1.text = "\(noteNamesWithSharps[firstNote])\(firstNoteOctave)"
     }
     
     @IBAction func playFirstNote(sender: UIButton){
@@ -144,10 +147,18 @@ class MajMinSingViewController: UIViewController {
         setScale()
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
+        
+        var i = 1
+        for l in noteLabels{
+            l.backgroundColor = UIColor.white
+            l.text = "Note \(i)"
+            i += 1
+        }
+        
+        
     }
     
     @IBAction func instruments(sender: UIButton){
-        print("hi")
         if(instrumentButtons[0].isHidden){
             for b in instrumentButtons{
                 b.isHidden = false

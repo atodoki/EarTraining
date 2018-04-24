@@ -158,7 +158,7 @@
                         <segue destination="WfU-NW-OPq" kind="show" identifier="Descending Diatonic" id="7tF-5K-IiC"/>
                         <segue destination="hrx-Y5-t7E" kind="show" identifier="Descending Chromatic" id="28W-lD-jUh"/>
                         <segue destination="rcM-zm-mE6" kind="show" identifier="Ascending Diatonic" id="Nz4-qY-sbO"/>
-                        <segue destination="qgt-PC-HXl" kind="show" id="Tsd-Ai-z2j"/>
+                        <segue destination="qgt-PC-HXl" kind="show" identifier="DescendingDSing" id="Tsd-Ai-z2j"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndj-Yx-MRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1710,6 +1710,14 @@
                         <outletCollection property="instrumentButtons" destination="cu3-pi-u3g" collectionClass="NSMutableArray" id="IYv-dm-OXi"/>
                         <outletCollection property="instrumentButtons" destination="xnf-kO-oXf" collectionClass="NSMutableArray" id="iBV-kk-vki"/>
                         <outletCollection property="instrumentButtons" destination="SdE-fH-Zax" collectionClass="NSMutableArray" id="W38-7Y-TiR"/>
+                        <outletCollection property="noteLabels" destination="SZh-lB-aqd" collectionClass="NSMutableArray" id="F8U-K7-LQn"/>
+                        <outletCollection property="noteLabels" destination="D1C-Ry-Nje" collectionClass="NSMutableArray" id="kiv-gT-MgX"/>
+                        <outletCollection property="noteLabels" destination="jvb-3p-0H7" collectionClass="NSMutableArray" id="5QT-qc-c3K"/>
+                        <outletCollection property="noteLabels" destination="NjY-gB-1Z8" collectionClass="NSMutableArray" id="LaA-ge-xPD"/>
+                        <outletCollection property="noteLabels" destination="Oy3-Ir-FSN" collectionClass="NSMutableArray" id="m56-f2-0D8"/>
+                        <outletCollection property="noteLabels" destination="832-43-vNv" collectionClass="NSMutableArray" id="wVj-xk-92f"/>
+                        <outletCollection property="noteLabels" destination="Wpc-Xi-L1e" collectionClass="NSMutableArray" id="Q4v-bS-yYr"/>
+                        <outletCollection property="noteLabels" destination="jQt-ZF-Y1b" collectionClass="NSMutableArray" id="icg-OM-hQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLo-hY-9nO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2481,7 +2489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRh-Bb-rrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2546" y="2319"/>
+            <point key="canvasLocation" x="-2188" y="2330"/>
         </scene>
         <!--Descending Chromatic View Controller-->
         <scene sceneID="R8T-JK-nJn">
@@ -2826,22 +2834,234 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qap-nb-ldx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1567" y="2280"/>
+            <point key="canvasLocation" x="-1229" y="2298"/>
         </scene>
-        <!--View Controller-->
+        <!--DescendingD Sing View Controller-->
         <scene sceneID="Ruj-zB-i6Z">
             <objects>
-                <viewController id="qgt-PC-HXl" sceneMemberID="viewController">
+                <viewController id="qgt-PC-HXl" customClass="DescendingDSingViewController" customModule="EarTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YVV-l6-EC2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="eXL-hG-KYD">
+                                <rect key="frame" x="0.0" y="74" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-wC-4ug">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descending Diatonic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgz-6u-L18">
+                                        <rect key="frame" x="0.0" y="37.666666666666671" width="414" height="38"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rki-Jg-24S">
+                                        <rect key="frame" x="0.0" y="75.666666666666657" width="414" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Lke-oS-upW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a45-fd-5Lw">
+                                <rect key="frame" x="35" y="214" width="344" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El3-dW-iN5">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="50.333333333333336"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-z3-Ghf">
+                                        <rect key="frame" x="0.0" y="65.3333333333333" width="344" height="236.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Given Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYg-34-WaM">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="110.66666666666667"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sung Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-MQ-GmF">
+                                                <rect key="frame" x="0.0" y="125.66666666666669" width="344" height="111"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="4" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="DWT-Up-Z73">
+                                <rect key="frame" x="105" y="536" width="204" height="51"/>
+                                <color key="tintColor" red="0.53833600739999998" green="0.52562204300000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aZ4-T4-lAJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="zwu-xw-dcQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeOctaveWithSender:" destination="qgt-PC-HXl" eventType="valueChanged" id="39l-mb-D24"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UU3-so-ESu">
+                                <rect key="frame" x="0.0" y="606" width="414" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ODf-8p-cTC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="42.666666666666664"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czN-CK-D7q">
+                                                <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="42.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Start">
+                                                    <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="1Mx-Bo-pYh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-3D-LYf">
+                                                <rect key="frame" x="139.66666666666669" y="0.0" width="134.66666666666669" height="42.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Replay">
+                                                    <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="replayWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="I6M-Pu-B6B"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7G-E2-FdT">
+                                                <rect key="frame" x="279.33333333333331" y="0.0" width="134.66666666666669" height="42.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Play Answer">
+                                                    <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playAnswerWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="XvV-GD-jS9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbM-9G-k0v">
+                                        <rect key="frame" x="0.0" y="47.666666666666629" width="414" height="42.333333333333343"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Hold to Record">
+                                            <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gDj-51-oRK" appends="YES" id="QKa-0m-m3G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="S6w-gr-k08"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-ak-uYr">
+                                <rect key="frame" x="297" y="69" width="107" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLP-0G-Ih0">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="⚙️"/>
+                                        <connections>
+                                            <action selector="instrumentsWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="DzG-e1-LKT"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnO-Ab-htd">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Piano">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pianoWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="fpc-7j-b89"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKn-x8-iKb">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Clarinet">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clarinetWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="dtS-5h-juh"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRU-Nl-1Ln">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.87261967809999996" green="0.8483371555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="French Horn">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="frenchHornWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="q6z-nG-1eC"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou5-2J-zvz">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Pizz Strings">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stringWithSender:" destination="qgt-PC-HXl" eventType="touchUpInside" id="2cv-aO-sdC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mPI-qI-g5u" firstAttribute="trailing" secondItem="eXL-hG-KYD" secondAttribute="trailing" id="1b1-gI-LCn"/>
+                            <constraint firstItem="a45-fd-5Lw" firstAttribute="top" secondItem="eXL-hG-KYD" secondAttribute="bottom" constant="40" id="1tw-RY-A1W"/>
+                            <constraint firstItem="oqC-ak-uYr" firstAttribute="top" secondItem="mPI-qI-g5u" secondAttribute="top" constant="5" id="Cpm-0W-0sD"/>
+                            <constraint firstItem="UU3-so-ESu" firstAttribute="top" secondItem="DWT-Up-Z73" secondAttribute="bottom" constant="20" id="DyQ-Sg-t9E"/>
+                            <constraint firstItem="mPI-qI-g5u" firstAttribute="trailing" secondItem="UU3-so-ESu" secondAttribute="trailing" id="Rzp-UM-Rnu"/>
+                            <constraint firstItem="eXL-hG-KYD" firstAttribute="top" secondItem="mPI-qI-g5u" secondAttribute="top" constant="10" id="SdS-ZT-8rQ"/>
+                            <constraint firstItem="mPI-qI-g5u" firstAttribute="bottom" secondItem="UU3-so-ESu" secondAttribute="bottom" constant="40" id="TCA-U6-fzt"/>
+                            <constraint firstItem="mPI-qI-g5u" firstAttribute="trailing" secondItem="a45-fd-5Lw" secondAttribute="trailing" constant="35" id="XeD-He-w12"/>
+                            <constraint firstItem="DWT-Up-Z73" firstAttribute="centerX" secondItem="YVV-l6-EC2" secondAttribute="centerX" id="ZK8-nO-iYf"/>
+                            <constraint firstItem="DWT-Up-Z73" firstAttribute="top" secondItem="a45-fd-5Lw" secondAttribute="bottom" constant="20" id="dZL-7E-DXQ"/>
+                            <constraint firstItem="eXL-hG-KYD" firstAttribute="leading" secondItem="mPI-qI-g5u" secondAttribute="leading" id="gkz-Yq-sZK"/>
+                            <constraint firstItem="UU3-so-ESu" firstAttribute="leading" secondItem="mPI-qI-g5u" secondAttribute="leading" id="nae-hM-H9G"/>
+                            <constraint firstItem="mPI-qI-g5u" firstAttribute="trailing" secondItem="oqC-ak-uYr" secondAttribute="trailing" constant="10" id="yFV-BE-XAH"/>
+                            <constraint firstItem="a45-fd-5Lw" firstAttribute="leading" secondItem="mPI-qI-g5u" secondAttribute="leading" constant="35" id="yfc-5s-Gl3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mPI-qI-g5u"/>
                     </view>
+                    <connections>
+                        <outlet property="exerciseNumLabel" destination="rki-Jg-24S" id="wUZ-5q-cMj"/>
+                        <outlet property="givenNote" destination="XYg-34-WaM" id="X0X-NO-Oek"/>
+                        <outlet property="intervalLabel" destination="El3-dW-iN5" id="C32-gc-HZD"/>
+                        <outlet property="recordButton" destination="FbM-9G-k0v" id="cAb-hi-DNK"/>
+                        <outlet property="sungNote" destination="r6M-MQ-GmF" id="xTM-cU-889"/>
+                        <outletCollection property="instrumentButtons" destination="JnO-Ab-htd" collectionClass="NSMutableArray" id="OiW-Rr-4Gb"/>
+                        <outletCollection property="instrumentButtons" destination="NKn-x8-iKb" collectionClass="NSMutableArray" id="Ydu-OA-UV8"/>
+                        <outletCollection property="instrumentButtons" destination="DRU-Nl-1Ln" collectionClass="NSMutableArray" id="KeH-uZ-lNp"/>
+                        <outletCollection property="instrumentButtons" destination="Ou5-2J-zvz" collectionClass="NSMutableArray" id="Apw-Dl-roY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1q-bK-NyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gDj-51-oRK">
+                    <connections>
+                        <action selector="handleGesture:" destination="qgt-PC-HXl" id="ibN-ro-Zvt"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-619" y="2279"/>
+            <point key="canvasLocation" x="-204" y="2318"/>
         </scene>
         <!--Ascending Diatonic View Controller-->
         <scene sceneID="hBm-H2-aLh">
