@@ -55,8 +55,6 @@ class ChromaticScalesViewController: UIViewController {
         super.viewDidAppear(animated)
 
         
-        playScale(scale: scaleList[scaleType])
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

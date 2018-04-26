@@ -13,7 +13,7 @@ enum Instrument {
 }
 
 enum Note {
-    case root, third, fifth
+    case root, third, fifth, seventh
 }
 
 class Conductor {
@@ -23,10 +23,12 @@ class Conductor {
     var sampler1 = AKAppleSampler()
     var sampler2 = AKAppleSampler()
     var sampler3 = AKAppleSampler()
+    var sampler4 = AKAppleSampler()
     
     var timePitch1: AKTimePitch!
     var timePitch2: AKTimePitch!
     var timePitch3: AKTimePitch!
+    var timePitch4: AKTimePitch!
     
     var mic: AKMicrophone!
     var tracker: AKFrequencyTracker!
@@ -50,12 +52,16 @@ class Conductor {
             timePitch3 = AKTimePitch(sampler3)
             timePitch3.rate = 2.0
             
+            try sampler4.loadWav("Kawai-K11-GrPiano-C4")
+            timePitch4 = AKTimePitch(sampler4)
+            timePitch4.rate = 2.0
+            
             mic = AKMicrophone()
             tracker = AKFrequencyTracker(mic)
             silence = AKBooster(tracker, gain: 0)
             AudioKit.output = silence
             
-            mixer = AKMixer(timePitch1, timePitch2, timePitch3)
+            mixer = AKMixer(timePitch1, timePitch2, timePitch3, timePitch4)
             mixer.volume = 3
             
             AudioKit.output = mixer
@@ -108,6 +114,7 @@ class Conductor {
                 try sampler1.loadWav("Kawai-K11-GrPiano-C4")
                 try sampler2.loadWav("Kawai-K11-GrPiano-C4")
                 try sampler3.loadWav("Kawai-K11-GrPiano-C4")
+                try sampler4.loadWav("Kawai-K11-GrPiano-C4")
             }catch{
                 AKLog("Could not find file.")
             }
@@ -117,6 +124,7 @@ class Conductor {
                 try sampler1.loadWav("Ensoniq-SQ-1-Clarinet-C4")
                 try sampler2.loadWav("Ensoniq-SQ-1-Clarinet-C4")
                 try sampler3.loadWav("Ensoniq-SQ-1-Clarinet-C4")
+                try sampler4.loadWav("Ensoniq-SQ-1-Clarinet-C4")
             }catch{
                 AKLog("Could not find file.")
             }
@@ -125,6 +133,7 @@ class Conductor {
                 try sampler1.loadWav("Ensoniq-SQ-1-French-Horn-C4")
                 try sampler2.loadWav("Ensoniq-SQ-1-French-Horn-C4")
                 try sampler3.loadWav("Ensoniq-SQ-1-French-Horn-C4")
+                try sampler4.loadWav("Ensoniq-SQ-1-French-Horn-C4")
             }catch{
                 AKLog("Could not find file.")
             }
@@ -134,6 +143,7 @@ class Conductor {
                 try sampler1.loadWav("Alesis-Fusion-Pizzicato-Strings-C4")
                 try sampler2.loadWav("Alesis-Fusion-Pizzicato-Strings-C4")
                 try sampler3.loadWav("Alesis-Fusion-Pizzicato-Strings-C4")
+                try sampler4.loadWav("Alesis-Fusion-Pizzicato-Strings-C4")
             }catch{
                 AKLog("Could not find file.")
             }
@@ -149,6 +159,8 @@ class Conductor {
             timePitch2.pitch = pitch
         case .fifth:
             timePitch3.pitch = pitch
+        case .seventh:
+            timePitch4.pitch = pitch
         }
     }
     
@@ -171,6 +183,12 @@ class Conductor {
         case .fifth:
             do {
                 try sampler3.play()
+            } catch {
+                AKLog("Did not play")
+            }
+        case .seventh:
+            do {
+                try sampler4.play()
             } catch {
                 AKLog("Did not play")
             }

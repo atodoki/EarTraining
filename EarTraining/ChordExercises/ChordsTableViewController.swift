@@ -10,16 +10,17 @@ import UIKit
 
 class ChordsTableViewController: UITableViewController {
     
-    var chordExercises = [["Triad Identification","Triad Sing"]]
+    var chordExercises = [["Triad Identification","Triad Sing", "Seventh Chord Identification"]]
     
-    var segueNames = [["Triad Identification","Triad Sing"]]
+    var segueNames = [["Triad Identification","Triad Sing", "seventhIdentification"]]
     
     var headers = ["Easy"]
     
-    var imageNames = [["triad","triad"]]
+    var imageNames = [["triad","triad", "seventhChord"]]
     
     var descriptions = [["Test your knowledge and identify major, minor, diminished, and augmented triads!",
-                         "See if you can sing major, minor, diminished, and augmented broken triads!"]]
+                         "See if you can sing major, minor, diminished, and augmented broken triads!",
+                         "Test your knowledge and identify major seventh, minor seventh, dominant seventh, half-diminished seventh, and diminished seventh chords!"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()

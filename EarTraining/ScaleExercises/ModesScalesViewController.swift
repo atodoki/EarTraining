@@ -59,9 +59,6 @@ class ModesScalesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        
-        playScale(scale: scaleList[scaleType])
         
     }
     

@@ -11,6 +11,7 @@
 		622815C5208EE5C700D85B7B /* DescendingDSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */; };
 		622815C7208EF40E00D85B7B /* ModesSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C6208EF40E00D85B7B /* ModesSingViewController.swift */; };
 		622815C9208EFD7800D85B7B /* ChromaticSingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815C8208EFD7800D85B7B /* ChromaticSingViewController.swift */; };
+		622815CB2091955C00D85B7B /* SeventhIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622815CA2091955C00D85B7B /* SeventhIdentificationViewController.swift */; };
 		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
 		624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D109620807AD7005B65B1 /* AudioKit.framework */; };
 		6253633A2074A36D0097AB11 /* SingTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625363392074A36D0097AB11 /* SingTriadsViewController.swift */; };
@@ -56,6 +57,7 @@
 		622815C4208EE5C700D85B7B /* DescendingDSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingDSingViewController.swift; sourceTree = "<group>"; };
 		622815C6208EF40E00D85B7B /* ModesSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesSingViewController.swift; sourceTree = "<group>"; };
 		622815C8208EFD7800D85B7B /* ChromaticSingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticSingViewController.swift; sourceTree = "<group>"; };
+		622815CA2091955C00D85B7B /* SeventhIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhIdentificationViewController.swift; sourceTree = "<group>"; };
 		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
 		624D109620807AD7005B65B1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		625363392074A36D0097AB11 /* SingTriadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingTriadsViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				62A0E47C202CD356002995D7 /* ChordsTableViewController.swift */,
 				623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */,
 				625363392074A36D0097AB11 /* SingTriadsViewController.swift */,
+				622815CA2091955C00D85B7B /* SeventhIdentificationViewController.swift */,
 			);
 			path = ChordExercises;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				622815C9208EFD7800D85B7B /* ChromaticSingViewController.swift in Sources */,
 				62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */,
+				622815CB2091955C00D85B7B /* SeventhIdentificationViewController.swift in Sources */,
 				62A0E48120312E7E002995D7 /* MajMinScalesViewController.swift in Sources */,
 				629F43902080AEE70000E682 /* Conductor.swift in Sources */,
 				6259F009207DF1F600887FAC /* ChromaticScalesViewController.swift in Sources */,

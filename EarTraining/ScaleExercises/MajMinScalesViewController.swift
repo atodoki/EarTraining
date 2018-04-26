@@ -55,8 +55,6 @@ class MajMinScalesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        playScale(scale: scaleList[scaleType])
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
