@@ -1,5 +1,5 @@
 //
-//  AscendingCSingViewController.swift
+//  DescendingCSingViewController.swift
 //  EarTraining
 //
 //  Created by Ariel Todoki on 4/26/18.
@@ -9,7 +9,7 @@
 import UIKit
 import AudioKit
 
-class AscendingCSingViewController: UIViewController {
+class DescendingCSingViewController: UIViewController {
 
     @IBOutlet var givenNote: UILabel!
     @IBOutlet var sungNote: UILabel!
@@ -47,15 +47,13 @@ class AscendingCSingViewController: UIViewController {
     
     let intervalNames = ["Minor 2nd", "Major 2nd", "Minor 3rd","Major 3rd", "Perfect 4th", "Tritone","Perfect 5th", "Minor 6th","Major 6th", "Minor 7th","Major 7th", "Octave"]
     
-    
     let chromaticIntervals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-
+        
         conductor.setMic()
         setInterval()
         
@@ -63,13 +61,14 @@ class AscendingCSingViewController: UIViewController {
     
     
     func setInterval(){
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+        topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
         intervalIndex = chromaticIntervals.randomIndex
         intervalSize = chromaticIntervals[intervalIndex]
-        topNote = bottomNote + intervalSize
-        tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
-        
-        givenNote.text = "\(noteNamesWithSharps[bottomNote])\(bNoteOctave)"
+        bottomNote = topNote - intervalSize
+        bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
+        bottomNote += 12
+
+        givenNote.text = "\(noteNamesWithSharps[topNote])\(tNoteOctave)"
         intervalLabel.text = "Sing \(intervalNames[intervalIndex])"
         
     }
@@ -115,26 +114,24 @@ class AscendingCSingViewController: UIViewController {
     }
     
     @IBAction func changeOctave(sender: UISlider){
-        bNoteOctave = Int(sender.value)
-        tNoteOctave = topNote > 11 ? bNoteOctave + 1 : bNoteOctave
-        givenNote.text = "\(noteNamesWithSharps[bottomNote])\(bNoteOctave)"
+        tNoteOctave = Int(sender.value)
+        bottomNote = topNote - intervalSize
+        bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
+        bottomNote += 12
+        givenNote.text = "\(noteNamesWithSharps[topNote])\(tNoteOctave)"
     }
     
     
     @IBAction func replay(sender: UIButton){
-        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
-        
-        //sleep(1)
-        
+
     }
     
     @IBAction func playAnswer(sender: UIButton){
-        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
-        
-        //sleep(1)
-        
+
     }
     
     @IBAction func start(sender: UIButton){
@@ -146,7 +143,7 @@ class AscendingCSingViewController: UIViewController {
         
         setInterval()
         
-        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
         
         exerciseNum += 1
@@ -156,12 +153,11 @@ class AscendingCSingViewController: UIViewController {
         
     }
     
-    
-    
     @objc func updateUI(){
         var frequency0 = conductor.listenFreq()
         var sungOctave = 0.0
         var sungNoteIndex = 0;
+        
         if(conductor.listenAmp() > 0.05){
             
             // Get note frequency in octave 0
@@ -184,7 +180,7 @@ class AscendingCSingViewController: UIViewController {
             
             //checks if sung interval is correct
             
-            if((sungNoteIndex == topNote%12) && (Int(sungOctave) == tNoteOctave)){ // if correct pitch class and octave
+            if((sungNoteIndex == bottomNote%12) && (Int(sungOctave) == bNoteOctave)){ // if correct pitch class and octave
                 if(frequency0 > inTuneLow[sungNoteIndex] && frequency0 < inTuneHigh[sungNoteIndex]){ // checks if sung note is within -10 and +10 cents of correct pitch
                     sungNote.backgroundColor = UIColor.green
                 }else{
@@ -199,7 +195,7 @@ class AscendingCSingViewController: UIViewController {
     @IBAction func handleGesture(_ sender: UILongPressGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.began{
             
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(AscendingDSingIntervalViewController.updateUI), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(DescendingDSingViewController.updateUI), userInfo: nil, repeats: true)
             recordButton.setTitle("Listening...", for: .normal)
         }
         else if sender.state == UIGestureRecognizerState.ended{

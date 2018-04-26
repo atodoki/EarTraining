@@ -14,11 +14,11 @@ class IntervalTableViewController: UITableViewController {
     
     var intervalExercises = [
         ["Ascending", "Descending", "Ascending Sing", "Descending Sing"],
-        ["Ascending", "Descending", "Ascending Sing"]
+        ["Ascending", "Descending", "Ascending Sing", "Descending Sing"]
     ]
     var segueNames = [
     ["Ascending Diatonic", "Descending Diatonic", "Ascending Sing Interval", "DescendingDSing"],
-    ["Ascending Chromatic", "Descending Chromatic", "AscendingCSing"]
+    ["Ascending Chromatic", "Descending Chromatic", "AscendingCSing", "DescendingCSing"]
     ]
     
     var headers = ["Diatonic", "Chromatic"]
@@ -30,11 +30,12 @@ class IntervalTableViewController: UITableViewController {
      "Test your skills by singing diatonic intervals below a given note!"],
     ["Test your skills and identify the intervals found in a chromatic scale! Plays bottom note, then top note.",
      "Test your skills and identify the intervals found in a chromatic scale! Plays top note, then bottom note.",
-     "Test your skills by singing chromait cintervals above a given note!"]
+     "Test your skills by singing chromatic intervals above a given note!",
+     "Test your skills by singing chromatic intervals below a given note!"]
     ]
     
     var imageNames = [["ascendDiatonic","descendDiatonic","ascendDiatonic","descendDiatonic"],
-                      ["ascendChrom","descendChrom","ascendChrom"]]
+                      ["ascendChrom","descendChrom","ascendChrom", "descendChrom"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
