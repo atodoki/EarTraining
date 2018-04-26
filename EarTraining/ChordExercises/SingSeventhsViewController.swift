@@ -1,21 +1,21 @@
 //
-//  SingTriadsViewController.swift
+//  SingSeventhsViewController.swift
 //  EarTraining
 //
-//  Created by Ariel Todoki on 4/3/18.
+//  Created by Ariel Todoki on 4/26/18.
 //  Copyright © 2018 Ariel Todoki. All rights reserved.
 //
 
 import UIKit
-import AudioKit
 
-class SingTriadsViewController: UIViewController {
-    
+class SingSeventhsViewController: UIViewController {
+
     @IBOutlet var exerciseNumLabel: UILabel!
     @IBOutlet var rootNote: UILabel!
     @IBOutlet var thirdNote: UILabel!
     @IBOutlet var fifthNote: UILabel!
-    @IBOutlet var triadLabel: UILabel!
+    @IBOutlet var seventhNote: UILabel!
+    @IBOutlet var chordLabel: UILabel!
     @IBOutlet var recordButton: UIButton!
     @IBOutlet var instrumentButtons: [UIButton]!
     
@@ -26,12 +26,13 @@ class SingTriadsViewController: UIViewController {
     
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
-    let triadNames = ["Major Triad", "Minor Triad", "Diminished Triad", "Augmented Triad"]
+    let chordNames = ["Major Seventh", "Minor Seventh", "Dominant Seventh", "Half-Diminished Seventh", "Diminished Seventh"]
     
-    let majChord = [4,7]
-    let minChord = [3,7]
-    let dimChord = [3,6]
-    let augChord = [4,8]
+    let majSChord = [4,7,11]
+    let minSChord = [3,7,10]
+    let domChord = [4,7,10]
+    let hDimChord = [3,6,10]
+    let fDimChord = [3,6,9]
     
     var chordList = [[Int]]()
     
@@ -39,70 +40,58 @@ class SingTriadsViewController: UIViewController {
     var root = 0
     var third = 0
     var fifth = 0
+    var seventh = 0
     
     var exerciseNum = 1
-    
-//    var rootNoteName = ""
-//    var thirdNoteName = ""
-//    var fifthNoteName = ""
     
     var rootOctave = 4
     var thirdOctave = 4
     var fifthOctave = 4
+    var seventhOctave = 4
     
-
+    
     var timer: Timer!
-
     
     var conductor = Conductor.sharedInstance
     
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        chordList.append(majChord)
-        chordList.append(minChord)
-        chordList.append(dimChord)
-        chordList.append(augChord)
+        
+        chordList.append(majSChord)
+        chordList.append(minSChord)
+        chordList.append(domChord)
+        chordList.append(hDimChord)
+        chordList.append(fDimChord)
         
         conductor.setMic()
         setChord()
-        
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func setChord(){
-        chordType = Int(arc4random_uniform(4))
+        chordType = Int(arc4random_uniform(5))
         root = Int(arc4random_uniform(12))
         third = root + chordList[chordType][0]
         fifth = root + chordList[chordType][1]
+        seventh = root + chordList[chordType][2]
         
         thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
         fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
+        seventhOctave = seventh > 11 ? rootOctave + 1 : rootOctave
         
-        triadLabel.text = "Sing a \(triadNames[chordType])"
+        chordLabel.text = "Sing a \(chordNames[chordType]) chord"
         
         conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
         conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
         conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
-
+        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], note: .seventh)
+        
     }
     
     func closeInstButtons(){
@@ -125,60 +114,64 @@ class SingTriadsViewController: UIViewController {
     
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
-
+        
         closeInstButtons()
     }
     
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
-
+        
         closeInstButtons()
     }
     
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
-
+        
         closeInstButtons()
     }
     
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
-
+        
         closeInstButtons()
     }
     
     @IBAction func playRoot(sender: UIButton){
-
         conductor.play(note: .root)
         
     }
     
     @IBAction func playChordSequence(sender: UIButton){
-        //AudioKit.output = mixer
         conductor.play(note: .root)
         sleep(1)
         conductor.play(note: .third)
         sleep(1)
         conductor.play(note: .fifth)
+        sleep(1)
+        conductor.play(note: .seventh)
     }
     
     @IBAction func playChord(sender: UIButton){
-        //AudioKit.output = mixer
         conductor.play(note: .root)
         conductor.play(note: .third)
         conductor.play(note: .fifth)
+        conductor.play(note: .seventh)
         
     }
     
     @IBAction func next(sender: UIButton){
         setChord()
+
         rootNote.backgroundColor = UIColor.white
         thirdNote.backgroundColor = UIColor.white
         fifthNote.backgroundColor = UIColor.white
+        seventhNote.backgroundColor = UIColor.white
         
         rootNote.text = "Sung Note"
         thirdNote.text = "Sung Note"
         fifthNote.text = "Sung Note"
+        seventhNote.text = "Sung Note"
+        
         
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise #\(exerciseNum)"
@@ -188,10 +181,12 @@ class SingTriadsViewController: UIViewController {
         rootOctave = Int(sender.value)
         thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
         fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
+        seventhOctave = seventh > 11 ? rootOctave + 1 : rootOctave
         
         conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
         conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
         conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
+        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], note: .seventh)
         
         rootNote.text = "\(noteNamesWithSharps[root])\(rootOctave)"
     }
@@ -208,7 +203,6 @@ class SingTriadsViewController: UIViewController {
     }
     
     @objc func updateUI(){
-//        AudioKit.output = silence
         var frequency0 = conductor.listenFreq()
         var sungOctave = 0
         var sungNoteIndex = 0
@@ -236,8 +230,10 @@ class SingTriadsViewController: UIViewController {
                 changeNoteLabel(label: rootNote, noteIndex: root, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: rootOctave)
             }else if(thirdNote.backgroundColor != UIColor.green){
                 changeNoteLabel(label: thirdNote, noteIndex: third, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: thirdOctave)
-            }else{
+            }else if(fifthNote.backgroundColor != UIColor.green){
                 changeNoteLabel(label: fifthNote, noteIndex: fifth, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: fifthOctave)
+            }else {
+                changeNoteLabel(label: seventhNote, noteIndex: seventh, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave, noteOctave: seventhOctave)
             }
             
             
