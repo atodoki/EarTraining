@@ -170,6 +170,7 @@ class ChromaticSingViewController: UIViewController {
             l.text = "Note \(i)"
             i -= 1
         }
+
         
         
     }
@@ -308,6 +309,10 @@ class ChromaticSingViewController: UIViewController {
         }else{
             label.backgroundColor = UIColor.red
         }
+    }
+    
+    @IBAction func unwindSegueScaleSing(segue: UIStoryboardSegue) {
+        
     }
     
 

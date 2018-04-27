@@ -255,6 +255,10 @@ class SingTriadsViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindSegueChordSing(segue: UIStoryboardSegue) {
+        
+    }
+    
 
     /*
     // MARK: - Navigation

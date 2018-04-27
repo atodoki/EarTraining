@@ -158,8 +158,7 @@ class ModesSingViewController: UIViewController {
             l.text = "Note \(i)"
             i -= 1
         }
-        
-        
+ 
     }
     
     @IBAction func instruments(sender: UIButton){
@@ -263,6 +262,10 @@ class ModesSingViewController: UIViewController {
         }else{
             label.backgroundColor = UIColor.red
         }
+    }
+    
+    @IBAction func unwindSegueScaleSing(segue: UIStoryboardSegue) {
+        
     }
     
 

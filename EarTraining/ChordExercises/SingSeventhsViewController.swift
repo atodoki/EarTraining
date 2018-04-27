@@ -251,6 +251,10 @@ class SingSeventhsViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindSegueChordSing(segue: UIStoryboardSegue) {
+        
+    }
+    
 
     /*
     // MARK: - Navigation

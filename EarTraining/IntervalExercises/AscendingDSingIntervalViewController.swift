@@ -142,7 +142,6 @@ class AscendingDSingIntervalViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
 
-        sleep(1)
 
     }
     
@@ -150,7 +149,6 @@ class AscendingDSingIntervalViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
 
-        sleep(1)
 
     }
     
@@ -168,8 +166,7 @@ class AscendingDSingIntervalViewController: UIViewController {
 
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
-        
-        sender.setTitle("Next", for: .normal)
+
 
     }
 
@@ -231,6 +228,10 @@ class AscendingDSingIntervalViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func unwindSegueSinging(segue: UIStoryboardSegue) {
+        
     }
     
 

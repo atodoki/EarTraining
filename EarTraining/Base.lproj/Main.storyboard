@@ -154,13 +154,13 @@
                     </tableView>
                     <connections>
                         <segue destination="n6z-gd-6Iu" kind="show" identifier="Ascending Chromatic" id="dww-1D-uWZ"/>
-                        <segue destination="qmO-Zr-jAa" kind="show" identifier="Ascending Sing Interval" id="Llo-6L-sTF"/>
                         <segue destination="WfU-NW-OPq" kind="show" identifier="Descending Diatonic" id="7tF-5K-IiC"/>
                         <segue destination="hrx-Y5-t7E" kind="show" identifier="Descending Chromatic" id="28W-lD-jUh"/>
                         <segue destination="rcM-zm-mE6" kind="show" identifier="Ascending Diatonic" id="Nz4-qY-sbO"/>
-                        <segue destination="qgt-PC-HXl" kind="show" identifier="DescendingDSing" id="Tsd-Ai-z2j"/>
                         <segue destination="rjI-td-E4F" kind="show" identifier="AscendingCSing" id="xiB-La-WE2"/>
                         <segue destination="y3i-4q-PoH" kind="show" identifier="DescendingCSing" id="Pth-dz-7fy"/>
+                        <segue destination="qmO-Zr-jAa" kind="show" identifier="Ascending Sing Interval" id="ILh-7i-fe9"/>
+                        <segue destination="qgt-PC-HXl" kind="show" identifier="DescendingDSing" id="njK-HL-JsM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndj-Yx-MRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -267,32 +267,32 @@
                                                             <action selector="perfectFifthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="S0Q-ei-bfT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLv-4x-sQ0">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-FM-9GW">
                                                         <rect key="frame" x="0.0" y="300" width="169.66666666666666" height="70"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Minor 6th">
+                                                        <state key="normal" title="Major 6th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="minorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="POj-Fe-164"/>
+                                                            <action selector="majorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="Fwo-n5-w7D"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-zk-dCu">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-Mv-tiS">
                                                         <rect key="frame" x="0.0" y="375" width="169.66666666666666" height="70"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Minor 7th">
+                                                        <state key="normal" title="Major 7th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="minorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="Ago-XE-6aw"/>
+                                                            <action selector="majorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="cbu-l8-6CY"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -342,32 +342,32 @@
                                                             <action selector="tritoneWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="fau-Pg-hhI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-FM-9GW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLv-4x-sQ0">
                                                         <rect key="frame" x="0.0" y="225" width="169.33333333333334" height="70"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 6th">
+                                                        <state key="normal" title="Minor 6th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="majorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="Fwo-n5-w7D"/>
+                                                            <action selector="minorSixthWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="POj-Fe-164"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-Mv-tiS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-zk-dCu">
                                                         <rect key="frame" x="0.0" y="300" width="169.33333333333334" height="70"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 7th">
+                                                        <state key="normal" title="Minor 7th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="majorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="cbu-l8-6CY"/>
+                                                            <action selector="minorSeventhWithSender:" destination="n6z-gd-6Iu" eventType="touchUpInside" id="Ago-XE-6aw"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJO-9N-liA">
@@ -488,24 +488,31 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fhk-hw-8FJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AR7-xQ-w0I">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="12m-1H-BTy">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="e6W-Eb-BSl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="izS-Qh-gGg" id="dLr-i5-d5k"/>
                         <outletCollection property="instrumentButtons" destination="tgz-IG-urx" collectionClass="NSMutableArray" id="wSE-Vd-tRl"/>
                         <outletCollection property="instrumentButtons" destination="8yw-mY-sn4" collectionClass="NSMutableArray" id="5lA-s1-Cfi"/>
                         <outletCollection property="instrumentButtons" destination="lMM-i5-yEP" collectionClass="NSMutableArray" id="LV6-jL-cGj"/>
                         <outletCollection property="instrumentButtons" destination="rTu-Ey-OB0" collectionClass="NSMutableArray" id="dcI-dK-Taw"/>
-                        <outletCollection property="intervalButtons" destination="WBP-FM-9GW" collectionClass="NSMutableArray" id="ow0-Vg-unT"/>
                         <outletCollection property="intervalButtons" destination="quL-M1-msN" collectionClass="NSMutableArray" id="alg-2N-mI8"/>
                         <outletCollection property="intervalButtons" destination="qJO-9N-liA" collectionClass="NSMutableArray" id="bPk-A6-AZe"/>
                         <outletCollection property="intervalButtons" destination="qAX-RH-9br" collectionClass="NSMutableArray" id="dhV-Lc-TcA"/>
                         <outletCollection property="intervalButtons" destination="M2h-9H-ZxS" collectionClass="NSMutableArray" id="osf-YA-SKO"/>
                         <outletCollection property="intervalButtons" destination="Wi9-Jy-Sio" collectionClass="NSMutableArray" id="qjN-O7-ksF"/>
-                        <outletCollection property="intervalButtons" destination="jnF-Mv-tiS" collectionClass="NSMutableArray" id="2fZ-aD-lyd"/>
-                        <outletCollection property="intervalButtons" destination="pbh-zk-dCu" collectionClass="NSMutableArray" id="DE2-aQ-rvb"/>
                         <outletCollection property="intervalButtons" destination="2gf-pL-RY5" collectionClass="NSMutableArray" id="VWy-RK-n0V"/>
                         <outletCollection property="intervalButtons" destination="Pzj-zl-TCM" collectionClass="NSMutableArray" id="cEf-gl-DsK"/>
                         <outletCollection property="intervalButtons" destination="bS2-bp-10h" collectionClass="NSMutableArray" id="EfO-4K-iDG"/>
                         <outletCollection property="intervalButtons" destination="TLv-4x-sQ0" collectionClass="NSMutableArray" id="514-BK-owD"/>
+                        <outletCollection property="intervalButtons" destination="WBP-FM-9GW" collectionClass="NSMutableArray" id="ow0-Vg-unT"/>
+                        <outletCollection property="intervalButtons" destination="pbh-zk-dCu" collectionClass="NSMutableArray" id="DE2-aQ-rvb"/>
+                        <outletCollection property="intervalButtons" destination="jnF-Mv-tiS" collectionClass="NSMutableArray" id="2fZ-aD-lyd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MwM-yL-QMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -730,6 +737,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jdd-Ec-7dG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jkV-Qk-gt9">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="SfI-NB-jes">
+                            <connections>
+                                <segue destination="knM-q4-dCY" kind="presentation" id="DrR-7l-Dkk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="7R3-MU-Af3" id="V5p-a3-Wlh"/>
                         <outlet property="givenNote" destination="5FP-po-nhN" id="yWT-8a-MOb"/>
@@ -750,7 +764,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-5087" y="2286"/>
+            <point key="canvasLocation" x="-4181.159420289855" y="2285.8695652173915"/>
         </scene>
         <!--Modes Scales View Controller-->
         <scene sceneID="QTI-mV-PUB">
@@ -992,6 +1006,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bh4-C5-fDh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Jay-EL-3Ul">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="kvT-v6-CkO">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="BYz-7n-9gj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="1WU-Nh-NCQ" id="Fco-mh-tVu"/>
                         <outletCollection property="scaleButtons" destination="irf-db-zIZ" collectionClass="NSMutableArray" id="PPh-aC-Sdj"/>
@@ -1009,7 +1030,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lT-ed-9MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="1985"/>
+            <point key="canvasLocation" x="1262" y="1928"/>
         </scene>
         <!--Chromatic Scales View Controller-->
         <scene sceneID="Z0U-rA-3Rw">
@@ -1212,6 +1233,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ihV-K0-3hU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1yZ-4Q-dvO">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="WmL-uv-C0v">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="cXK-Co-LvA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="WAo-4F-Ine" id="mC8-Tt-TWY"/>
                         <outletCollection property="scaleButtons" destination="MlB-YS-lXW" collectionClass="NSMutableArray" id="owE-nI-OHs"/>
@@ -1226,7 +1254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4e-Mi-AA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="2082"/>
+            <point key="canvasLocation" x="2128" y="2025"/>
         </scene>
         <!--Maj Min Scales View Controller-->
         <scene sceneID="Ur5-sx-asI">
@@ -1425,6 +1453,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iEu-77-yHw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DVf-hW-oNJ">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="jwJ-1a-yHK">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="0Vc-f7-e2A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="dRD-vI-S2z" id="wqM-8Q-fRF"/>
                         <outletCollection property="scaleButtons" destination="KDm-ix-jhI" collectionClass="NSMutableArray" id="gKn-9P-FpE"/>
@@ -1439,7 +1474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-ip-n4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="1955"/>
+            <point key="canvasLocation" x="459" y="1899"/>
         </scene>
         <!--Maj Min Sing View Controller-->
         <scene sceneID="bju-Bx-Rz8">
@@ -1702,6 +1737,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xom-Eb-xus"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DSj-Sx-E9h">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="3wv-vh-9gN">
+                            <connections>
+                                <segue destination="h60-OD-rZm" kind="presentation" id="E4H-6Y-KPs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="YdO-QN-kbk" id="4cS-xz-RN4"/>
                         <outlet property="note1" destination="jQt-ZF-Y1b" id="FoR-Dq-eaB"/>
@@ -1735,7 +1777,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="100" y="2772"/>
+            <point key="canvasLocation" x="232" y="2688"/>
         </scene>
         <!--Modes Sing View Controller-->
         <scene sceneID="lhM-Cf-4t3">
@@ -1988,6 +2030,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KxK-3y-jRX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zi6-su-jjb">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="pgy-wh-OFV">
+                            <connections>
+                                <segue destination="h60-OD-rZm" kind="presentation" id="eDl-ie-QSn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="m79-xy-xw9" id="dhi-IU-uog"/>
                         <outlet property="note1" destination="j8s-D0-fqu" id="Kbs-cs-d1Q"/>
@@ -2021,7 +2070,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="906" y="2772"/>
+            <point key="canvasLocation" x="1299" y="2715"/>
         </scene>
         <!--Chromatic Sing View Controller-->
         <scene sceneID="eWE-LJ-yca">
@@ -2302,6 +2351,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XYM-rD-3zY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hKo-YG-jBI">
+                        <barButtonItem key="rightBarButtonItem" title="Instruction" id="3j8-X5-sM1">
+                            <connections>
+                                <segue destination="h60-OD-rZm" kind="presentation" id="Ct2-fI-aHu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="eQi-m0-d0G" id="ddu-jt-HuC"/>
                         <outlet property="note1" destination="kqJ-kj-Q7f" id="pbi-aM-AUf"/>
@@ -2343,7 +2399,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1736" y="2772"/>
+            <point key="canvasLocation" x="2128" y="2715"/>
         </scene>
         <!--Seventh Identification View Controller-->
         <scene sceneID="gA7-da-h9c">
@@ -2556,6 +2612,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WAJ-KK-hcU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="io8-5i-FqG">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="lLA-Zs-lKv">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="cLt-GR-JTH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="ebc-SM-a6d" id="hOB-P6-qkS"/>
                         <outletCollection property="intervalButtons" destination="zm0-9I-DL7" collectionClass="NSMutableArray" id="PPv-OJ-qCD"/>
@@ -2571,7 +2634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4u-cT-lwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4177" y="1617"/>
+            <point key="canvasLocation" x="5212" y="1617"/>
         </scene>
         <!--Triad Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">
@@ -2759,6 +2822,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VyD-fm-HjB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hmF-fY-Mqj">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="KFY-od-j2X">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="ris-os-M3R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="jqN-kP-VUV" id="hFd-rC-aRV"/>
                         <outletCollection property="instrumentButtons" destination="kya-bB-aBl" collectionClass="NSMutableArray" id="BJe-AL-rBy"/>
@@ -2773,7 +2843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A6-Fm-A4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3212" y="1618"/>
+            <point key="canvasLocation" x="3803" y="1617"/>
         </scene>
         <!--Sing Triads View Controller-->
         <scene sceneID="hvH-Yu-2iC">
@@ -3025,6 +3095,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ka5-nQ-eeg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EUX-fz-Ucb">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="Tcm-J3-o9Z">
+                            <connections>
+                                <segue destination="Ivd-yz-gRm" kind="presentation" id="TpU-sK-lUW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="t3v-be-H4M" id="p59-ba-gDo"/>
                         <outlet property="fifthNote" destination="gip-WV-Coy" id="z2U-5t-cLI"/>
@@ -3045,7 +3122,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3212" y="2389"/>
+            <point key="canvasLocation" x="4091" y="2389"/>
         </scene>
         <!--Sing Sevenths View Controller-->
         <scene sceneID="Jws-JV-ZDL">
@@ -3320,6 +3397,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GXH-SP-P7p"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b3i-XI-ciD">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="Vx6-VD-ZLL">
+                            <connections>
+                                <segue destination="Ivd-yz-gRm" kind="presentation" id="qaY-Pm-bc2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chordLabel" destination="xqa-jc-jYH" id="900-2M-h35"/>
                         <outlet property="exerciseNumLabel" destination="tpy-Ky-7RZ" id="TTg-Xk-oya"/>
@@ -3341,7 +3425,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4272" y="2389"/>
+            <point key="canvasLocation" x="5212" y="2389"/>
         </scene>
         <!--Descending Diatonic View Controller-->
         <scene sceneID="B3U-qD-Ffx">
@@ -3612,6 +3696,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hva-ry-eih"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gTs-cq-zBE">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="lhQ-u9-pze">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="617-jz-az5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="N0e-rP-bvw" id="nZp-ri-PH2"/>
                         <outletCollection property="instrumentButtons" destination="fnE-HG-LH3" collectionClass="NSMutableArray" id="ex9-9E-xi4"/>
@@ -3731,32 +3822,32 @@
                                                             <action selector="perfectFifthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="5ke-Ph-AiR"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-82-GII">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-ls-ygB">
                                                         <rect key="frame" x="0.0" y="294.33333333333331" width="169.66666666666666" height="68.666666666666686"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Minor 6th">
+                                                        <state key="normal" title="Major 6th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="minorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="HRE-Fs-BvL"/>
+                                                            <action selector="majorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="u3E-qS-Js1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rs-7F-TCh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wng-D2-A5Y">
                                                         <rect key="frame" x="0.0" y="368.00000000000006" width="169.66666666666666" height="68.666666666666686"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Minor 7th">
+                                                        <state key="normal" title="Major 7th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="minorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="RQB-EU-pTB"/>
+                                                            <action selector="majorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="gac-Xv-78q"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3806,32 +3897,32 @@
                                                             <action selector="tritoneWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="MaT-nM-mf4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-ls-ygB">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-82-GII">
                                                         <rect key="frame" x="0.0" y="220.66666666666669" width="169.33333333333334" height="68.666666666666686"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 6th">
+                                                        <state key="normal" title="Minor 6th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="majorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="u3E-qS-Js1"/>
+                                                            <action selector="minorSixthWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="HRE-Fs-BvL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wng-D2-A5Y">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rs-7F-TCh">
                                                         <rect key="frame" x="0.0" y="294.33333333333331" width="169.33333333333334" height="68.666666666666686"/>
                                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Major 7th">
+                                                        <state key="normal" title="Minor 7th">
                                                             <color key="titleColor" red="0.62224355860000002" green="0.46752251290000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <state key="disabled">
                                                             <color key="titleColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="majorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="gac-Xv-78q"/>
+                                                            <action selector="minorSeventhWithSender:" destination="hrx-Y5-t7E" eventType="touchUpInside" id="RQB-EU-pTB"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2C-3D-oDu">
@@ -3952,6 +4043,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sxj-3p-Pzt"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NSo-Fq-JCk">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="etK-zM-0Fb">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="oRF-Ee-hsg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="zkv-jq-1PP" id="oBJ-cy-aJg"/>
                         <outletCollection property="instrumentButtons" destination="rmT-bK-gop" collectionClass="NSMutableArray" id="MOY-cI-t2U"/>
@@ -3959,17 +4057,17 @@
                         <outletCollection property="instrumentButtons" destination="5AB-05-e0g" collectionClass="NSMutableArray" id="xXg-FS-ani"/>
                         <outletCollection property="instrumentButtons" destination="yjo-er-1B9" collectionClass="NSMutableArray" id="kT5-QP-eqD"/>
                         <outletCollection property="intervalButtons" destination="VZl-Xz-ocd" collectionClass="NSMutableArray" id="1mb-fn-A7h"/>
-                        <outletCollection property="intervalButtons" destination="wng-D2-A5Y" collectionClass="NSMutableArray" id="YMS-MX-I69"/>
                         <outletCollection property="intervalButtons" destination="A2C-3D-oDu" collectionClass="NSMutableArray" id="jId-ah-Saf"/>
                         <outletCollection property="intervalButtons" destination="Bik-Al-FcL" collectionClass="NSMutableArray" id="KG1-8u-Si6"/>
                         <outletCollection property="intervalButtons" destination="RQD-dj-06Z" collectionClass="NSMutableArray" id="lB7-e1-JBE"/>
                         <outletCollection property="intervalButtons" destination="EM6-tH-5h3" collectionClass="NSMutableArray" id="n8P-rg-hvO"/>
-                        <outletCollection property="intervalButtons" destination="Eba-ls-ygB" collectionClass="NSMutableArray" id="UIv-52-ViV"/>
                         <outletCollection property="intervalButtons" destination="s8t-yh-qa9" collectionClass="NSMutableArray" id="kxc-mQ-plr"/>
-                        <outletCollection property="intervalButtons" destination="5rs-7F-TCh" collectionClass="NSMutableArray" id="1AR-ZM-1kr"/>
                         <outletCollection property="intervalButtons" destination="dRA-ho-gnT" collectionClass="NSMutableArray" id="bNg-eD-6qk"/>
                         <outletCollection property="intervalButtons" destination="bS2-CW-gb3" collectionClass="NSMutableArray" id="VtM-k6-FeO"/>
+                        <outletCollection property="intervalButtons" destination="Eba-ls-ygB" collectionClass="NSMutableArray" id="UIv-52-ViV"/>
                         <outletCollection property="intervalButtons" destination="Ffc-82-GII" collectionClass="NSMutableArray" id="loV-do-1NI"/>
+                        <outletCollection property="intervalButtons" destination="5rs-7F-TCh" collectionClass="NSMutableArray" id="1AR-ZM-1kr"/>
+                        <outletCollection property="intervalButtons" destination="wng-D2-A5Y" collectionClass="NSMutableArray" id="YMS-MX-I69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qap-nb-ldx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4013,7 +4111,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a45-fd-5Lw">
                                 <rect key="frame" x="35" y="194" width="344" height="392"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="El3-dW-iN5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="El3-dW-iN5">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="65"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
@@ -4060,7 +4158,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czN-CK-D7q">
                                                 <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="42.666666666666664"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Start">
+                                                <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -4182,6 +4280,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPI-qI-g5u"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1rt-Tz-aQI">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="Pxo-co-1f3">
+                            <connections>
+                                <segue destination="knM-q4-dCY" kind="presentation" id="ate-VC-6pK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="rki-Jg-24S" id="wUZ-5q-cMj"/>
                         <outlet property="givenNote" destination="XYg-34-WaM" id="X0X-NO-Oek"/>
@@ -4201,7 +4306,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4226" y="2286"/>
+            <point key="canvasLocation" x="-3380" y="2286"/>
         </scene>
         <!--AscendingC Sing View Controller-->
         <scene sceneID="LCc-ei-kbx">
@@ -4240,7 +4345,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BNy-3p-WnY">
                                 <rect key="frame" x="30" y="194" width="354" height="392"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-hQ-ZDw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-hQ-ZDw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="71"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
@@ -4287,7 +4392,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-pu-Krr">
                                                 <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="42.666666666666664"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Start">
+                                                <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -4409,6 +4514,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0LI-ha-gyq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4bv-ZG-3rh">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="c95-z7-Lzf">
+                            <connections>
+                                <segue destination="knM-q4-dCY" kind="presentation" id="mRg-nU-211"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="eIT-dD-UX7" id="jph-s5-T55"/>
                         <outlet property="givenNote" destination="oBL-ha-hAh" id="WDw-99-IAr"/>
@@ -4428,7 +4540,236 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-3435" y="2286"/>
+            <point key="canvasLocation" x="-2559" y="2305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KEq-g4-yqb">
+            <objects>
+                <viewController id="VdR-IU-ZoP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N7a-Rw-1Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-CK-hi2">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.89729788789999998" green="0.73867220170000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Instructions" id="soU-tt-bKE">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="l5u-fW-9ZV">
+                                            <connections>
+                                                <segue destination="e2u-vN-vwT" kind="unwind" unwindAction="unwindSegueIDWithSegue:" id="9Tg-JK-FO2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identification Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IQX-ml-AXD">
+                                <rect key="frame" x="0.0" y="84" width="414" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZc-On-XF4">
+                                <rect key="frame" x="30" y="146" width="354" height="560"/>
+                                <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">1. Press the "Start/Replay" button to hear the interval, scale, or chord.  2. Click on the correct button identifying the type of interval, scale, or chord. If the button turns red, it is incorrect and if it turns green, it is correct!  3. Press the "Next" button to continue to the next interval, scale, or chord.  4. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</mutableString>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5yZ-CK-hi2" firstAttribute="top" secondItem="Za0-Wo-olZ" secondAttribute="top" id="6JT-x2-LdF"/>
+                            <constraint firstItem="Za0-Wo-olZ" firstAttribute="trailing" secondItem="IQX-ml-AXD" secondAttribute="trailing" id="Aw9-YW-y8u"/>
+                            <constraint firstItem="Za0-Wo-olZ" firstAttribute="bottom" secondItem="CZc-On-XF4" secondAttribute="bottom" constant="30" id="NOY-8j-R61"/>
+                            <constraint firstItem="CZc-On-XF4" firstAttribute="leading" secondItem="Za0-Wo-olZ" secondAttribute="leading" constant="30" id="Prn-kM-mYs"/>
+                            <constraint firstItem="IQX-ml-AXD" firstAttribute="leading" secondItem="Za0-Wo-olZ" secondAttribute="leading" id="Qd6-Cq-nOv"/>
+                            <constraint firstItem="CZc-On-XF4" firstAttribute="top" secondItem="IQX-ml-AXD" secondAttribute="bottom" constant="30" id="VAb-7p-sD4"/>
+                            <constraint firstItem="Za0-Wo-olZ" firstAttribute="trailing" secondItem="CZc-On-XF4" secondAttribute="trailing" constant="30" id="dud-hd-hq2"/>
+                            <constraint firstItem="5yZ-CK-hi2" firstAttribute="trailing" secondItem="Za0-Wo-olZ" secondAttribute="trailing" id="oXh-jF-T3s"/>
+                            <constraint firstItem="IQX-ml-AXD" firstAttribute="top" secondItem="5yZ-CK-hi2" secondAttribute="bottom" constant="20" id="sFW-RQ-cVY"/>
+                            <constraint firstItem="5yZ-CK-hi2" firstAttribute="leading" secondItem="Za0-Wo-olZ" secondAttribute="leading" id="sSh-1E-B0s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Za0-Wo-olZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfc-8r-BPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e2u-vN-vwT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1278" y="3623"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ycP-4p-Xyo">
+            <objects>
+                <viewController id="h60-OD-rZm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="op2-Ee-6UV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a66-vM-Pid">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.89729788789999998" green="0.73867220170000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Instructions" id="DF1-8w-IFx">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="TMy-0p-sDu">
+                                            <connections>
+                                                <segue destination="0Fr-Rw-NvD" kind="unwind" unwindAction="unwindSegueScaleSingWithSegue:" id="UUm-k1-xgm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale Singing Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="umN-kp-nC1">
+                                <rect key="frame" x="0.0" y="84" width="414" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-ft-cxe">
+                                <rect key="frame" x="30" y="146" width="354" height="560"/>
+                                <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">1. Press the "First Note" button to hear the first note of the scale.   2. Look at what scale it says to sing.  3. Hold down the "Hold to Record" button and sing each pitch of the scale starting from the given pitch. Only after the box turns green will it let you sing the next note in the scale.  4. You may adjust the octave of the given pitch and answer by using the slider, but the octave will not affect your answer.  5. Press the "Answer" button to hear the answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next scale.  Happy Practicing!</mutableString>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a66-vM-Pid" firstAttribute="leading" secondItem="2Kd-gw-ima" secondAttribute="leading" id="18P-zi-ncJ"/>
+                            <constraint firstItem="2Kd-gw-ima" firstAttribute="bottom" secondItem="EK8-ft-cxe" secondAttribute="bottom" constant="30" id="2dx-Lk-3Fk"/>
+                            <constraint firstItem="umN-kp-nC1" firstAttribute="leading" secondItem="2Kd-gw-ima" secondAttribute="leading" id="3sr-yy-fHh"/>
+                            <constraint firstItem="umN-kp-nC1" firstAttribute="top" secondItem="a66-vM-Pid" secondAttribute="bottom" constant="20" id="7bi-Eo-a7o"/>
+                            <constraint firstItem="a66-vM-Pid" firstAttribute="trailing" secondItem="2Kd-gw-ima" secondAttribute="trailing" id="BaG-Jx-lJn"/>
+                            <constraint firstItem="EK8-ft-cxe" firstAttribute="leading" secondItem="2Kd-gw-ima" secondAttribute="leading" constant="30" id="clk-gp-oIZ"/>
+                            <constraint firstItem="2Kd-gw-ima" firstAttribute="trailing" secondItem="umN-kp-nC1" secondAttribute="trailing" id="g7u-lu-Jzf"/>
+                            <constraint firstItem="a66-vM-Pid" firstAttribute="top" secondItem="2Kd-gw-ima" secondAttribute="top" id="hy4-M6-bwa"/>
+                            <constraint firstItem="2Kd-gw-ima" firstAttribute="trailing" secondItem="EK8-ft-cxe" secondAttribute="trailing" constant="30" id="qFe-Pw-U37"/>
+                            <constraint firstItem="EK8-ft-cxe" firstAttribute="top" secondItem="umN-kp-nC1" secondAttribute="bottom" constant="30" id="wRU-gc-RIE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Kd-gw-ima"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUO-eY-L7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0Fr-Rw-NvD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="3539"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="clG-0H-zLI">
+            <objects>
+                <viewController id="Ivd-yz-gRm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wD-cx-KSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-Z5-7dM">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.89729788789999998" green="0.73867220170000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Instructions" id="PGU-ue-awo">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="cFD-CU-Ubx">
+                                            <connections>
+                                                <segue destination="8bA-S1-LGZ" kind="unwind" unwindAction="unwindSegueChordSingWithSegue:" id="uxA-R6-nuP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chord Singing Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2YE-4s-BXA">
+                                <rect key="frame" x="0.0" y="84" width="414" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-IS-TJW">
+                                <rect key="frame" x="30" y="146" width="354" height="560"/>
+                                <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">1. Press the "Root" button to hear the root of the chord.  2. Hold down the "Hold to Record" button and sing into the microphone the chord one note at a time from the root. Only after the box turns green will it let you sing the next note in the chord.  3. You may adjust the octave of the given pitch and chord by using the slider.  4. Press the "Chord" button to hear the answer played as a chord.  5. Press the "Answer" button to hear the answer as a broken chord (the way you would sing it).  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next chord.  Happy Practicing!</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JYD-sY-pjH" firstAttribute="bottom" secondItem="lDz-IS-TJW" secondAttribute="bottom" constant="30" id="Few-OI-TPl"/>
+                            <constraint firstItem="Gdn-Z5-7dM" firstAttribute="leading" secondItem="JYD-sY-pjH" secondAttribute="leading" id="K5V-FM-GbU"/>
+                            <constraint firstItem="JYD-sY-pjH" firstAttribute="trailing" secondItem="2YE-4s-BXA" secondAttribute="trailing" id="PZl-md-ZNC"/>
+                            <constraint firstItem="Gdn-Z5-7dM" firstAttribute="top" secondItem="JYD-sY-pjH" secondAttribute="top" id="UBR-7w-sVF"/>
+                            <constraint firstItem="2YE-4s-BXA" firstAttribute="leading" secondItem="JYD-sY-pjH" secondAttribute="leading" id="VME-ze-V1o"/>
+                            <constraint firstItem="2YE-4s-BXA" firstAttribute="top" secondItem="Gdn-Z5-7dM" secondAttribute="bottom" constant="20" id="cIV-YY-zgA"/>
+                            <constraint firstItem="Gdn-Z5-7dM" firstAttribute="trailing" secondItem="JYD-sY-pjH" secondAttribute="trailing" id="dTS-7f-isw"/>
+                            <constraint firstItem="JYD-sY-pjH" firstAttribute="trailing" secondItem="lDz-IS-TJW" secondAttribute="trailing" constant="30" id="hWG-aQ-ADf"/>
+                            <constraint firstItem="lDz-IS-TJW" firstAttribute="leading" secondItem="JYD-sY-pjH" secondAttribute="leading" constant="30" id="oX1-7f-3CM"/>
+                            <constraint firstItem="lDz-IS-TJW" firstAttribute="top" secondItem="2YE-4s-BXA" secondAttribute="bottom" constant="30" id="vZL-kD-oze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JYD-sY-pjH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTK-LW-85b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8bA-S1-LGZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4603" y="3135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qBZ-VK-68O">
+            <objects>
+                <viewController id="knM-q4-dCY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wnE-7c-O4H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afT-iy-Q09">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Instructions" id="ZPb-7o-tVL">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="XX5-MP-KKM">
+                                            <connections>
+                                                <segue destination="thd-rm-gRN" kind="unwind" unwindAction="unwindSegueSingingWithSegue:" id="CFy-Xa-23N"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval Singing Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k5g-er-OMO">
+                                <rect key="frame" x="0.0" y="84" width="414" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTN-7j-nZc">
+                                <rect key="frame" x="30" y="146" width="354" height="560"/>
+                                <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">1. Press the "Replay" Button to play the given note.  * You can use the slider to change the octave of the given note. Sometimes it is difficult to detect singing below G3. 
+2. Look at what interval is says to sing above the given note.  3. Hold down the "Hold to Record" button at the bottom, and sing into the microphone your guess of the answer.  4. Red colored box means it is incorrect, orange means it is correct but out of tune, and green means correct and in tune!  5. Use the "Replay" button to hear the beginning pitch again, and use the "Answer" button to hear the correct answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</mutableString>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Sg-ih-9fV" firstAttribute="trailing" secondItem="LTN-7j-nZc" secondAttribute="trailing" constant="30" id="1CW-hv-KLM"/>
+                            <constraint firstItem="LTN-7j-nZc" firstAttribute="top" secondItem="k5g-er-OMO" secondAttribute="bottom" constant="30" id="2qd-0S-hVw"/>
+                            <constraint firstItem="k5g-er-OMO" firstAttribute="leading" secondItem="7Sg-ih-9fV" secondAttribute="leading" id="5k9-DD-t4Z"/>
+                            <constraint firstItem="7Sg-ih-9fV" firstAttribute="trailing" secondItem="k5g-er-OMO" secondAttribute="trailing" id="D7m-jg-MjR"/>
+                            <constraint firstItem="afT-iy-Q09" firstAttribute="leading" secondItem="7Sg-ih-9fV" secondAttribute="leading" id="GOv-iR-c5k"/>
+                            <constraint firstItem="LTN-7j-nZc" firstAttribute="leading" secondItem="7Sg-ih-9fV" secondAttribute="leading" constant="30" id="JmF-aQ-Kzy"/>
+                            <constraint firstItem="k5g-er-OMO" firstAttribute="top" secondItem="afT-iy-Q09" secondAttribute="bottom" constant="20" id="Lwu-iJ-lRw"/>
+                            <constraint firstItem="afT-iy-Q09" firstAttribute="top" secondItem="7Sg-ih-9fV" secondAttribute="top" id="Nds-wv-oVR"/>
+                            <constraint firstItem="afT-iy-Q09" firstAttribute="trailing" secondItem="7Sg-ih-9fV" secondAttribute="trailing" id="fuP-01-vy0"/>
+                            <constraint firstItem="7Sg-ih-9fV" firstAttribute="bottom" secondItem="LTN-7j-nZc" secondAttribute="bottom" constant="30" id="p3V-hp-VyS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Sg-ih-9fV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHk-zv-zUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="thd-rm-gRN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3336.2318840579715" y="3182.608695652174"/>
         </scene>
         <!--DescendingC Sing View Controller-->
         <scene sceneID="9OU-w8-mUd">
@@ -4441,7 +4782,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6p-4J-rNn">
                                 <rect key="frame" x="30" y="184" width="354" height="402"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2it-WK-Bpp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2it-WK-Bpp">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="72.666666666666671"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
@@ -4503,7 +4844,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaE-t5-xYF">
                                                 <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="42.666666666666664"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Start">
+                                                <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -4636,6 +4977,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnY-vf-IBg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="v9F-8n-kCA">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="HPI-uA-1wt">
+                            <connections>
+                                <segue destination="knM-q4-dCY" kind="presentation" id="mhu-eZ-a0F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="yWA-Su-eNL" id="UDr-jN-oY6"/>
                         <outlet property="givenNote" destination="fOL-ZF-A2x" id="uls-Rl-QXI"/>
@@ -4655,7 +5003,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2664" y="2284"/>
+            <point key="canvasLocation" x="-1830" y="2319"/>
         </scene>
         <!--Ascending Diatonic View Controller-->
         <scene sceneID="hBm-H2-aLh">
@@ -4914,6 +5262,13 @@
                         <viewLayoutGuide key="safeArea" id="HTi-Po-v2r"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YM3-Ad-0cU">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="zK2-Ou-ODd">
+                            <connections>
+                                <segue destination="VdR-IU-ZoP" kind="presentation" id="O2B-N4-tfM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="exerciseNumLabel" destination="WC7-Vs-zY8" id="sK5-gf-rav"/>
@@ -5108,4 +5463,10 @@
             <point key="canvasLocation" x="-484" y="2"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ate-VC-6pK"/>
+        <segue reference="qaY-Pm-bc2"/>
+        <segue reference="Ct2-fI-aHu"/>
+        <segue reference="ris-os-M3R"/>
+    </inferredMetricsTieBreakers>
 </document>

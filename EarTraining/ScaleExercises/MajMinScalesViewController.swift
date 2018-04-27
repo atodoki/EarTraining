@@ -178,6 +178,10 @@ class MajMinScalesViewController: UIViewController {
         checkAnswer(button: sender, scale: 3)
     }
     
+    @IBAction func unwindSegueID(segue: UIStoryboardSegue) {
+        
+    }
+    
 
     /*
     // MARK: - Navigation

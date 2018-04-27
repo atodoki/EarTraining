@@ -155,8 +155,7 @@ class DescendingDSingViewController: UIViewController {
         
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
-        
-        sender.setTitle("Next", for: .normal)
+
         
     }
    
@@ -212,10 +211,10 @@ class DescendingDSingViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func unwindSegueSinging(segue: UIStoryboardSegue) {
+        
     }
+    
     
 
     /*

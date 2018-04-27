@@ -192,6 +192,10 @@ class ModesScalesViewController: UIViewController {
     @IBAction func locrian(sender: UIButton){
         checkAnswer(button: sender, scale: 6)
     }
+    
+    @IBAction func unwindSegueID(segue: UIStoryboardSegue) {
+        
+    }
 
     /*
     // MARK: - Navigation

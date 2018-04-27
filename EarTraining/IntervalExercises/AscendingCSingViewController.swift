@@ -151,8 +151,7 @@ class AscendingCSingViewController: UIViewController {
         
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
-        
-        sender.setTitle("Next", for: .normal)
+
         
     }
     
@@ -206,6 +205,10 @@ class AscendingCSingViewController: UIViewController {
             timer.invalidate()
             recordButton.setTitle("Hold to Record", for: .normal)
         }
+    }
+    
+    @IBAction func unwindSegueSinging(segue: UIStoryboardSegue) {
+        
     }
     
 
