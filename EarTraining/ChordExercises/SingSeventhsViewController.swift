@@ -74,6 +74,8 @@ class SingSeventhsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Defined Functions
+    
     func setChord(){
         chordType = Int(arc4random_uniform(5))
         root = Int(arc4random_uniform(12))

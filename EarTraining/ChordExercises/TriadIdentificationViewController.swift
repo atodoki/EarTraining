@@ -15,11 +15,10 @@ class TriadIdentificationViewController: UIViewController {
     @IBOutlet var instrumentButtons: [UIButton]!
     @IBOutlet var exerciseNumLabel: UILabel!
     
-    //let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
-    //let diatonicIntervals = [2,4,5,7,9,11,12]
+ 
     let majChord = [4,7]
     let minChord = [3,7]
     let dimChord = [3,6]
@@ -41,10 +40,6 @@ class TriadIdentificationViewController: UIViewController {
     
     var conductor = Conductor.sharedInstance
     
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,26 +52,15 @@ class TriadIdentificationViewController: UIViewController {
         conductor.closeMic()
         setChord()
 
+    }
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-   
-    }
-    
-    
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Defined Functions
     
     func setChord(){
         chordType = Int(arc4random_uniform(4))

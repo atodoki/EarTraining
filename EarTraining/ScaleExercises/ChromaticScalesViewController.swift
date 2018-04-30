@@ -38,9 +38,7 @@ class ChromaticScalesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         conductor.closeMic()
-        
 
-        
         // Do any additional setup after loading the view.
         scaleList.append(chromatic)
         scaleList.append(wholeTone)
@@ -51,21 +49,12 @@ class ChromaticScalesViewController: UIViewController {
         firstNote = Int(arc4random_uniform(12))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func playScale(scale: Array<Int>){
         
@@ -132,8 +121,6 @@ class ChromaticScalesViewController: UIViewController {
         
         scaleType = Int(arc4random_uniform(4))
         firstNote = Int(arc4random_uniform(12))
-        
-        
     }
     
     @IBAction func piano(sender: UIButton){

@@ -34,31 +34,20 @@ class DescendingDiatonicViewController: UIViewController {
     
     var conductor = Conductor.sharedInstance
     
-
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         conductor.closeMic()
         setInterval()
         
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
- 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func setInterval(){
         topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1

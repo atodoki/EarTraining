@@ -9,8 +9,6 @@
 import UIKit
 import AudioKit
 
-
-
 class MajMinScalesViewController: UIViewController {
     
     @IBOutlet var scaleButtons: [UIButton]!
@@ -27,15 +25,12 @@ class MajMinScalesViewController: UIViewController {
     
     var scaleList = [[Int]]()
     
-    
     var scaleType = 0
     var firstNote = 0
     
     var exerciseNum = 1
 
     var conductor = Conductor.sharedInstance
-    
-//    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,23 +47,14 @@ class MajMinScalesViewController: UIViewController {
         firstNote = Int(arc4random_uniform(12))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Defined Functions
+    
     func playScale(scale: Array<Int>){
-        
         
         for i in scale{
             let noteIndex = firstNote+i
@@ -78,8 +64,6 @@ class MajMinScalesViewController: UIViewController {
 
             usleep(500000)
         }
-        
-        
     }
     
     func checkAnswer(button: UIButton, scale: Int){
@@ -134,8 +118,6 @@ class MajMinScalesViewController: UIViewController {
         
         scaleType = Int(arc4random_uniform(4))
         firstNote = Int(arc4random_uniform(12))
-        
-        
     }
     
     @IBAction func piano(sender: UIButton){

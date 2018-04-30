@@ -25,40 +25,23 @@ class AscendingChromaticViewController: UIViewController {
     var bottomNote = 0
     var topNote = 0
     var intervalSize = 0
-    var exerciseNum = 1;
-    
-
+    var exerciseNum = 1
     
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     var conductor = Conductor.sharedInstance
-    
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
-        
         conductor.closeMic()
         setInterval()
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
 
-        
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,7 +54,7 @@ class AscendingChromaticViewController: UIViewController {
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
         intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
         topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
-        bNoteOctave = Int(arc4random_uniform(3))+2 // octave 2 to 4
+        bNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
         tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
         
     }

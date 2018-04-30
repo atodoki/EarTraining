@@ -2080,89 +2080,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Y3y-pF-Jh0">
-                                <rect key="frame" x="0.0" y="74" width="414" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Chromatic and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-OJ-Ncs">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37.666666666666664"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes of Limited Transposition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6M-Io-wlS">
-                                        <rect key="frame" x="0.0" y="37.666666666666671" width="414" height="38"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eQi-m0-d0G">
-                                        <rect key="frame" x="0.0" y="75.666666666666657" width="414" height="24.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="xQM-Dy-1gN">
+                                <rect key="frame" x="105" y="596" width="204" height="21"/>
+                                <color key="tintColor" red="0.53833600739999998" green="0.52562204300000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="cqu-dK-TDG"/>
+                                    <constraint firstAttribute="width" constant="200" id="1EC-hw-RSO"/>
+                                    <constraint firstAttribute="height" constant="20" id="Q4r-4C-QaP"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HUA-dP-dRG">
-                                <rect key="frame" x="297" y="69" width="107" height="42"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-Da-af0">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="⚙️"/>
-                                        <connections>
-                                            <action selector="instrumentsWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="46x-cY-hSE"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-rT-VFP">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Piano">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pianoWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="aK7-97-iiN"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px5-Pd-VEV">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Clarinet">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clarinetWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="fSX-y9-1re"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-fK-D7r">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="French Horn">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="frenchHornWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="ESW-S5-bEN"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mny-CM-ZrD">
-                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Pizz Strings">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="stringWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="enO-Z3-n1n"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <connections>
+                                    <action selector="changeOctaveWithSender:" destination="4Ol-OP-mCw" eventType="valueChanged" id="tFD-lG-ZSB"/>
+                                </connections>
+                            </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HYd-Ai-8MY">
                                 <rect key="frame" x="0.0" y="626" width="414" height="90"/>
                                 <subviews>
@@ -2217,17 +2145,6 @@
                                     <constraint firstAttribute="height" constant="90" id="p3n-he-Fvd"/>
                                 </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="xQM-Dy-1gN">
-                                <rect key="frame" x="105" y="596" width="204" height="21"/>
-                                <color key="tintColor" red="0.53833600739999998" green="0.52562204300000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1EC-hw-RSO"/>
-                                    <constraint firstAttribute="height" constant="20" id="Q4r-4C-QaP"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="changeOctaveWithSender:" destination="4Ol-OP-mCw" eventType="valueChanged" id="tFD-lG-ZSB"/>
-                                </connections>
-                            </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-Wr-9uu">
                                 <rect key="frame" x="30" y="184" width="354" height="402"/>
                                 <subviews>
@@ -2331,6 +2248,89 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Y3y-pF-Jh0">
+                                <rect key="frame" x="0.0" y="74" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sing Chromatic and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-OJ-Ncs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modes of Limited Transposition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6M-Io-wlS">
+                                        <rect key="frame" x="0.0" y="37.666666666666671" width="414" height="38"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise # 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eQi-m0-d0G">
+                                        <rect key="frame" x="0.0" y="75.666666666666657" width="414" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cqu-dK-TDG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HUA-dP-dRG">
+                                <rect key="frame" x="297" y="69" width="107" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-Da-af0">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="⚙️"/>
+                                        <connections>
+                                            <action selector="instrumentsWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="46x-cY-hSE"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-rT-VFP">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Piano">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pianoWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="aK7-97-iiN"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px5-Pd-VEV">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Clarinet">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clarinetWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="fSX-y9-1re"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-fK-D7r">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" red="0.83036199980000003" green="0.82047697630000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="French Horn">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="frenchHornWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="ESW-S5-bEN"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mny-CM-ZrD">
+                                        <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Pizz Strings">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stringWithSender:" destination="4Ol-OP-mCw" eventType="touchUpInside" id="enO-Z3-n1n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.97061751289999998" green="0.94167387339999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -2339,20 +2339,20 @@
                             <constraint firstItem="Nhh-Wr-9uu" firstAttribute="leading" secondItem="XYM-rD-3zY" secondAttribute="leading" constant="30" id="8xr-8m-agf"/>
                             <constraint firstItem="HYd-Ai-8MY" firstAttribute="leading" secondItem="XYM-rD-3zY" secondAttribute="leading" id="EG4-rG-Ju7"/>
                             <constraint firstItem="xQM-Dy-1gN" firstAttribute="top" secondItem="Nhh-Wr-9uu" secondAttribute="bottom" constant="10" id="K5Y-RG-Faj"/>
-                            <constraint firstItem="HUA-dP-dRG" firstAttribute="top" secondItem="XYM-rD-3zY" secondAttribute="top" constant="5" id="LiS-mm-MiC"/>
+                            <constraint firstItem="HUA-dP-dRG" firstAttribute="top" secondItem="XYM-rD-3zY" secondAttribute="top" constant="5" id="LXn-mN-soW"/>
                             <constraint firstItem="Y3y-pF-Jh0" firstAttribute="leading" secondItem="XYM-rD-3zY" secondAttribute="leading" id="Oqk-ar-h4k"/>
                             <constraint firstItem="HYd-Ai-8MY" firstAttribute="top" secondItem="xQM-Dy-1gN" secondAttribute="bottom" constant="10" id="P7J-AG-SUP"/>
                             <constraint firstItem="XYM-rD-3zY" firstAttribute="trailing" secondItem="Y3y-pF-Jh0" secondAttribute="trailing" id="Ueg-oe-prR"/>
                             <constraint firstItem="Nhh-Wr-9uu" firstAttribute="top" secondItem="Y3y-pF-Jh0" secondAttribute="bottom" constant="10" id="XDI-mO-Z0N"/>
-                            <constraint firstItem="XYM-rD-3zY" firstAttribute="trailing" secondItem="HUA-dP-dRG" secondAttribute="trailing" constant="10" id="Yw1-qr-gXR"/>
                             <constraint firstItem="XYM-rD-3zY" firstAttribute="bottom" secondItem="HYd-Ai-8MY" secondAttribute="bottom" constant="20" id="kXH-4A-YGd"/>
                             <constraint firstItem="XYM-rD-3zY" firstAttribute="trailing" secondItem="HYd-Ai-8MY" secondAttribute="trailing" id="o87-31-Ah6"/>
                             <constraint firstItem="XYM-rD-3zY" firstAttribute="trailing" secondItem="Nhh-Wr-9uu" secondAttribute="trailing" constant="30" id="vIN-cU-XEF"/>
+                            <constraint firstItem="XYM-rD-3zY" firstAttribute="trailing" secondItem="HUA-dP-dRG" secondAttribute="trailing" constant="10" id="xmF-w8-Mxk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XYM-rD-3zY"/>
                     </view>
                     <navigationItem key="navigationItem" id="hKo-YG-jBI">
-                        <barButtonItem key="rightBarButtonItem" title="Instruction" id="3j8-X5-sM1">
+                        <barButtonItem key="rightBarButtonItem" title="Instructions" id="3j8-X5-sM1">
                             <connections>
                                 <segue destination="h60-OD-rZm" kind="presentation" id="Ct2-fI-aHu"/>
                             </connections>
@@ -2780,6 +2780,9 @@
                                         <state key="normal" title="Piano">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pianoWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="76d-ji-4Kk"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-50-DoP">
                                         <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
@@ -2788,6 +2791,9 @@
                                         <state key="normal" title="Clarinet">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clarinetWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="9gS-Ap-KrG"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-Wt-BFl">
                                         <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
@@ -2796,6 +2802,9 @@
                                         <state key="normal" title="French Horn">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="frenchHornWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="85p-fV-rmk"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-kw-2mt">
                                         <rect key="frame" x="0.0" y="-69" width="107" height="0.0"/>
@@ -2804,6 +2813,9 @@
                                         <state key="normal" title="Pizz Strings">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stringWithSender:" destination="cMf-PG-aaJ" eventType="touchUpInside" id="z2g-FS-8zq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

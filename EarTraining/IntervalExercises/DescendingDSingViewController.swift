@@ -61,6 +61,7 @@ class DescendingDSingViewController: UIViewController {
         
     }
     
+    // MARK: - Defined Functions
     
     func setInterval(){
         topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
@@ -81,6 +82,8 @@ class DescendingDSingViewController: UIViewController {
             b.isHidden = true
         }
     }
+    
+    // MARK: - Button Actions
     
     @IBAction func instruments(sender: UIButton){
         if(instrumentButtons[0].isHidden){
@@ -155,12 +158,10 @@ class DescendingDSingViewController: UIViewController {
         
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"
-
         
     }
    
     @objc func updateUI(){
-        //AudioKit.output = silence
         var frequency0 = conductor.listenFreq()
         var sungOctave = 0.0
         var sungNoteIndex = 0;

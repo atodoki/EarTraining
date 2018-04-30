@@ -27,37 +27,18 @@ class DescendingChromaticViewController: UIViewController {
     var intervalSize = 0
     var exerciseNum = 1;
     
-//    let sampler = AKAppleSampler()
-//    var timePitch: AKTimePitch!
-    
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     var conductor = Conductor.sharedInstance
     
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         conductor.closeMic()
         setInterval()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +63,8 @@ class DescendingChromaticViewController: UIViewController {
 
         sleep(1)
         
-        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], note: .root)
+        
         conductor.play(note: .root)
 
     }

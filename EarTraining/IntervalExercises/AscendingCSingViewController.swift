@@ -61,6 +61,7 @@ class AscendingCSingViewController: UIViewController {
         
     }
     
+    // MARK: - Defined Functions
     
     func setInterval(){
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
@@ -79,6 +80,8 @@ class AscendingCSingViewController: UIViewController {
             b.isHidden = true
         }
     }
+    
+    // MARK: Button Actions
     
     @IBAction func instruments(sender: UIButton){
         if(instrumentButtons[0].isHidden){
@@ -125,15 +128,11 @@ class AscendingCSingViewController: UIViewController {
         conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
         conductor.play(note: .root)
         
-        //sleep(1)
-        
     }
     
     @IBAction func playAnswer(sender: UIButton){
         conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
         conductor.play(note: .root)
-        
-        //sleep(1)
         
     }
     
@@ -154,8 +153,6 @@ class AscendingCSingViewController: UIViewController {
 
         
     }
-    
-    
     
     @objc func updateUI(){
         var frequency0 = conductor.listenFreq()

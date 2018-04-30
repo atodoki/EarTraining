@@ -42,10 +42,6 @@ class SingTriadsViewController: UIViewController {
     
     var exerciseNum = 1
     
-//    var rootNoteName = ""
-//    var thirdNoteName = ""
-//    var fifthNoteName = ""
-    
     var rootOctave = 4
     var thirdOctave = 4
     var fifthOctave = 4
@@ -53,10 +49,7 @@ class SingTriadsViewController: UIViewController {
 
     var timer: Timer!
 
-    
     var conductor = Conductor.sharedInstance
-    
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,22 +64,13 @@ class SingTriadsViewController: UIViewController {
         
 
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func setChord(){
         chordType = Int(arc4random_uniform(4))
@@ -208,7 +192,6 @@ class SingTriadsViewController: UIViewController {
     }
     
     @objc func updateUI(){
-//        AudioKit.output = silence
         var frequency0 = conductor.listenFreq()
         var sungOctave = 0
         var sungNoteIndex = 0

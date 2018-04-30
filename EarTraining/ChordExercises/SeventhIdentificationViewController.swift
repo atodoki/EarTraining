@@ -52,30 +52,17 @@ class SeventhIdentificationViewController: UIViewController {
         chordList.append(hDimChord)
         chordList.append(fDimChord)
         
-        
         conductor.closeMic()
         setChord()
-        
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
-    
-    
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        
+  
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Defined Functions
     
     func setChord(){
         chordType = Int(arc4random_uniform(5))

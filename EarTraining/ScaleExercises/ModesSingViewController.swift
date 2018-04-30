@@ -81,13 +81,14 @@ class ModesSingViewController: UIViewController {
         
         setScale()
         
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func setScale(){
         scaleType = Int(arc4random_uniform(7))
@@ -106,7 +107,6 @@ class ModesSingViewController: UIViewController {
     }
     
     func playScale(scale: Array<Int>){
-        
         
         for i in scale{
             let noteIndex = firstNote+i

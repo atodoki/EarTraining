@@ -81,14 +81,14 @@ class ChromaticSingViewController: UIViewController {
         scaleList.append(hwOctatonic)
         
         setScale()
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func setScale(){
         scaleType = Int(arc4random_uniform(4))
@@ -128,8 +128,6 @@ class ChromaticSingViewController: UIViewController {
             
             usleep(500000)
         }
-        
-        
     }
     
     func closeInstButtons(){
@@ -260,8 +258,6 @@ class ChromaticSingViewController: UIViewController {
             }else if(note7.backgroundColor != UIColor.green){
                 changeNoteLabel(label: note7, noteIndex: noteInd7, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
             }
-//                else if(note8.backgroundColor != UIColor.green){
-//                changeNoteLabel(label: note8, noteIndex: noteInd8, sungNoteIndex: sungNoteIndex, sungOctave: sungOctave)
             else{
                 
             switch scaleType {
@@ -295,9 +291,6 @@ class ChromaticSingViewController: UIViewController {
                 scaleLabel.text = "Press the Next Button"
             }
             }
-            
-            
-            
         }
     }
     

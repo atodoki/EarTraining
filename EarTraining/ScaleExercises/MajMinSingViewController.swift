@@ -76,14 +76,14 @@ class MajMinSingViewController: UIViewController {
         scaleList.append(melodicMinorScale)
         
         setScale()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func setScale(){
         scaleType = Int(arc4random_uniform(4))

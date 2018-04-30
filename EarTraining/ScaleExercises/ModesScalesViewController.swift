@@ -18,7 +18,6 @@ class ModesScalesViewController: UIViewController {
     let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
     
-    
     let ionian = [0,2,4,5,7,9,11,12]
     let dorian = [0,2,3,5,7,9,10,12]
     let phrygian = [0,1,3,5,7,8,10,12]
@@ -29,7 +28,6 @@ class ModesScalesViewController: UIViewController {
     
     var scaleList = [[Int]]()
     
-    
     var scaleType = 0
     var firstNote = 0
     
@@ -37,12 +35,9 @@ class ModesScalesViewController: UIViewController {
 
     var conductor = Conductor.sharedInstance
     
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         conductor.closeMic()
-        
         
         // Do any additional setup after loading the view.
         scaleList.append(ionian)
@@ -57,20 +52,12 @@ class ModesScalesViewController: UIViewController {
         firstNote = Int(arc4random_uniform(12))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Defined Functions
     
     func playScale(scale: Array<Int>){
         
@@ -80,7 +67,6 @@ class ModesScalesViewController: UIViewController {
             conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex], note: .root)
             conductor.play(note: .root)
 
-            
             usleep(500000)
         }
         
@@ -137,7 +123,6 @@ class ModesScalesViewController: UIViewController {
         
         scaleType = Int(arc4random_uniform(7))
         firstNote = Int(arc4random_uniform(12))
-        
         
     }
     

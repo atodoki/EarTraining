@@ -28,10 +28,7 @@ class AscendingDSingIntervalViewController: UIViewController {
 
     var exerciseNum = 1
     
-    var conductor = Conductor.sharedInstance
-    
-    let soundNames = ["Kawai-K11-GrPiano-C4", "Ensoniq-SQ-1-Clarinet-C4", "Ensoniq-SQ-1-French-Horn-C4", "Alesis-Fusion-Pizzicato-Strings-C4"]
-    
+    var conductor = Conductor.sharedInstance    
 
     var timer: Timer!
     
@@ -60,13 +57,12 @@ class AscendingDSingIntervalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-
         conductor.setMic()
         setInterval()
 
     }
     
+    // MARK: - Defined Functions
     
     func setInterval(){
         bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
@@ -86,16 +82,8 @@ class AscendingDSingIntervalViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    // MARK: - Button Actions
 
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-    }
     
     @IBAction func instruments(sender: UIButton){
         if(instrumentButtons[0].isHidden){
@@ -173,12 +161,9 @@ class AscendingDSingIntervalViewController: UIViewController {
     
     
     @objc func updateUI(){
-        //AudioKit.output = silence
         var frequency0 = conductor.listenFreq()
         var sungOctave = 0.0
         var sungNoteIndex = 0;
-//        print(mic.isStarted)
-//        print(tracker.amplitude)
         if(conductor.listenAmp() > 0.05){
             
             // Get note frequency in octave 0
