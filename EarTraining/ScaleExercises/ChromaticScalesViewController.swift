@@ -61,8 +61,8 @@ class ChromaticScalesViewController: UIViewController {
         for i in scale{
             let noteIndex = firstNote+i
             
-            conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex], note: .root)
-            conductor.play(note: .root)
+            conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + 1200.0 : noteCents[noteIndex], noteType: .root)
+            conductor.play(noteType: .root)
 
             
             usleep(500000)

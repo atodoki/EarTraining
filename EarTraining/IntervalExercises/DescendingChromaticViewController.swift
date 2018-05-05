@@ -58,14 +58,14 @@ class DescendingChromaticViewController: UIViewController {
     }
     
     func playInterval(){
-        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
 
         sleep(1)
         
-        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], note: .root)
+        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], noteType: .root)
         
-        conductor.play(note: .root)
+        conductor.play(noteType: .root)
 
     }
     

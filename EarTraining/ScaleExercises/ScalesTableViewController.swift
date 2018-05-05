@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// TableViewController for the scale exercises
 class ScalesTableViewController: UITableViewController {
     var scales = [["Major/Minor Scales", "Major/Minor Sing"], ["Modes", "Modes Sing"], ["Chromatic/Modes of Limited Transposition", "Chromatic/Modes Sing"]]
     

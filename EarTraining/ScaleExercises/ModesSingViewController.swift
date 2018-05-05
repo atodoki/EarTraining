@@ -111,8 +111,8 @@ class ModesSingViewController: UIViewController {
         for i in scale{
             let noteIndex = firstNote+i
             
-            conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + octaveChange[firstNoteOctave] + 1200.0 : noteCents[noteIndex] + octaveChange[firstNoteOctave], note: .root)
-            conductor.play(note: .root)
+            conductor.changePitch(pitch: noteIndex > 11 ? noteCents[noteIndex%12] + octaveChange[firstNoteOctave] + 1200.0 : noteCents[noteIndex] + octaveChange[firstNoteOctave], noteType: .root)
+            conductor.play(noteType: .root)
             
             usleep(500000)
         }
@@ -137,8 +137,8 @@ class ModesSingViewController: UIViewController {
     }
     
     @IBAction func playFirstNote(sender: UIButton){
-        conductor.changePitch(pitch: noteCents[noteInd1%12] + octaveChange[firstNoteOctave] , note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[noteInd1%12] + octaveChange[firstNoteOctave] , noteType: .root)
+        conductor.play(noteType: .root)
     }
     
     @IBAction func playAnswer(sender: UIButton){

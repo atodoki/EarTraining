@@ -72,16 +72,16 @@ class TriadIdentificationViewController: UIViewController {
         thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
         fifthOctave = fifthOctave > 11 ? rootOctave + 1 : rootOctave
         
-        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
-        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
-        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], noteType: .fifth)
         
     }
     
     func playChord(){
-        conductor.play(note: .root)
-        conductor.play(note: .third)
-        conductor.play(note: .fifth)
+        conductor.play(noteType: .root)
+        conductor.play(noteType: .third)
+        conductor.play(noteType: .fifth)
 
     }
     

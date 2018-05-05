@@ -60,13 +60,13 @@ class AscendingChromaticViewController: UIViewController {
     }
     
     func playInterval(){
-        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[bottomNote] + octaveChange[bNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
 
         sleep(1)
         
-        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[topNote%12] + octaveChange[tNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
 
     }
     

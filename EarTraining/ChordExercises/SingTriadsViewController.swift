@@ -83,9 +83,9 @@ class SingTriadsViewController: UIViewController {
         
         triadLabel.text = "Sing a \(triadNames[chordType])"
         
-        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
-        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
-        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], noteType: .fifth)
 
     }
     
@@ -133,24 +133,24 @@ class SingTriadsViewController: UIViewController {
     
     @IBAction func playRoot(sender: UIButton){
 
-        conductor.play(note: .root)
+        conductor.play(noteType: .root)
         
     }
     
     @IBAction func playChordSequence(sender: UIButton){
         //AudioKit.output = mixer
-        conductor.play(note: .root)
+        conductor.play(noteType: .root)
         sleep(1)
-        conductor.play(note: .third)
+        conductor.play(noteType: .third)
         sleep(1)
-        conductor.play(note: .fifth)
+        conductor.play(noteType: .fifth)
     }
     
     @IBAction func playChord(sender: UIButton){
         //AudioKit.output = mixer
-        conductor.play(note: .root)
-        conductor.play(note: .third)
-        conductor.play(note: .fifth)
+        conductor.play(noteType: .root)
+        conductor.play(noteType: .third)
+        conductor.play(noteType: .fifth)
         
     }
     
@@ -173,9 +173,9 @@ class SingTriadsViewController: UIViewController {
         thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
         fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
         
-        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
-        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
-        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], noteType: .fifth)
         
         rootNote.text = "\(noteNamesWithSharps[root])\(rootOctave)"
     }

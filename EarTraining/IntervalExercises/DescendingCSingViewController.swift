@@ -126,14 +126,14 @@ class DescendingCSingViewController: UIViewController {
     
     
     @IBAction func replay(sender: UIButton){
-        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
 
     }
     
     @IBAction func playAnswer(sender: UIButton){
-        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[bottomNote%12] + octaveChange[bNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
 
     }
     
@@ -146,8 +146,8 @@ class DescendingCSingViewController: UIViewController {
         
         setInterval()
         
-        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], note: .root)
-        conductor.play(note: .root)
+        conductor.changePitch(pitch: noteCents[topNote] + octaveChange[tNoteOctave], noteType: .root)
+        conductor.play(noteType: .root)
         
         exerciseNum += 1
         exerciseNumLabel.text = "Exercise # \(exerciseNum)"

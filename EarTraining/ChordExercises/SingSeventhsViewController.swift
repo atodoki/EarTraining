@@ -89,10 +89,10 @@ class SingSeventhsViewController: UIViewController {
         
         chordLabel.text = "Sing a \(chordNames[chordType]) chord"
         
-        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
-        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
-        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
-        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], note: .seventh)
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], noteType: .fifth)
+        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], noteType: .seventh)
         
     }
     
@@ -139,25 +139,25 @@ class SingSeventhsViewController: UIViewController {
     }
     
     @IBAction func playRoot(sender: UIButton){
-        conductor.play(note: .root)
+        conductor.play(noteType: .root)
         
     }
     
     @IBAction func playChordSequence(sender: UIButton){
-        conductor.play(note: .root)
+        conductor.play(noteType: .root)
         sleep(1)
-        conductor.play(note: .third)
+        conductor.play(noteType: .third)
         sleep(1)
-        conductor.play(note: .fifth)
+        conductor.play(noteType: .fifth)
         sleep(1)
-        conductor.play(note: .seventh)
+        conductor.play(noteType: .seventh)
     }
     
     @IBAction func playChord(sender: UIButton){
-        conductor.play(note: .root)
-        conductor.play(note: .third)
-        conductor.play(note: .fifth)
-        conductor.play(note: .seventh)
+        conductor.play(noteType: .root)
+        conductor.play(noteType: .third)
+        conductor.play(noteType: .fifth)
+        conductor.play(noteType: .seventh)
         
     }
     
@@ -185,10 +185,10 @@ class SingSeventhsViewController: UIViewController {
         fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
         seventhOctave = seventh > 11 ? rootOctave + 1 : rootOctave
         
-        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], note: .root)
-        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], note: .third)
-        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], note: .fifth)
-        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], note: .seventh)
+        conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
+        conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)
+        conductor.changePitch(pitch: noteCents[fifth%12] + octaveChange[fifthOctave], noteType: .fifth)
+        conductor.changePitch(pitch: noteCents[seventh%12] + octaveChange[seventhOctave], noteType: .seventh)
         
         rootNote.text = "\(noteNamesWithSharps[root])\(rootOctave)"
     }
