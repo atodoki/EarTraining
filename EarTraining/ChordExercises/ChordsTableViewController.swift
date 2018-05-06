@@ -8,21 +8,30 @@
 
 import UIKit
 
+/**
+ Table view controller to display the chord exercises.
+ */
 class ChordsTableViewController: UITableViewController {
     
+    /// 2D array that holds the names of the exercises split by different section (currently there is only one section).
     var chordExercises = [["Triad Identification","Triad Sing", "Seventh Chord Identification", "Seventh Chord Sing"]]
     
+    /// 2D array that holds the segue names to the corresponding exercises listed in `chordExercises`.
     var segueNames = [["Triad Identification","Triad Sing", "seventhIdentification", "seventhSing"]]
     
+    /// Array holding the header names for the different sections.
     var headers = ["Easy"]
     
+    /// 2D array holding the image names to display for each exercise.
     var imageNames = [["triad","triad", "seventhChord", "seventhChord"]]
     
+    /// 2D array holding the descriptions of each corresponding exercise in `chordExercises`.
     var descriptions = [["Test your knowledge and identify major, minor, diminished, and augmented triads!",
                          "See if you can sing major, minor, diminished, and augmented broken triads!",
                          "Test your knowledge and identify major seventh, minor seventh, dominant seventh, half-diminished seventh, and diminished seventh chords!",
                          "See if you can sing major seventh, minor seventh, dominant seventh, half-diminished seventh, and diminished seventh chords!"]]
 
+    /// Sets the large title display mode to never.
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -39,8 +48,11 @@ class ChordsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
     
+    /**
+     Set the headers for the chord exercises
+     */
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = headers[section]
@@ -50,21 +62,31 @@ class ChordsTableViewController: UITableViewController {
         
     }
     
+    /**
+     Set the height for the headers to 50
+     */
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
 
+    /**
+     Set the number of sections to be the number of exercises
+     */
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return chordExercises.count
     }
 
+    /**
+     Set the number of rows in each section to be the number of exercises in each section
+     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return chordExercises[section].count
     }
 
-    
+    /**
+     Configure the cell with the exercise name, description, and image
+     */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cellIdentifier = "Cell"
@@ -78,6 +100,9 @@ class ChordsTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+     Call `performSegue()` on the exercise the user selects.
+     */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueNames[indexPath.section][indexPath.row], sender: self)
     }

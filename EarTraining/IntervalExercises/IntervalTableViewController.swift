@@ -9,26 +9,26 @@
 import UIKit
 
 /**
- Table view controller to display the interval exercises
+ Table view controller to display the interval exercises.
  */
 class IntervalTableViewController: UITableViewController {
     
-    /// 2D array that holds the names of the exercises split by diatonic exercises and chromatic exercises
+    /// 2D array that holds the names of the exercises split by diatonic exercises and chromatic exercises.
     var intervalExercises = [
         ["Ascending", "Descending", "Ascending Sing", "Descending Sing"],
         ["Ascending", "Descending", "Ascending Sing", "Descending Sing"]
     ]
     
-    /// 2D array that holds the segue names to the corresponding exercises listed in `intervalExercises`
+    /// 2D array that holds the segue names to the corresponding exercises listed in `intervalExercises`.
     var segueNames = [
     ["Ascending Diatonic", "Descending Diatonic", "Ascending Sing Interval", "DescendingDSing"],
     ["Ascending Chromatic", "Descending Chromatic", "AscendingCSing", "DescendingCSing"]
     ]
     
-    /// Array holding the header names for the diatonic and chromatic sections
+    /// Array holding the header names for the diatonic and chromatic sections.
     var headers = ["Diatonic", "Chromatic"]
     
-    /// 2D array holding the descriptions of each corresponding exercise in `intervalExercises`
+    /// 2D array holding the descriptions of each corresponding exercise in `intervalExercises`.
     var descriptions = [
     ["Test your skills and identify the intervals found in a major scale! Plays bottom note, then top note.",
      "Test your skills and identify the intervals found in a major scale! Plays top note, then bottom note.",
@@ -40,11 +40,11 @@ class IntervalTableViewController: UITableViewController {
      "Test your skills by singing chromatic intervals below a given note!"]
     ]
     
-    /// 2D array holding the image names to display for each exercise
+    /// 2D array holding the image names to display for each exercise.
     var imageNames = [["ascendDiatonic","descendDiatonic","ascendDiatonic","descendDiatonic"],
                       ["ascendChrom","descendChrom","ascendChrom", "descendChrom"]]
 
-    /// Sets the large title display mode to never
+    /// Sets the large title display mode to never.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +57,7 @@ class IntervalTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - TableView Data Source
+    // MARK: - Table View Data Source
 
     /**
      Set the headers for the Diatonic and Chromatic sections

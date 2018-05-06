@@ -9,29 +9,51 @@
 import UIKit
 import AudioKit
 
+/**
+ View controller for the Major and Minor Scale exercises.
+ 
+ A random major, natural minor, harmonic minor, or melodic minor scale will be played, and the user guesses the type of scale by pressing on the corresponding buttons. The user has the option to change the instrument that is used to play the scales.
+ */
 class MajMinScalesViewController: UIViewController {
     
+    // MARK: - IBOutlet Properties
+    
+    /// Collection of the scale buttons.
     @IBOutlet var scaleButtons: [UIButton]!
+    /// Collection of the instrument buttons.
     @IBOutlet var instrumentButtons: [UIButton]!
+    /// Label that displays the number of the exercise.
     @IBOutlet var exerciseNumLabel: UILabel!
     
-    let noteFrequency = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
+    /// Array that holds the cent values of notes starting from C4.
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
 
+    /// Array that holds the note indices for the major scale.
     let majorScale = [0,2,4,5,7,9,11,12]
+    /// Array that holds the note indices for the natural minor scale.
     let naturalMinorScale = [0,2,3,5,7,8,10,12]
+    /// Array that holds the note indices for the harmonic minor scale.
     let harmonicMinorScale = [0,2,3,5,7,8,11,12]
+    /// Array that holds the note indices for the melodic minor scale.
     let melodicMinorScale = [0,2,3,5,7,9,11,12]
     
+    /// 2D array that holds the different scale types.
     var scaleList = [[Int]]()
     
+    /// Initialize the scale type index
     var scaleType = 0
+    /// Initialize the index of the first note
     var firstNote = 0
     
+    /// Initialize the exercise number to be displayed.
     var exerciseNum = 1
 
+    /// Initialize conductor to the shared instance of `Conductor`.
     var conductor = Conductor.sharedInstance
     
+    // MARK: - Default View Controller Methods
+    
+    /// Close the mic, add scales to `scaleList`, and set `scaleType` and `firstNote` to random indices.
     override func viewDidLoad() {
         super.viewDidLoad()
         conductor.closeMic()
@@ -47,13 +69,13 @@ class MajMinScalesViewController: UIViewController {
         firstNote = Int(arc4random_uniform(12))
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    // MARK: Defined Functions
+    // MARK: Custom Methods
     
+    /**
+     Plays the scale.
+     - Parameter scale: The array that has the indices for the scale to be played.
+     */
     func playScale(scale: Array<Int>){
         
         for i in scale{
@@ -66,6 +88,12 @@ class MajMinScalesViewController: UIViewController {
         }
     }
     
+    /**
+     Checks if the user selected the correct scale button. Turns the selected button red if wrong, and green if correct.
+     - Parameters:
+        - button: UIButton which was selected by the user.
+        - scale: The index of the scale type.
+     */
     func checkAnswer(button: UIButton, scale: Int){
         if(scale == scaleType){
             button.backgroundColor = UIColor.green
@@ -79,6 +107,9 @@ class MajMinScalesViewController: UIViewController {
         }
     }
 
+    /**
+     Hides the list of instruments
+     */
     func closeInstButtons(){
         for b in instrumentButtons{
             b.isHidden = true
@@ -86,8 +117,13 @@ class MajMinScalesViewController: UIViewController {
     }
     
     
-    // MARK: - Button Actions
+    // MARK: - IBAction Methods
     
+    /**
+     Displays and hides the instrument button list
+     - Parameters:
+        - sender: The UIButton to show/hide the list of instruments
+     */
     @IBAction func instruments(sender: UIButton){
         if(instrumentButtons[0].isHidden){
             for b in instrumentButtons{
@@ -98,12 +134,20 @@ class MajMinScalesViewController: UIViewController {
         }
     }
     
+    /**
+     Plays the current scale again. Calls `playScale()`.
+     */
     @IBAction func playAgain(sender: UIButton){
         
         playScale(scale: scaleList[scaleType])
         
     }
     
+    /**
+     Moves on to the next exercise by resetting the buttons and randomly selecting a scale type and first note.
+     - Parameters:
+        - sender: The UIButton labeled next.
+     */
     @IBAction func next(sender: UIButton){
         // Reset interval button background color
         for b in scaleButtons{
@@ -120,46 +164,72 @@ class MajMinScalesViewController: UIViewController {
         firstNote = Int(arc4random_uniform(12))
     }
     
+    /**
+     Changes the instrument to a piano.
+     - Parameters:
+        - sender: The UIButton labeled Piano
+     */
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
 
         closeInstButtons()
     }
     
+    /**
+     Changes the instrument to a clarinet.
+     - Parameters:
+        - sender: The UIButton labeled Clarinet
+     */
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
 
         closeInstButtons()
     }
     
+    /**
+     Changes the instrument to a french horn.
+     - Parameters:
+        - sender: The UIButton labeled French Horn.
+     */
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
 
         closeInstButtons()
     }
     
+    /**
+     Changes the instrument to pizzicato strings.
+     - Parameters:
+        - sender: The UIButton labeled Pizz Strings.
+     */
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
 
         closeInstButtons()
     }
     
+    /// Button turns green if the scale played is a major scale, turns red if not.
     @IBAction func major(sender: UIButton){
         checkAnswer(button: sender, scale: 0)
     }
     
+    /// Button turns green if the scale played is a natural minor scale, turns red if not.
     @IBAction func naturalMinor(sender: UIButton){
         checkAnswer(button: sender, scale: 1)
     }
     
+    /// Button turns green if the scale played is a harmonic minor scale, turns red if not.
     @IBAction func harmonicMinor(sender: UIButton){
         checkAnswer(button: sender, scale: 2)
     }
     
+    /// Button turns green if the scale played is a melodic minor scale, turns red if not.
     @IBAction func melodicMinor(sender: UIButton){
         checkAnswer(button: sender, scale: 3)
     }
     
+    // MARK: - Navigation
+    /// Unwind segue when in the instruction page.
     @IBAction func unwindSegueID(segue: UIStoryboardSegue) {
         
     }

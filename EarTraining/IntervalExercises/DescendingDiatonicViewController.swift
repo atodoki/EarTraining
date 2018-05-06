@@ -90,8 +90,8 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Checks if the user selected the correct interval button. Turns the selected button red if wrong, and green if correct.
      - Parameters:
-     - sender: UIButton which was selected by the user.
-     - interval: The intervalic difference between the top note and the bottom note.
+        - sender: UIButton which was selected by the user.
+        - interval: The intervalic difference between the top note and the bottom note.
      */
     func checkAnswer(sender: UIButton, interval: Int){
         if(diatonicIntervals[randomIndex] == interval){
@@ -120,7 +120,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Displays and hides the instrument button list
      - Parameters:
-     - sender: The UIButton to show/hide the list of instruments
+        - sender: The UIButton to show/hide the list of instruments
      */
     @IBAction func instruments(sender: UIButton){
         if(instrumentButtons[0].isHidden){
@@ -135,7 +135,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Changes the instrument to a piano.
      - Parameters:
-     - sender: The UIButton labeled Piano
+        - sender: The UIButton labeled Piano
      */
     @IBAction func piano(sender: UIButton){
         conductor.changeInstrument(instr: .piano)
@@ -146,7 +146,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Changes the instrument to a clarinet.
      - Parameters:
-     - sender: The UIButton labeled Clarinet
+        - sender: The UIButton labeled Clarinet
      */
     @IBAction func clarinet(sender: UIButton){
         conductor.changeInstrument(instr: .clarinet)
@@ -157,7 +157,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Changes the instrument to a french horn.
      - Parameters:
-     - sender: The UIButton labeled French Horn.
+        - sender: The UIButton labeled French Horn.
      */
     @IBAction func frenchHorn(sender: UIButton){
         conductor.changeInstrument(instr: .french_horn)
@@ -168,7 +168,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Changes the instrument to pizzicato strings.
      - Parameters:
-     - sender: The UIButton labeled Pizz Strings.
+        - sender: The UIButton labeled Pizz Strings.
      */
     @IBAction func string(sender: UIButton){
         conductor.changeInstrument(instr: .pizz_strings)
@@ -179,7 +179,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Plays the current interval again. Calls `playInterval()`.
      - Parameters:
-     - sender: The UIButton to replay the interval.
+        - sender: The UIButton to replay the interval.
      */
     @IBAction func playAgain(sender: UIButton){
         playInterval()
@@ -189,7 +189,7 @@ class DescendingDiatonicViewController: UIViewController {
     /**
      Moves on to the next exercise by resetting the buttons and calls `setInterval()`.
      - Parameters:
-     - sender: The UIButton labeled next.
+        - sender: The UIButton labeled next.
      */
     @IBAction func next(sender: UIButton){
         
@@ -244,7 +244,7 @@ class DescendingDiatonicViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    /// Unwind segue when in the instruction page
+    /// Unwind segue when in the instruction page.
     @IBAction func unwindSegueID(segue: UIStoryboardSegue) {
         
     }

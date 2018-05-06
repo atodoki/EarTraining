@@ -10,7 +10,7 @@ import UIKit
 import AudioKit
 
 /**
- View controller for the Ascending Diatonic exercises.
+ View controller for the Ascending Diatonic interval exercises.
  
  Random ascending diatonic intervals will be played, and the user guesses the interval by pressing on the corresponding buttons. The user has the option to change the instrument that is used to play the intervals.
  */
@@ -234,18 +234,18 @@ class AscendingDiatonicViewController: UIViewController {
         checkAnswer(sender: sender, interval: 9)
     }
     
-    /// Button turns green if the interval played is a major seventh, turns red if not
+    /// Button turns green if the interval played is a major seventh, turns red if not.
     @IBAction func majorSeventh(sender: UIButton){
         checkAnswer(sender: sender, interval: 11)
     }
     
-    /// Button turns green if the interval played is an octave, turns red if not
+    /// Button turns green if the interval played is an octave, turns red if not.
     @IBAction func octave(sender: UIButton){
         checkAnswer(sender: sender, interval: 12)
     }
     
     // MARK: - Navigation
-    /// Unwind segue when in the instruction page
+    /// Unwind segue when in the instruction page.
     @IBAction func unwindSegueID(segue: UIStoryboardSegue) {
         
     }

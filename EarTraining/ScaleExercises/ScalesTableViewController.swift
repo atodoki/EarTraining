@@ -8,21 +8,29 @@
 
 import UIKit
 
-/// TableViewController for the scale exercises
+/**
+ Table view controller to display the scale exercises.
+ */
 class ScalesTableViewController: UITableViewController {
+    
+    /// 2D array that holds the names of the exercises split by easy, medium, hard sections.
     var scales = [["Major/Minor Scales", "Major/Minor Sing"], ["Modes", "Modes Sing"], ["Chromatic/Modes of Limited Transposition", "Chromatic/Modes Sing"]]
     
+    /// 2D array that holds the segue names to the corresponding exercises listed in `scales`.
     var segueNames = [["Major/Minor Scales","MajMinSing"], ["Modes", "ModesSing"], ["Chromatic/Modes of Limited Transposition", "ChromaticSing"]]
     
+    /// Array holding the header names for the different sections.
     var headers = ["Easy","Medium","Challenge"]
     
+    /// 2D array holding the image names to display for each exercise.
     var imageNames = [["majorScale","majorScale"],["modeScale","modeScale"],["wtScale", "wtScale"]]
     
+    /// 2D array holding the descriptions of each corresponding exercise in `scales`.
     var descriptions = [["See if you can identify major and minor scales! Includes natural minor, harmonic minor, and natural minor.", "Test your skills and sing major and minor scales!"],
                         ["See if you can identify the 7 different modes of the major scale!", "Test your skills and sing modes of the major scale!"],
                         ["Can you identify the chromatic scale, whole tone scale, and the octatonic/diminished scales?","Test your skills and sing the chromatic scale, whole tone scale, and the octatonic/diminished scales!"]]
     
-
+    /// Sets the large title display mode to never.
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -39,8 +47,11 @@ class ScalesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
     
+    /**
+     Set the headers for the scale exercises
+     */
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = headers[section]
@@ -50,21 +61,31 @@ class ScalesTableViewController: UITableViewController {
         
     }
     
+    /**
+     Set the height for the headers to 50
+     */
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
 
+    /**
+     Set the number of sections to be the number of exercises
+     */
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return scales.count
     }
 
+    /**
+     Set the number of rows in each section to be the number of exercises in each section
+     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return scales[section].count
     }
 
-    
+    /**
+     Configure the cell with the exercise name, description, and image
+     */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ExerciseTableViewCell
@@ -76,6 +97,9 @@ class ScalesTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+     Call `performSegue()` on the exercise the user selects.
+     */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueNames[indexPath.section][indexPath.row], sender: self)
     }
