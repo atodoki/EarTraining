@@ -1,0 +1,208 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 36,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ChordExercises/ChordsTableViewController.swift",
+      "line": 46,
+      "symbol": "ChordsTableViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 11,
+      "symbol": "ExerciseTableViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 13,
+      "symbol": "ExerciseTableViewCell.nameLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 14,
+      "symbol": "ExerciseTableViewCell.descriptionLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 15,
+      "symbol": "ExerciseTableViewCell.musicImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 17,
+      "symbol": "ExerciseTableViewCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewCell.swift",
+      "line": 22,
+      "symbol": "ExerciseTableViewCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 11,
+      "symbol": "ExerciseTableViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 13,
+      "symbol": "ExerciseTableViewController.exerciseNames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 15,
+      "symbol": "ExerciseTableViewController.descriptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 17,
+      "symbol": "ExerciseTableViewController.imageNames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 19,
+      "symbol": "ExerciseTableViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 31,
+      "symbol": "ExerciseTableViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 38,
+      "symbol": "ExerciseTableViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 43,
+      "symbol": "ExerciseTableViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 49,
+      "symbol": "ExerciseTableViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ExerciseTableViewController.swift",
+      "line": 62,
+      "symbol": "ExerciseTableViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/IntervalExercises/DescendingCSingViewController.swift",
+      "line": 88,
+      "symbol": "DescendingCSingViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/IntervalExercises/DescendingChromaticViewController.swift",
+      "line": 250,
+      "symbol": "DescendingChromaticViewController.majorSixth(sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ScaleExercises/ChromaticScalesViewController.swift",
+      "line": 110,
+      "symbol": "ChromaticScalesViewController.closeInstButtons()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ScaleExercises/ScalesTableViewController.swift",
+      "line": 45,
+      "symbol": "ScalesTableViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/arieltodoki/Desktop/Xcode/EarTraining"
+}

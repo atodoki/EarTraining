@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MajMinScalesViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MajMinScalesViewController" class="dashAnchor"></a>
+    <a title="MajMinScalesViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (96% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MajMinScalesViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AscendingCSingViewController.html">AscendingCSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AscendingChromaticViewController.html">AscendingChromaticViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AscendingDSingIntervalViewController.html">AscendingDSingIntervalViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AscendingDiatonicViewController.html">AscendingDiatonicViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChordsTableViewController.html">ChordsTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChromaticScalesViewController.html">ChromaticScalesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChromaticSingViewController.html">ChromaticSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Conductor.html">Conductor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DescendingCSingViewController.html">DescendingCSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DescendingChromaticViewController.html">DescendingChromaticViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DescendingDSingViewController.html">DescendingDSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DescendingDiatonicViewController.html">DescendingDiatonicViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExerciseTableViewCell.html">ExerciseTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExerciseTableViewController.html">ExerciseTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IntervalTableViewController.html">IntervalTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MajMinScalesViewController.html">MajMinScalesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MajMinSingViewController.html">MajMinSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModesScalesViewController.html">ModesScalesViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModesSingViewController.html">ModesSingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScalesTableViewController.html">ScalesTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SeventhIdentificationViewController.html">SeventhIdentificationViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SingSeventhsViewController.html">SingSeventhsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SingTriadsViewController.html">SingTriadsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TriadIdentificationViewController.html">TriadIdentificationViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Note.html">Note</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MajMinScalesViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MajMinScalesViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>View controller for the Major and Minor Scale exercises.</p>
+
+<p>A random major, natural minor, harmonic minor, or melodic minor scale will be played, and the user guesses the type of scale by pressing on the corresponding buttons. The user has the option to change the instrument that is used to play the scales.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/IBOutlet%20Properties"></a>
+                <a name="//apple_ref/swift/Section/IBOutlet Properties" class="dashAnchor"></a>
+                <a href="#/IBOutlet%20Properties">
+                  <h3 class="section-name">IBOutlet Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)scaleButtons"></a>
+                    <a name="//apple_ref/swift/Property/scaleButtons" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)scaleButtons">scaleButtons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Collection of the scale buttons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">var</span> <span class="nv">scaleButtons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIButton</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)instrumentButtons"></a>
+                    <a name="//apple_ref/swift/Property/instrumentButtons" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)instrumentButtons">instrumentButtons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Collection of the instrument buttons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">var</span> <span class="nv">instrumentButtons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIButton</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)exerciseNumLabel"></a>
+                    <a name="//apple_ref/swift/Property/exerciseNumLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(py)exerciseNumLabel">exerciseNumLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Label that displays the number of the exercise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">var</span> <span class="nv">exerciseNumLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9noteCentsSaySdGvp"></a>
+                    <a name="//apple_ref/swift/Property/noteCents" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9noteCentsSaySdGvp">noteCents</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array that holds the cent values of notes starting from C4.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">noteCents</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC10majorScaleSaySiGvp"></a>
+                    <a name="//apple_ref/swift/Property/majorScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC10majorScaleSaySiGvp">majorScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array that holds the note indices for the major scale.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">majorScale</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC17naturalMinorScaleSaySiGvp"></a>
+                    <a name="//apple_ref/swift/Property/naturalMinorScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC17naturalMinorScaleSaySiGvp">naturalMinorScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array that holds the note indices for the natural minor scale.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">naturalMinorScale</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC18harmonicMinorScaleSaySiGvp"></a>
+                    <a name="//apple_ref/swift/Property/harmonicMinorScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC18harmonicMinorScaleSaySiGvp">harmonicMinorScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array that holds the note indices for the harmonic minor scale.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">harmonicMinorScale</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC17melodicMinorScaleSaySiGvp"></a>
+                    <a name="//apple_ref/swift/Property/melodicMinorScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC17melodicMinorScaleSaySiGvp">melodicMinorScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array that holds the note indices for the melodic minor scale.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">melodicMinorScale</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9scaleListSaySaySiGGvp"></a>
+                    <a name="//apple_ref/swift/Property/scaleList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9scaleListSaySaySiGGvp">scaleList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>2D array that holds the different scale types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">scaleList</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9scaleTypeSivp"></a>
+                    <a name="//apple_ref/swift/Property/scaleType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9scaleTypeSivp">scaleType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the scale type index.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">scaleType</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9firstNoteSivp"></a>
+                    <a name="//apple_ref/swift/Property/firstNote" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9firstNoteSivp">firstNote</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the index of the first note.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">firstNote</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC11exerciseNumSivp"></a>
+                    <a name="//apple_ref/swift/Property/exerciseNum" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC11exerciseNumSivp">exerciseNum</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the exercise number to be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exerciseNum</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9conductorAA9ConductorCvp"></a>
+                    <a name="//apple_ref/swift/Property/conductor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9conductorAA9ConductorCvp">conductor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize conductor to the shared instance of <code><a href="../Classes/Conductor.html">Conductor</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">conductor</span><span class="p">:</span> <span class="kt"><a href="../Classes/Conductor.html">Conductor</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20View%20Controller%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Default View Controller Methods" class="dashAnchor"></a>
+                <a href="#/Default%20View%20Controller%20Methods">
+                  <h3 class="section-name">Default View Controller Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close the mic, add scales to <code><a href="../Classes/MajMinScalesViewController.html#/s:11EarTraining26MajMinScalesViewControllerC9scaleListSaySaySiGGvp">scaleList</a></code>, and set <code><a href="../Classes/MajMinScalesViewController.html#/s:11EarTraining26MajMinScalesViewControllerC9scaleTypeSivp">scaleType</a></code> and <code><a href="../Classes/MajMinScalesViewController.html#/s:11EarTraining26MajMinScalesViewControllerC9firstNoteSivp">firstNote</a></code> to random indices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Custom%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Custom Methods" class="dashAnchor"></a>
+                <a href="#/Custom%20Methods">
+                  <h3 class="section-name">Custom Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC9playScaleySaySiG5scale_tF"></a>
+                    <a name="//apple_ref/swift/Method/playScale(scale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC9playScaleySaySiG5scale_tF">playScale(scale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays the scale.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">playScale</span><span class="p">(</span><span class="nv">scale</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array that has the indices for the scale to be played.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC11checkAnswerySo8UIButtonC6button_Si5scaletF"></a>
+                    <a name="//apple_ref/swift/Method/checkAnswer(button:scale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC11checkAnswerySo8UIButtonC6button_Si5scaletF">checkAnswer(button:scale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks if the user selected the correct scale button. Turns the selected button red if wrong, and green if correct.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">checkAnswer</span><span class="p">(</span><span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>button</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIButton which was selected by the user.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the scale type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11EarTraining26MajMinScalesViewControllerC16closeInstButtonsyyF"></a>
+                    <a name="//apple_ref/swift/Method/closeInstButtons()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11EarTraining26MajMinScalesViewControllerC16closeInstButtonsyyF">closeInstButtons()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hides the list of instruments</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">closeInstButtons</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/IBAction%20Methods"></a>
+                <a name="//apple_ref/swift/Section/IBAction Methods" class="dashAnchor"></a>
+                <a href="#/IBAction%20Methods">
+                  <h3 class="section-name">IBAction Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)instrumentsWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/instruments(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)instrumentsWithSender:">instruments(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays and hides the instrument button list</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">instruments</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton to show/hide the list of instruments</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)playAgainWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/playAgain(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)playAgainWithSender:">playAgain(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays the current scale again. Calls <code>playScale()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">playAgain</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)nextWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/next(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)nextWithSender:">next(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Moves on to the next exercise by resetting the buttons and randomly selecting a scale type and first note.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">next</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton labeled next.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)pianoWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/piano(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)pianoWithSender:">piano(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the instrument to a piano.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">piano</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton labeled Piano</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)clarinetWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/clarinet(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)clarinetWithSender:">clarinet(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the instrument to a clarinet.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">clarinet</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton labeled Clarinet</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)frenchHornWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/frenchHorn(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)frenchHornWithSender:">frenchHorn(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the instrument to a french horn.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">frenchHorn</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton labeled French Horn.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)stringWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/string(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)stringWithSender:">string(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the instrument to pizzicato strings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIButton labeled Pizz Strings.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)majorWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/major(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)majorWithSender:">major(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button turns green if the scale played is a major scale, turns red if not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">major</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)naturalMinorWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/naturalMinor(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)naturalMinorWithSender:">naturalMinor(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button turns green if the scale played is a natural minor scale, turns red if not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">naturalMinor</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)harmonicMinorWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/harmonicMinor(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)harmonicMinorWithSender:">harmonicMinor(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button turns green if the scale played is a harmonic minor scale, turns red if not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">harmonicMinor</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)melodicMinorWithSender:"></a>
+                    <a name="//apple_ref/swift/Method/melodicMinor(sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)melodicMinorWithSender:">melodicMinor(sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button turns green if the scale played is a melodic minor scale, turns red if not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">melodicMinor</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Navigation"></a>
+                <a name="//apple_ref/swift/Section/Navigation" class="dashAnchor"></a>
+                <a href="#/Navigation">
+                  <h3 class="section-name">Navigation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)unwindSegueIDWithSegue:"></a>
+                    <a name="//apple_ref/swift/Method/unwindSegueID(segue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@EarTraining@objc(cs)MajMinScalesViewController(im)unwindSegueIDWithSegue:">unwindSegueID(segue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unwind segue when in the instruction page.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">unwindSegueID</span><span class="p">(</span><span class="nv">segue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
