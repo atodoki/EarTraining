@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
 options: "6f08895c7a07948aecb1d0ef30433bff"
-build_time: [1525567194, 723406000]
+build_time: [1525744537, 539621000]
 inputs:
   "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/ScaleExercises/ChromaticSingViewController.swift": [9223372036, 854775807]
   "/Users/arieltodoki/Desktop/Xcode/EarTraining/EarTraining/IntervalExercises/IntervalTableViewController.swift": [9223372036, 854775807]

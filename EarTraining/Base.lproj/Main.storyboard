@@ -165,7 +165,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndj-Yx-MRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3884" y="792"/>
+            <point key="canvasLocation" x="-3033" y="792"/>
         </scene>
         <!--Ascending Chromatic View Controller-->
         <scene sceneID="sXZ-yF-5EQ">
@@ -517,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MwM-yL-QMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2635" y="1617"/>
+            <point key="canvasLocation" x="-1786" y="1573"/>
         </scene>
         <!--AscendingD Sing Interval View Controller-->
         <scene sceneID="sX9-2B-nos">
@@ -764,7 +764,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4181.159420289855" y="2285.8695652173915"/>
+            <point key="canvasLocation" x="-4204" y="2287"/>
         </scene>
         <!--Modes Scales View Controller-->
         <scene sceneID="QTI-mV-PUB">
@@ -1030,7 +1030,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lT-ed-9MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="1928"/>
+            <point key="canvasLocation" x="496" y="1617"/>
         </scene>
         <!--Chromatic Scales View Controller-->
         <scene sceneID="Z0U-rA-3Rw">
@@ -1254,7 +1254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4e-Mi-AA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128" y="2025"/>
+            <point key="canvasLocation" x="1401" y="1617"/>
         </scene>
         <!--Maj Min Scales View Controller-->
         <scene sceneID="Ur5-sx-asI">
@@ -1474,7 +1474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAc-ip-n4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="1899"/>
+            <point key="canvasLocation" x="-412" y="1617"/>
         </scene>
         <!--Maj Min Sing View Controller-->
         <scene sceneID="bju-Bx-Rz8">
@@ -1777,7 +1777,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="232" y="2688"/>
+            <point key="canvasLocation" x="-413" y="2368"/>
         </scene>
         <!--Modes Sing View Controller-->
         <scene sceneID="lhM-Cf-4t3">
@@ -2070,7 +2070,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1299" y="2715"/>
+            <point key="canvasLocation" x="496" y="2367"/>
         </scene>
         <!--Chromatic Sing View Controller-->
         <scene sceneID="eWE-LJ-yca">
@@ -2399,7 +2399,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2128" y="2715"/>
+            <point key="canvasLocation" x="1400" y="2367"/>
         </scene>
         <!--Seventh Identification View Controller-->
         <scene sceneID="gA7-da-h9c">
@@ -2634,7 +2634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4u-cT-lwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5212" y="1617"/>
+            <point key="canvasLocation" x="3781" y="1617"/>
         </scene>
         <!--Triad Identification View Controller-->
         <scene sceneID="Nyn-y8-cQp">
@@ -2855,7 +2855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A6-Fm-A4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="1617"/>
+            <point key="canvasLocation" x="2806" y="1617"/>
         </scene>
         <!--Sing Triads View Controller-->
         <scene sceneID="hvH-Yu-2iC">
@@ -3134,7 +3134,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4091" y="2389"/>
+            <point key="canvasLocation" x="2806" y="2389"/>
         </scene>
         <!--Sing Sevenths View Controller-->
         <scene sceneID="Jws-JV-ZDL">
@@ -3437,7 +3437,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5212" y="2389"/>
+            <point key="canvasLocation" x="3780" y="2389"/>
         </scene>
         <!--Descending Diatonic View Controller-->
         <scene sceneID="B3U-qD-Ffx">
@@ -3732,7 +3732,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRh-Bb-rrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4225" y="1573"/>
+            <point key="canvasLocation" x="-3375" y="1573"/>
         </scene>
         <!--Descending Chromatic View Controller-->
         <scene sceneID="R8T-JK-nJn">
@@ -4084,7 +4084,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qap-nb-ldx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3417" y="1573"/>
+            <point key="canvasLocation" x="-2567" y="1573"/>
         </scene>
         <!--DescendingD Sing View Controller-->
         <scene sceneID="Ruj-zB-i6Z">
@@ -4318,7 +4318,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-3380" y="2286"/>
+            <point key="canvasLocation" x="-3375" y="2287"/>
         </scene>
         <!--AscendingC Sing View Controller-->
         <scene sceneID="LCc-ei-kbx">
@@ -4552,7 +4552,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2559" y="2305"/>
+            <point key="canvasLocation" x="-2567" y="2287"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KEq-g4-yqb">
@@ -4584,7 +4584,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZc-On-XF4">
                                 <rect key="frame" x="30" y="146" width="354" height="560"/>
                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">1. Press the "Start/Replay" button to hear the interval, scale, or chord.  2. Click on the correct button identifying the type of interval, scale, or chord. If the button turns red, it is incorrect and if it turns green, it is correct!  3. Press the "Next" button to continue to the next interval, scale, or chord.  4. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</mutableString>
+                                <string key="text">1. Press the "Start/Replay" button to hear the interval, scale, or chord.  2. Click on the correct button identifying the type of interval, scale, or chord. If the button turns red, it is incorrect and if it turns green, it is correct!  3. Press the "Next" button to continue to the next interval, scale, or chord.  4. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4609,7 +4609,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfc-8r-BPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="e2u-vN-vwT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1278" y="3623"/>
+            <point key="canvasLocation" x="-1128" y="3249"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ycP-4p-Xyo">
@@ -4641,7 +4641,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-ft-cxe">
                                 <rect key="frame" x="30" y="146" width="354" height="560"/>
                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">1. Press the "First Note" button to hear the first note of the scale.   2. Look at what scale it says to sing.  3. Hold down the "Hold to Record" button and sing each pitch of the scale starting from the given pitch. Only after the box turns green will it let you sing the next note in the scale.  4. You may adjust the octave of the given pitch and answer by using the slider, but the octave will not affect your answer.  5. Press the "Answer" button to hear the answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next scale.  Happy Practicing!</mutableString>
+                                <string key="text">1. Press the "First Note" button to hear the first note of the scale.   2. Look at what scale it says to sing.  3. Hold down the "Hold to Record" button and sing each pitch of the scale starting from the given pitch. Only after the box turns green will it let you sing the next note in the scale.  4. You may adjust the octave of the given pitch and answer by using the slider, but the octave will not affect your answer.  5. Press the "Answer" button to hear the answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next scale.  Happy Practicing!</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4666,7 +4666,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUO-eY-L7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Fr-Rw-NvD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="3539"/>
+            <point key="canvasLocation" x="1230" y="3249"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="clG-0H-zLI">
@@ -4698,7 +4698,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-IS-TJW">
                                 <rect key="frame" x="30" y="146" width="354" height="560"/>
                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">1. Press the "Root" button to hear the root of the chord.  2. Hold down the "Hold to Record" button and sing into the microphone the chord one note at a time from the root. Only after the box turns green will it let you sing the next note in the chord.  3. You may adjust the octave of the given pitch and chord by using the slider.  4. Press the "Chord" button to hear the answer played as a chord.  5. Press the "Answer" button to hear the answer as a broken chord (the way you would sing it).  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next chord.  Happy Practicing!</mutableString>
+                                <string key="text">1. Press the "Root" button to hear the root of the chord.  2. Hold down the "Hold to Record" button and sing into the microphone the chord one note at a time from the root. Only after the box turns green will it let you sing the next note in the chord.  3. You may adjust the octave of the given pitch and chord by using the slider.  4. Press the "Chord" button to hear the answer played as a chord.  5. Press the "Answer" button to hear the answer as a broken chord (the way you would sing it).  6. Use the ⚙️ button on the top right to change the instrument of the output.  7. Press the "Next" button to move on to the next chord.  Happy Practicing!</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4723,7 +4723,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTK-LW-85b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8bA-S1-LGZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4603" y="3135"/>
+            <point key="canvasLocation" x="3288" y="3250"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qBZ-VK-68O">
@@ -4755,8 +4755,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTN-7j-nZc">
                                 <rect key="frame" x="30" y="146" width="354" height="560"/>
                                 <color key="backgroundColor" red="0.72946381540000005" green="0.54052430029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">1. Press the "Replay" Button to play the given note.  * You can use the slider to change the octave of the given note. Sometimes it is difficult to detect singing below G3. 
-2. Look at what interval is says to sing above the given note.  3. Hold down the "Hold to Record" button at the bottom, and sing into the microphone your guess of the answer.  4. Red colored box means it is incorrect, orange means it is correct but out of tune, and green means correct and in tune!  5. Use the "Replay" button to hear the beginning pitch again, and use the "Answer" button to hear the correct answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</mutableString>
+                                <string key="text">1. Press the "Replay" Button to play the given note.  * You can use the slider to change the octave of the given note. Sometimes it is difficult to detect singing below G3. 
+2. Look at what interval is says to sing above the given note.  3. Hold down the "Hold to Record" button at the bottom, and sing into the microphone your guess of the answer.  4. Red colored box means it is incorrect, orange means it is correct but out of tune, and green means correct and in tune!  5. Use the "Replay" button to hear the beginning pitch again, and use the "Answer" button to hear the correct answer.  6. Use the ⚙️ button on the top right to change the instrument of the output.  Happy Practicing!</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4781,7 +4781,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHk-zv-zUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="thd-rm-gRN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3336.2318840579715" y="3182.608695652174"/>
+            <point key="canvasLocation" x="-3330" y="3249"/>
         </scene>
         <!--DescendingC Sing View Controller-->
         <scene sceneID="9OU-w8-mUd">
@@ -5015,7 +5015,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1830" y="2319"/>
+            <point key="canvasLocation" x="-1786" y="2287"/>
         </scene>
         <!--Ascending Diatonic View Controller-->
         <scene sceneID="hBm-H2-aLh">
@@ -5299,7 +5299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqL-42-VZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5054" y="1574"/>
+            <point key="canvasLocation" x="-4204" y="1574"/>
         </scene>
         <!--Scales Table View Controller-->
         <scene sceneID="M8D-1j-YxU">
@@ -5377,7 +5377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHx-P3-VAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="1161"/>
+            <point key="canvasLocation" x="458" y="792"/>
         </scene>
         <!--Chords Table View Controller-->
         <scene sceneID="dxO-AY-vdE">
@@ -5476,9 +5476,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ate-VC-6pK"/>
+        <segue reference="mhu-eZ-a0F"/>
         <segue reference="qaY-Pm-bc2"/>
         <segue reference="Ct2-fI-aHu"/>
-        <segue reference="ris-os-M3R"/>
+        <segue reference="cLt-GR-JTH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -251,7 +251,7 @@ class SingTriadsViewController: UIViewController {
     }
     
     /**
-     Moves on to the next exercise by resetting the buttons and calls `setChord()`.
+     Moves on to the next exercise by resetting the labels and calls `setChord()`.
      - Parameters:
         - sender: The UIButton labeled next.
      */

@@ -64,6 +64,7 @@ class AscendingCSingViewController: UIViewController {
     
     /// Array that holds the cent values of notes starting from C4.
     let noteCents = [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0, 1100.0]
+    /// Array that holds the cent values to be added to a pitch to change the octave.
     let octaveChange = [0,0,-2400.0,-1200.0,0,1200.0,2400.0]
     
     /// Array that holds chromatic note names with sharps.

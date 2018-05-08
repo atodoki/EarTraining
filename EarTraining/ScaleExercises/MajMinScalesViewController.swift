@@ -40,9 +40,9 @@ class MajMinScalesViewController: UIViewController {
     /// 2D array that holds the different scale types.
     var scaleList = [[Int]]()
     
-    /// Initialize the scale type index
+    /// Initialize the scale type index.
     var scaleType = 0
-    /// Initialize the index of the first note
+    /// Initialize the index of the first note.
     var firstNote = 0
     
     /// Initialize the exercise number to be displayed.

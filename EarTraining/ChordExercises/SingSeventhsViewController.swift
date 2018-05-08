@@ -94,7 +94,9 @@ class SingSeventhsViewController: UIViewController {
     /// Initialize conductor to the shared instance of `Conductor`.
     var conductor = Conductor.sharedInstance
     
-    /// Close the mic, add chords to `chordList`, and call `setChord()`.
+    // MARK: - Default View Controller Methods
+    
+    /// Set the mic, add chords to `chordList`, and call `setChord()`.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,7 +138,7 @@ class SingSeventhsViewController: UIViewController {
     }
     
     /**
-     Hides the list of instruments
+     Hides the list of instruments.
      */
     func closeInstButtons(){
         for b in instrumentButtons{
@@ -166,7 +168,7 @@ class SingSeventhsViewController: UIViewController {
     // MARK: - IBAction Methods
     
     /**
-     Displays and hides the instrument button list
+     Displays and hides the instrument button list.
      - Parameters:
         - sender: The UIButton to show/hide the list of instruments
      */
@@ -262,7 +264,7 @@ class SingSeventhsViewController: UIViewController {
     }
     
     /**
-     Moves on to the next exercise by resetting the buttons and calls `setChord()`.
+     Moves on to the next exercise by resetting the labels and calls `setChord()`.
      - Parameters:
         - sender: The UIButton labeled next.
      */
