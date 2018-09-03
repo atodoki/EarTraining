@@ -18,14 +18,14 @@
 		623F07D5204A8BB100548DE6 /* TriadIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */; };
 		624D109720807AD7005B65B1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D109620807AD7005B65B1 /* AudioKit.framework */; };
 		6253633A2074A36D0097AB11 /* SingTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625363392074A36D0097AB11 /* SingTriadsViewController.swift */; };
-		6253633F2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633B2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav */; };
-		625363402074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633C2074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav */; };
-		625363412074B46D0097AB11 /* Alesis-Fusion-Pizzicato-Strings-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633D2074B46D0097AB11 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */; };
-		625363422074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6253633E2074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav */; };
 		6259F0052079E11F00887FAC /* DescendingChromaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F0042079E11F00887FAC /* DescendingChromaticViewController.swift */; };
 		6259F007207C6A6100887FAC /* ModesScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F006207C6A6100887FAC /* ModesScalesViewController.swift */; };
 		6259F009207DF1F600887FAC /* ChromaticScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */; };
 		629F43902080AEE70000E682 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629F438F2080AEE70000E682 /* Conductor.swift */; };
+		62A09D52213CBD33002F14E1 /* Alesis-Fusion-Pizzicato-Strings-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62A09D51213CBD33002F14E1 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */; };
+		62A09D54213CBD4C002F14E1 /* Ensoniq-SQ-1-Clarinet-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62A09D53213CBD4C002F14E1 /* Ensoniq-SQ-1-Clarinet-C4.wav */; };
+		62A09D56213CBD50002F14E1 /* Ensoniq-SQ-1-French-Horn-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62A09D55213CBD50002F14E1 /* Ensoniq-SQ-1-French-Horn-C4.wav */; };
+		62A09D58213CBD54002F14E1 /* Kawai-K11-GrPiano-C4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62A09D57213CBD54002F14E1 /* Kawai-K11-GrPiano-C4.wav */; };
 		62A0E46F2027055D002995D7 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */; };
 		62A0E471202708B2002995D7 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */; };
 		62A0E473202BDAC1002995D7 /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */; };
@@ -67,14 +67,14 @@
 		623F07D4204A8BB100548DE6 /* TriadIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadIdentificationViewController.swift; sourceTree = "<group>"; };
 		624D109620807AD7005B65B1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		625363392074A36D0097AB11 /* SingTriadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingTriadsViewController.swift; sourceTree = "<group>"; };
-		6253633B2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Kawai-K11-GrPiano-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Kawai-K11-GrPiano-C4.wav"; sourceTree = "<group>"; };
-		6253633C2074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-French-Horn-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Ensoniq-SQ-1-French-Horn-C4.wav"; sourceTree = "<group>"; };
-		6253633D2074B46D0097AB11 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Alesis-Fusion-Pizzicato-Strings-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Alesis-Fusion-Pizzicato-Strings-C4.wav"; sourceTree = "<group>"; };
-		6253633E2074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-Clarinet-C4.wav"; path = "../../../../Senior Sem/Project/Sounds/Ensoniq-SQ-1-Clarinet-C4.wav"; sourceTree = "<group>"; };
 		6259F0042079E11F00887FAC /* DescendingChromaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescendingChromaticViewController.swift; sourceTree = "<group>"; };
 		6259F006207C6A6100887FAC /* ModesScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesScalesViewController.swift; sourceTree = "<group>"; };
 		6259F008207DF1F600887FAC /* ChromaticScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticScalesViewController.swift; sourceTree = "<group>"; };
 		629F438F2080AEE70000E682 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
+		62A09D51213CBD33002F14E1 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Alesis-Fusion-Pizzicato-Strings-C4.wav"; path = "../../../../Alesis-Fusion-Pizzicato-Strings-C4.wav"; sourceTree = "<group>"; };
+		62A09D53213CBD4C002F14E1 /* Ensoniq-SQ-1-Clarinet-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-Clarinet-C4.wav"; path = "../../../../Ensoniq-SQ-1-Clarinet-C4.wav"; sourceTree = "<group>"; };
+		62A09D55213CBD50002F14E1 /* Ensoniq-SQ-1-French-Horn-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Ensoniq-SQ-1-French-Horn-C4.wav"; path = "../../../../Ensoniq-SQ-1-French-Horn-C4.wav"; sourceTree = "<group>"; };
+		62A09D57213CBD54002F14E1 /* Kawai-K11-GrPiano-C4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Kawai-K11-GrPiano-C4.wav"; path = "../../../../Kawai-K11-GrPiano-C4.wav"; sourceTree = "<group>"; };
 		62A0E46E2027055D002995D7 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		62A0E470202708B2002995D7 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		62A0E472202BDAC1002995D7 /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
@@ -194,10 +194,10 @@
 		62F3396B205A27AF006F38F6 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6253633D2074B46D0097AB11 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */,
-				6253633E2074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav */,
-				6253633C2074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav */,
-				6253633B2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav */,
+				62A09D57213CBD54002F14E1 /* Kawai-K11-GrPiano-C4.wav */,
+				62A09D55213CBD50002F14E1 /* Ensoniq-SQ-1-French-Horn-C4.wav */,
+				62A09D53213CBD4C002F14E1 /* Ensoniq-SQ-1-Clarinet-C4.wav */,
+				62A09D51213CBD33002F14E1 /* Alesis-Fusion-Pizzicato-Strings-C4.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -262,13 +262,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6253633F2074B46D0097AB11 /* Kawai-K11-GrPiano-C4.wav in Resources */,
+				62A09D58213CBD54002F14E1 /* Kawai-K11-GrPiano-C4.wav in Resources */,
+				62A09D52213CBD33002F14E1 /* Alesis-Fusion-Pizzicato-Strings-C4.wav in Resources */,
 				62A16D08200F30C600C5BED3 /* LaunchScreen.storyboard in Resources */,
+				62A09D56213CBD50002F14E1 /* Ensoniq-SQ-1-French-Horn-C4.wav in Resources */,
 				62A16D05200F30C600C5BED3 /* Assets.xcassets in Resources */,
+				62A09D54213CBD4C002F14E1 /* Ensoniq-SQ-1-Clarinet-C4.wav in Resources */,
 				62A16D03200F30C600C5BED3 /* Main.storyboard in Resources */,
-				625363402074B46D0097AB11 /* Ensoniq-SQ-1-French-Horn-C4.wav in Resources */,
-				625363412074B46D0097AB11 /* Alesis-Fusion-Pizzicato-Strings-C4.wav in Resources */,
-				625363422074B46D0097AB11 /* Ensoniq-SQ-1-Clarinet-C4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

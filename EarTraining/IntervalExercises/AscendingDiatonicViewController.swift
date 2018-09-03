@@ -69,11 +69,14 @@ class AscendingDiatonicViewController: UIViewController {
      Randomly picks a bottom note, bottom note octave, and diatonic interval. Then sets the top note and top note octave to be the correct interval above the bottom note.
      */
     func setInterval(){
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
-        topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
-        bNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
-        tNoteOctave = topNote > 11 ? bNoteOctave + 1 : bNoteOctave
+        
+        repeat{
+            bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+            randomIndex = Int(arc4random_uniform(UInt32(diatonicIntervals.count))) // random number from array diatonicIntervals
+            topNote = bottomNote + diatonicIntervals[randomIndex] // random number diatonic interval from bottomNote
+            bNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
+            tNoteOctave = topNote > 11 ? bNoteOctave + 1 : bNoteOctave
+        }while tNoteOctave > 5
         
     }
     

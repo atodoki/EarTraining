@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfU-rv-IlU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfU-rv-IlU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -704,7 +704,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="psH-Z4-FLp">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="psH-Z4-FLp">
                                 <rect key="frame" x="105" y="586" width="204" height="21"/>
                                 <color key="tintColor" red="0.53506134490000001" green="0.56263116769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -3076,7 +3076,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-ru-LYr">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-ru-LYr">
                                 <rect key="frame" x="105" y="586" width="204" height="21"/>
                                 <color key="tintColor" red="0.53506134490000001" green="0.56263116769999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -4384,7 +4384,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="nBM-qF-99m">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="3" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="nBM-qF-99m">
                                 <rect key="frame" x="105" y="596" width="204" height="21"/>
                                 <color key="tintColor" red="0.53833600739999998" green="0.52562204300000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

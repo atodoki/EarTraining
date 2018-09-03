@@ -118,15 +118,17 @@ class SingSeventhsViewController: UIViewController {
      Randomly picks a chord type and a root note, then builds the rest of the seventh chord from that.
      */
     func setChord(){
-        chordType = Int(arc4random_uniform(5))
-        root = Int(arc4random_uniform(12))
-        third = root + chordList[chordType][0]
-        fifth = root + chordList[chordType][1]
-        seventh = root + chordList[chordType][2]
-        
-        thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
-        fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
-        seventhOctave = seventh > 11 ? rootOctave + 1 : rootOctave
+        repeat{
+            chordType = Int(arc4random_uniform(5))
+            root = Int(arc4random_uniform(12))
+            third = root + chordList[chordType][0]
+            fifth = root + chordList[chordType][1]
+            seventh = root + chordList[chordType][2]
+            
+            thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
+            fifthOctave = fifth > 11 ? rootOctave + 1 : rootOctave
+            seventhOctave = seventh > 11 ? rootOctave + 1 : rootOctave
+        }while seventhOctave > 5
         
         chordLabel.text = "Sing a \(chordNames[chordType]) chord"
         
@@ -327,7 +329,7 @@ class SingSeventhsViewController: UIViewController {
         var sungOctave = 0
         var sungNoteIndex = 0
         
-        if(conductor.listenAmp() > 0.05){
+        if(conductor.listenAmp() > 0.01){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){

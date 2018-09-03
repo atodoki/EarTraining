@@ -101,12 +101,14 @@ class DescendingCSingViewController: UIViewController {
      Randomly picks a top note, top note octave, and chromatic interval. Then sets the bottom note and bottom note octave to be the correct interval below the top note. Sets the text of the interval label.
      */
     func setInterval(){
-        topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        intervalIndex = chromaticIntervals.randomIndex
-        intervalSize = chromaticIntervals[intervalIndex]
-        bottomNote = topNote - intervalSize
-        bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
-        bottomNote += 12
+        repeat{
+            topNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+            intervalIndex = chromaticIntervals.randomIndex
+            intervalSize = chromaticIntervals[intervalIndex]
+            bottomNote = topNote - intervalSize
+            bNoteOctave = (bottomNote < 0 ? tNoteOctave - 1 : tNoteOctave)
+            bottomNote += 12
+        }while bNoteOctave < 3
 
         givenNote.text = "\(noteNamesWithSharps[topNote])\(tNoteOctave)"
         intervalLabel.text = "Sing \(intervalNames[intervalIndex])"
@@ -249,7 +251,7 @@ class DescendingCSingViewController: UIViewController {
         var sungOctave = 0.0
         var sungNoteIndex = 0;
         
-        if(conductor.listenAmp() > 0.05){
+        if(conductor.listenAmp() > 0.01){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){

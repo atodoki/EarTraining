@@ -92,14 +92,17 @@ class TriadIdentificationViewController: UIViewController {
      Randomly picks a chord type and a root note, then builds the rest of the triad from that.
      */
     func setChord(){
-        chordType = Int(arc4random_uniform(4))
-        root = Int(arc4random_uniform(12))
-        third = root + chordList[chordType][0]
-        fifth = root + chordList[chordType][1]
         
-        rootOctave = Int(arc4random_uniform(3) + 3)
-        thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
-        fifthOctave = fifthOctave > 11 ? rootOctave + 1 : rootOctave
+        repeat{
+            chordType = Int(arc4random_uniform(4))
+            root = Int(arc4random_uniform(12))
+            third = root + chordList[chordType][0]
+            fifth = root + chordList[chordType][1]
+            
+            rootOctave = Int(arc4random_uniform(3) + 3)
+            thirdOctave = third > 11 ? rootOctave + 1 : rootOctave
+            fifthOctave = fifthOctave > 11 ? rootOctave + 1 : rootOctave
+        }while fifthOctave > 5
         
         conductor.changePitch(pitch: noteCents[root] + octaveChange[rootOctave], noteType: .root)
         conductor.changePitch(pitch: noteCents[third%12] + octaveChange[thirdOctave], noteType: .third)

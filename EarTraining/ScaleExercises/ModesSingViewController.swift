@@ -332,7 +332,7 @@ class ModesSingViewController: UIViewController {
         var sungOctave = 0
         var sungNoteIndex = 0
         
-        if(conductor.listenAmp() > 0.05){
+        if(conductor.listenAmp() > 0.01){
             
             // Get note frequency in octave 0
             while(frequency0 > noteFrequencies[noteFrequencies.count-1]){

@@ -69,11 +69,13 @@ class AscendingChromaticViewController: UIViewController {
      Randomly picks a bottom note, bottom note octave, and chromatic interval. Then sets the top note and top note octave to be the correct interval above the bottom note.
      */
     func setInterval(){
-        bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
-        intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
-        topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
-        bNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
-        tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
+        repeat{
+            bottomNote = Int(arc4random_uniform(12)) // random number 0<n<12-1
+            intervalSize = Int(arc4random_uniform(11))+1 // random number 1<n<11
+            topNote = bottomNote + intervalSize // random number chromatic interval from bottom note
+            bNoteOctave = Int(arc4random_uniform(3))+3 // octave 3 to 5
+            tNoteOctave = (topNote > 11 ? bNoteOctave + 1 : bNoteOctave)
+        }while tNoteOctave > 5
         
     }
     

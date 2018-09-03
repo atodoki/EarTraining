@@ -115,7 +115,7 @@ class Conductor {
             AudioKit.output = silence
             
             mixer = AKMixer(timePitch1, timePitch2, timePitch3, timePitch4)
-            mixer.volume = 4
+            mixer.volume = 8
             
             AudioKit.output = mixer
         }catch{
